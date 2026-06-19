@@ -44,9 +44,9 @@
 	#mainNavi .mn_a1:hover:after,
 	#mainNavi .mn_a1:focus:after,
 	#mainNavi .mn_li1.over .mn_a1:after {display:none}
-	#mainNavi .depth2-wrap {display:none;position:absolute;top:100px;left:50%;z-index:1000;width:1400px;margin:0 0 0 -700px;padding:0 0 40px 280px;text-align:left;font-weight:normal;box-sizing:border-box;min-height:260px;background:#fff;box-shadow:0 10px 25px rgba(0, 0, 0, .05)}
+	#mainNavi .depth2-wrap {display:none;position:absolute;top:100px;left:50%;z-index:1000;width:1400px;margin:0 0 0 -700px;padding:0 0 40px 448px;text-align:left;font-weight:normal;box-sizing:border-box;min-height:270px;background:#fff;box-shadow:0 10px 25px rgba(0, 0, 0, .05)}
 	#mainNavi .depth2-wrap:after {}
-	#mainNavi .depth2-wrap .depth2-tit {display:block;position:absolute;width:280px;height:100%;box-sizing:border-box;left:0;top:0;padding:40px 30px 35px;background:#008284;border-radius:0 0 50px 0}
+	#mainNavi .depth2-wrap .depth2-tit {display:block;position:absolute;width:448px;height:270px;box-sizing:border-box;left:0;top:0;padding:40px 30px 35px;background:#057d84;border-radius:0 20px 20px 0}
 	#mainNavi .depth2-wrap .depth2-tit span {display:block;line-height:1.3}
 	#mainNavi .depth2-wrap .depth2-tit .tit {font-size:36px;color:#fff;font-weight:700;letter-spacing:-.05em}
 	#mainNavi .depth2-wrap .depth2-tit .txt {font-size:0;color:transparent;line-height:0;margin:28px 0 0;overflow:hidden}
@@ -58,15 +58,15 @@
 	#mainNavi .depth2-wrap .mn_li2:nth-child(5n) {margin-right:0}
 	#mainNavi .depth2-wrap .mn_a2 {display:block;width:auto;height:auto;position:relative;box-sizing:border-box;padding:0 55px 0 20px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;font-size:0;text-align:left;transition:all .3s ease}
 	#mainNavi .depth2-wrap .mn_a2:before {content:"";display:inline-block;width:0;height:58px;vertical-align:middle}
-	#mainNavi .depth2-wrap .mn_a2:after {content:"";display:block;position:absolute;width:28px;height:28px;border:0;border-radius:50%;background:#f0f0f0 url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_grey.png) no-repeat center;background-size:10px auto;top:0;right:0;bottom:0;left:0;margin:auto 15px auto auto;transform:none;opacity:1;transition:all .3s ease}
+	#mainNavi .depth2-wrap .mn_a2:after {content:"";display:block;position:absolute;width:18px;height:18px;border:0;border-radius:50%;background-color:#e0e0e0;background-image:url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_01.png);background-repeat:no-repeat;background-position:center;background-size:auto 5.13px;top:0;right:0;bottom:0;left:0;margin:auto 15px auto auto;transform:none;opacity:1;transition:all .3s ease}
 	#mainNavi .depth2-wrap .mn_a2 span {display:inline-block;position:relative;vertical-align:middle;font-size:17px;color:#333;font-weight:500;letter-spacing:-.025em;line-height:1.2;transition:all .3s ease}
-	#mainNavi .depth2-wrap .over .mn_a2 {background:#fff;border-color:#008284}
+	#mainNavi .depth2-wrap .over .mn_a2 {background:#fff;border-color:#057d84}
 	#mainNavi .depth2-wrap .mn_a2:focus span,
-	#mainNavi .depth2-wrap .mn_a2:hover span {color:#008284}
+	#mainNavi .depth2-wrap .mn_a2:hover span {color:#057d84}
 	#mainNavi .depth2-wrap .mn_a2:focus:after,
-	#mainNavi .depth2-wrap .mn_a2:hover:after {background-color:#008284;background-image:url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_white.png)}
-	#mainNavi .depth2-wrap .over .mn_a2:after {background-color:#008284;background-image:url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_white.png)}
-	#mainNavi .depth2-wrap .over .mn_a2 span {color:#008284}
+	#mainNavi .depth2-wrap .mn_a2:hover:after {background-color:#057d84;background-image:url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_01.png);background-size:auto 5.13px}
+	#mainNavi .depth2-wrap .over .mn_a2:after {background-color:#057d84;background-image:url(/resources/_Templet/Header/header_ipsi/Img/icon_arrow_right_01.png);background-size:auto 5.13px}
+	#mainNavi .depth2-wrap .over .mn_a2 span {color:#057d84}
 	#mainNavi .depth3-wrap {display:none;padding:0;box-sizing:border-box}
 	#mainNavi .depth3-wrap .depth3-ul {display:flex;flex-flow:row;flex-wrap:wrap;}
 	#mainNavi .depth3-wrap .mn_li3 {width:50%;margin:0 0 4px;box-sizing:border-box}
@@ -116,20 +116,20 @@
 	.body-slider-ovclick {display:none}
 }
 @media all and (min-width:1300px) and (max-width:1440px) {
-	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 320px}
-	#mainNavi .depth2-wrap .depth2-tit {width:320px;padding:40px 25px 35px}
+	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 380px}
+	#mainNavi .depth2-wrap .depth2-tit {width:380px;height:270px;padding:40px 25px 35px;border-radius:0 20px 20px 0}
 }
 @media all and (min-width:1200px) and (max-width:1299px) {
 	#mainNavi-wrap.decoShow:after {opacity:.5;}
-	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 280px}
-	#mainNavi .depth2-wrap .depth2-tit {width:280px;padding:35px 20px 30px}
+	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 320px}
+	#mainNavi .depth2-wrap .depth2-tit {width:320px;height:270px;padding:35px 20px 30px;border-radius:0 20px 20px 0}
 	#mainNavi .depth2-wrap .depth2-tit .tit {font-size:30px}
 	#mainNavi .depth2-wrap .mn_a2 {padding:0 50px 0 15px;}
 }
 @media all and (min-width:1000px) and (max-width:1199px) {
 	#mainNavi-wrap.decoShow:after {opacity:.5;}
-	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 250px}
-	#mainNavi .depth2-wrap .depth2-tit {width:250px;padding:30px 20px 25px}
+	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 280px}
+	#mainNavi .depth2-wrap .depth2-tit {width:280px;height:270px;padding:30px 20px 25px;border-radius:0 20px 20px 0}
 	#mainNavi .depth2-wrap .depth2-tit .tit {font-size:28px}
 	#mainNavi .depth2-wrap .mn_a2 {padding:0 50px 0 15px;}
 	#mainNavi .depth2-wrap .mn_li2 {width:32%;margin-right:2%}
