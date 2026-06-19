@@ -1,0 +1,20 @@
+/* -------------------------------------Link S------------------------------------ */
+/* 퀵메뉴 */
+.center02-sec1 .qm-w {position:relative;width:100%}
+.center02-sec1 .qm-w:before {position:absolute;top:-84px;left:-50px;width:1px;height:105px;background:rgba(0,0,0,0.25);display:block;content:'';-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.center02-sec1 .qm-w .tit {font-size:26px;color:#233251;position:relative;font-family:'myriad-pro', sans-serif;padding-left:28px;}
+.center02-sec1 .qm-w .tit span {font-weight:normal;}
+.center02-sec1 .qm-w .tit:after {position:absolute;top:50%;left:0;margin-top:-4px;width:8px;height:8px;background:#233251;display:block;content:'';}
+.center02-sec1 .qm-w .list {overflow:hidden;padding-top:30px;}
+.center02-sec1 .qm-w .list li {float:left;width:33.33%;line-height:1.2;}
+.center02-sec1 .qm-w .list a {position:relative;display:block;padding-top:55px;background:url(/resources/_Templet/TMPL08/_Img/Main/center02_qm_icon1.png) no-repeat center 0;text-align:center;font-size:16px;color:#555555;}
+.center02-sec1 .qm-w .list li:first-child a:after {position:absolute;top:0;left:50%;margin-left:-35px;width:35px;height:35px;display:block;content:'';background:rgba(39,160,175,0.2);border-radius:50%;}
+.center02-sec1 .qm-w .list li:nth-child(2) a {padding:50px 21px 0;background:url(/resources/_Templet/TMPL08/_Img/Main/center02_qm_icon2.png) no-repeat center 0;word-wrap:break-word}
+.center02-sec1 .qm-w .list li:nth-child(3) a {background:url(/resources/_Templet/TMPL08/_Img/Main/center02_qm_icon3.png) no-repeat center 0;}
+@media all and (max-width:999px){
+	.center02-sec1 .qm-w .tit {font-size:24px}
+	.center02-sec1 .qm-w .list a {font-size:15px;padding-top:40px;border-left:1px solid #e1e4eb}
+	.center02-sec1 .qm-w .list li:first-child a {border-left:0}
+	.center02-sec1 .qm-w .list li:nth-child(2) a {padding:40px 0 0}
+}
+/* -------------------------------------Link SMALL E ------------------------------------ */

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/* ==============================
+ * 에디터 템플릿 
+================================= */
+/** -- recruit (채용게시판) */
+.rec-temp {}
+.rec-temp .rec-tit {position:relative;margin:40px 0 10px;color:#23325c;font-size:1.222em;font-weight:bold;box-sizing:border-box}
+.rec-temp .rec-tit:first-child {margin-top:0}
+.rec-temp .rec-tit:before,
+.rec-temp .rec-tit:after {content:"";display:block;position:absolute;box-sizing:border-box}
+.rec-temp .rec-txt-box {padding-left:26px;box-sizing:border-box}
+.rec-temp .rec-btm {color:#000;font-size:1.222em;line-height:1.777;letter-spacing:0;font-weight:bold;text-align:center}
+
+/** -- rec-temp01 */
+.rec-temp.rec-temp01 .rec-tit {padding-left:25px;}
+.rec-temp.rec-temp01 .rec-tit:before {left:0;top:6px;border:6px solid #28478e;border-radius:50%;width:16px;height:16px}
+.rec-temp.rec-temp01 .rec-tit:after {left:-2px;top:4px;background-color:#f3d359;border-radius:50%;width:7px;height:7px}
+
+/** -- rec-temp02 */
+.rec-temp.rec-temp02 .rec-tit {padding-left:32px}
+.rec-temp.rec-temp02 .rec-tit:before {left:0;top:2px;background:url(/resources/_Templet/Editor/_Img/rec_bul02.png) no-repeat center;width:24px;height:24px}
+
+
+/** -- rec-temp03 */
+.rec-temp.rec-temp03 .rec-tit {display:inline-block;background-color:#3e6ee5;border-radius:20px 0 20px 0;max-width:100%;padding:13px 25px 8px;color:#fff;font-size:1em;font-family:"Gmarket Sans", sans-serif;letter-spacing:-.025em;box-sizing:border-box}
+.rec-temp.rec-temp03 .rec-tit:nth-of-type(even) {background-color:#28478e;}

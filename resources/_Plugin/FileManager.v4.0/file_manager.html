@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<script src="/_contents/_Admin/_Js/jquery/external/jquery/jquery.js"></script>
+	<script src="/_contents/_Admin/_Js/jquery/jquery-ui.js"></script>
+	<script src="/resources/_Plugin/FileManager.v4.0/lib/js/fileupload_form.js"></script>
+</head>
+<body>
+	
+	<script type="text/javascript" >
+		var file_uploder = null;
+		$(window).ready(function() {
+			file_uploder = $( "#Uploader_target" ).formuploader({
+		    	debug : false
+	    		, prg_code : "Board"
+    			, prg_sub_code : "3"
+    			, prg_group_idx : "50"
+		    	, isUseEditor : true
+		    	, isFileView : true
+		    	, isMainImg : true
+		    	, editor_name : "${editor_name}"
+		    	, test : false
+		     });
+		});
+	</script>
+	
+	<div id="Uploader_target"></div>
+	
+	
+</body>
+</html>

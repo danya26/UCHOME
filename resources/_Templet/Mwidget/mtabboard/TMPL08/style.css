@@ -1,0 +1,60 @@
+/* S:공지사항 */
+.mnews-sec .mtab {position:relative;width:100%;height:605px;}
+.mnews-sec .mtab dl {display:inline-block;}
+.mnews-sec .mtab dt {position:relative;display:inline-block;padding:0 15px;z-index:1;}
+.mnews-sec .mtab dt a {position:relative;display:block;color:#333;font-size:20px;padding:15px 0 20px 0;border-bottom:5px solid transparent}
+.mnews-sec .mtab dt a:focus, 
+.mnews-sec .mtab dt a:hover {color:#0d5db2;font-weight:500;}
+.mnews-sec .mtab dl.isOn dt a {color:#0d5db2;font-weight:500;border-color:#0d5db2}
+.mnews-sec .mtab dd {display:none;position:absolute;top:0;left:0;width:100%;height:100%;box-sizing:border-box;text-align:left;margin-top:59px;padding-top:40px;border-top:2px solid #e6e6e6}
+.mnews-sec .mtab dd ul {border-bottom:1px solid #d3d3d3}
+.mnews-sec .mtab dd li {position:relative;}
+.mnews-sec .mtab dd li a {position:relative;display:block;padding:40px 150px 40px 60px;height:100px;background:#fcfcfc;box-sizing:border-box;transition:all .3s ease;}
+.mnews-sec .mtab dd li:nth-child(odd) a {background:#f2f2f2;}
+.mnews-sec .mtab dd li a:before {content:"";display:block;position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;border:2px solid transparent;z-index:3;background:transparent;transition:all .3s ease}
+.mnews-sec .mtab dd li.isNotice a:after {content:'';position: absolute;left: 0;top: 0;width:35px;height:35px;background:#515a6f url(/resources/homepage/kor/_Img/Layout/main_spr.png) no-repeat -556px 0;z-index:10;}
+.mnews-sec .mtab dd li a:hover,
+.mnews-sec .mtab dd li a:focus {background:#fff;}
+.mnews-sec .mtab dd li a:hover:before,
+.mnews-sec .mtab dd li a:focus:before {border-color:#0d5db2;box-shadow:4px 5px 8px 0px rgba(0, 0, 0, 0.25);}
+.mnews-sec .mtab dd li a:hover:after,
+.mnews-sec .mtab dd li a:focus:after {background-color:#0d5db2}
+.mnews-sec .mtab dd li .subject {display:block;font-size:17px;color:#000;font-weight:500;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.mnews-sec .mtab dd li .date {position: absolute;right:40px;top:25px;color:#292929;font-family:"bio-sans";font-size:14px;}
+.mnews-sec .mtab dd li .date:before {content:'';display:block;width:24px;height:18px;margin:0 auto 12px auto;background:url(/resources/homepage/kor/_Img/Layout/main_spr.png) no-repeat -530px 0;}
+.mnews-sec .mtab dd li.no-data {text-align:center;width:100%;margin-top:100px;padding:160px 0 40px !important}
+.mnews-sec .mtab .isOn dd {display:block;}
+.mnews-sec .mtab .isOn dt a:after {width:100%;}
+.mnews-sec .mtab dd li:hover .txt, .mnews-sec .mtab dd li:focus .txt {text-decoration:underline}
+.mnews-sec .mtab .btn-more {position:absolute;right:0;top:-55px;width:40px;height:40px;border-radius:50%;background:#bfbfbf url(/resources/homepage/kor/_Img/Layout/board_more.png) no-repeat 50% 50%;transition:all .3s ease;}
+.mnews-sec .mtab .btn-more:hover,
+.mnews-sec .mtab .btn-more:focus {background-color:#0d5db2}
+#LoadingImage {margin-top:100px;}
+
+@media all and (max-width:1400px) {
+	.mnews-sec .mtab dt {padding:0 10px;}
+}
+@media all and (max-width:640px) {
+	.mnews-sec .mtab {height:465px;}
+	.mnews-sec .mtab dt a {font-size: 16px;padding:15px 0;border-bottom:4px solid transparent}
+	.mnews-sec .mtab dd {margin-top: 48px;padding-top: 20px;}
+	.mnews-sec .mtab dd li a {padding:20px 20px 20px 50px;height:auto;}
+	.mnews-sec .mtab dd li.isNotice a:after {width: 30px;height: 30px;background-position: -558px -2px;}
+	.mnews-sec .mtab dd li .subject {margin-bottom:5px;}
+	.mnews-sec .mtab dd li .subject img {height:22px;}
+	.mnews-sec .mtab dd li .date {position: relative;right:auto;top:auto;}
+	.mnews-sec .mtab dd li .date:before {display:none;}
+	.mnews-sec .mtab .btn-more {width:32px;height:32px;top:-45px;}
+}
+@media all and (max-width:460px) {
+	.mnews-sec .mtab dt {padding:0 5px;}
+	.mnews-sec .mtab dt a {font-size:15px;}
+	.mnews-sec .mtab dd li .subject {font-size:15px;}
+	.mnews-sec .mtab dd li .date {font-size:13px;}
+}
+@media all and (max-width:360px) {
+	.mnews-sec .mtab dt {padding:0 2px;}
+	.mnews-sec .mtab dt a {font-size:14px;}
+	.mnews-sec .mtab .btn-more {width:28px;height:28px;top:-40px;background-size:40%;}
+}
+/* E:공지사항 */

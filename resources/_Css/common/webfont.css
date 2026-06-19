@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+
+/*pretendard*/
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Black.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-ExtraBold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Bold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Medium.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Light.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-ExtraLight.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: url(/resources/_Font/pretendard/Pretendard-Thin.woff2) format('woff2');
+}
+
+
+/*cormorant*/
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Medium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Light.ttf) format('truetype');
+}
+
+/*cormorant - italic*/
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 700;
+	font-display: swap;
+	font-style: italic;
+	src: url(/resources/_Font/cormorant/Cormorant-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 600;
+	font-display: swap;
+	font-style: italic;
+	src: url(/resources/_Font/cormorant/Cormorant-SemiBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 500;
+	font-display: swap;
+	font-style: italic;
+	src: url(/resources/_Font/cormorant/Cormorant-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 400;
+	font-display: swap;
+	font-style: italic;
+	src: url(/resources/_Font/cormorant/Cormorant-Italic.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 300;
+	font-display: swap;
+	font-style: italic;
+	src: url(/resources/_Font/cormorant/Cormorant-LightItalic.ttf) format('truetype');
+}
+
+/*cormorant*/
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Medium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'cormorant';
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/cormorant/Cormorant-Light.ttf) format('truetype');
+}
+
+/*atoz*/
+@font-face {
+	font-family: 'atoz';
+	font-weight: 900;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-9Black.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'atoz';
+	font-weight: 800;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-8ExtraBold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'atoz';
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-7Bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'atoz';
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-6SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'atoz';
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-5Medium.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'atoz';
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-4Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'atoz';
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-3Light.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'atoz';
+	font-weight: 200;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-2ExtraLight.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'atoz';
+	font-weight: 100;
+	font-display: swap;
+	font-style: normal;
+	src: url(/resources/_Font/atoz/atoz-1Thin.woff2) format('woff2');
+}
+
+/*paperlogy*/
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 900;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-9Black.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 800;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-8ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 700;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-7Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 600;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-6SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 500;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-5Medium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 400;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-4Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 300;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-3Light.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 200;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-2ExtraLight.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'paperlogy';
+	font-weight: 100;
+	font-display: swap;
+	src: url(/resources/_Font/paperlogy/Paperlogy-1Thin.ttf) format('truetype');
+}

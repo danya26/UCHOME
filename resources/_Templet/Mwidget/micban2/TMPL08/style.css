@@ -1,0 +1,48 @@
+/* S:Quicklnk */
+.quicklnk-box {overflow:hidden;}
+.quicklnk-box .mtit {font-size:30px;color:#006170;margin-bottom:15px;}
+.quicklnk-box .datalist li {float:left;width:27.33%;padding:10px 0;margin-left:8%;border-top:1px solid #ebebeb}
+.quicklnk-box .datalist li.n1, 
+.quicklnk-box .datalist li.n4 {margin-left:0;}
+.quicklnk-box .datalist li.n1,
+.quicklnk-box .datalist li.n2, 
+.quicklnk-box .datalist li.n3 {border-top:0}
+.quicklnk-box .datalist li a {display:block;font-size:16px;color:#000;}
+.quicklnk-box .datalist li .picon {display:inline-block;width:40px;height:40px;margin-right:5px;vertical-align:middle}
+.quicklnk-box .datalist li .icon-icon1 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s1.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon2 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s2.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon3 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s3.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon4 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s4.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon5 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s5.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon6 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s6.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon7 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s7.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon8 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s8.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon9 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s9.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li .icon-icon10 {background:url(/resources/_Img/MainModule/micban/s1/qlnk_ico_s10.png) no-repeat 50% 50%;}
+.quicklnk-box .datalist li:hover .ptit, .quicklnk-box .datalist li:focus .ptit {text-decoration:underline}
+.quicklnk-box .datalist li:hover .picon, .quicklnk-box .datalist li:focus .picon {animation:ico_ani 1s ease-out;transform-origin:50% 100%}
+@media all and (max-width:1200px){
+	.quicklnk-box .datalist li {width:32%;margin-left:2%}
+}
+@media all and (max-width:999px){
+	.quicklnk-box .mtit {text-align:center}
+	.quicklnk-box .datalist li {width:30%;margin-left:5%}
+	.quicklnk-box .datalist li a {font-size:15px}
+}
+@media all and (max-width:768px){
+	.quicklnk-box .mtit {font-size:26px}
+}
+@media (max-width:599px){
+	.quicklnk-box .mtit {font-size:24px}
+	.quicklnk-box .datalist li {position:relative;text-align:center;padding:20px 0}
+	.quicklnk-box .datalist li a {padding-top:30px}
+	.quicklnk-box .datalist li .picon {position:absolute;top:10px;left:0;width:100%}
+}
+/* E:Quicklnk */
+
+/* 아이콘 애니메이션 */
+@keyframes ico_ani {
+	0%,100% {transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg);}
+	10%, 30%, 50%, 70%, 90% {transform:rotateZ(-5deg);-webkit-transform:rotateZ(-5deg);}
+	20%, 40%, 60%, 80% {transform:rotateZ(5deg);-webkit-transform:rotateZ(5deg);}
+}

@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/* ==============================
+* 공통 ( 구성요소 )
+================================= */
+html,
+body {width:100%;height:100%}
+body {background-color:#d5d4d0;overflow:hidden}/* overflow-y:scroll;overflow-x:auto */
+body,
+a {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);font-size:13px}
+.body-proc,
+.body-popup {background-color:#FFF;overflow-y:auto}
+#doc {min-width:1600px}
+#doc {position:relative;-webkit-text-size-adjust:none;height:100%}/* min-width:320px;*/
+.div-abs {position:absolute}
+.div-wrap {position:relative;width:100%;text-align:center;margin:0 auto 0 auto}
+.div-cont {position:relative;text-align:left;margin:0 auto 0 auto}
+.div-cont:after {clear:both;content:"";display:block}
+.div-wrap {}
+.div-cont {width:100%}
+.doc-wr {position:relative;width:100%;height:100%;overflow-x:hidden;background:#fff;margin:0 auto;box-shadow:0px -10px 20px rgba(0, 0, 0, .3);box-sizing:border-box;padding:78px 0 0}/*max-width:1400px;*/
+@media all and (max-width:1600px) {
+	#doc {min-width:0}
+}
+
+/* ==============================
+* 공통 ( Icon Sprite )
+================================= */
+.mn-ico	 {opacity:0.6;display:inline-block;width:60px;height:60px;overflow:hidden;background:url(/resources/_Img/Admin/adm_icons.png) no-repeat 0 0}
+.mn-ico-1,
+.mn-ico-cfg {background-position:0 0}
+.mn-ico-2,
+.mn-ico-menu,
+.mn-ico-site {background-position:-60px 0}
+.mn-ico-3 {background-position:-120px 0}
+.mn-ico-4,
+.mn-ico-cont,
+.mn-ico-board {background-position:-180px 0}
+.mn-ico-5,
+.mn-ico-prgr {background-position:-240px 0}
+.mn-ico-6,
+.mn-ico-mem {background-position:-300px 0}
+.mn-ico-7 {background-position:-360px 0}
+.mn-ico-8 {background-position:-420px 0}
+.mn-ico-9,
+.mn-ico-reserv {background-position:-480px 0}
+.mn-ico-10 {background-position:-540px 0}
+.mn-ico-11 {background-position:0 -60px}
+.mn-ico-12 {background-position:-60px -60px}
+.mn-ico-13,
+.mn-ico-adm {background-position:-120px -60px}
+.mn-ico-14 {background-position:-180px -60px}
+.mn-ico-15 {background-position:-240px -60px}
+.mn-ico-16 {background-position:-300px -60px}
+.mn-ico-17,
+.mn-ico-report {background-position:-360px -60px}
+.mn-ico-18 {background-position:-420px -60px}
+.mn-ico-19 {background-position:-480px -60px}
+.mn-ico-20 {background-position:-540px -60px}
+
+/* ==============================
+* 상단 ( Logo + Topmenu + Homepage )
+================================= */
+#header-wrap {box-sizing:border-box;z-index:1000;height:78px;position:absolute;left:0;top:0}
+#header-wrap #header {padding:1.5em 0px;height:3em;border-bottom:1px solid #bbb;box-shadow:0px 2px 5px rgba(0,0,0,0.1)}
+#header-wrap #header #logo {position:absolute;left:15px}
+#header-wrap #header #logo img {max-height:3em}
+#topmenu-wr {position:absolute;top:0;width:auto;left:50%;transform:translateX(-50%);z-index:1001}
+#topmenu-wr #topmenu {transition:all 0.3s ease;text-align:center;z-index:1000;display:block;overflow:hidden;transition:top 0.3s ease}
+#topmenu-wr #topmenu {height:auto}
+#topmenu-wr #topmenu ul {white-space:nowrap;}
+#topmenu-wr #topmenu li {display:inline-block}
+#topmenu-wr #topmenu a {display:block;box-sizing:border-box;height:auto;border-radius:5px;padding:50px 20px 15px;line-height:1;position:relative}
+#topmenu-wr #topmenu a:hover {background:rgba(255,255,255,0.2);border:0px solid rgba(255,255,255,0.3)}
+#topmenu-wr #topmenu a span {color:#222;letter-spacing:-.05em}
+#topmenu-wr #topmenu a .mn-ico {position:absolute;left:50%;top:0;transform:translateX(-50%);background-image:url(/resources/_Img/Admin/adm_icons_b.png)}
+#topmenu-wr #topmenu a:hover .mn-ico,
+#topmenu-wr #topmenu a.over .mn-ico {background-image:url(/resources/_Img/Admin/adm_icons_c.png)}
+#topmenu-wr #topmenu a:hover span {color:#4392ed}
+#topmenu-wr #topmenu a .txt {display:block;white-space:nowrap;width:auto;font-size:1.07em;font-weight:500}
+#topmenu-wr #topmenu .over span {color:#4392ed}
+.btn-home {display:block;position:absolute;top:8px;right:40px;font-size:1.07em;font-weight:bold;white-space:nowrap;z-index:2000}
+.btn-home:before {content:"";display:block;width:40px;height:40px;margin:0 auto;background:url(/resources/_Img/Admin/adm_icons_b.png) no-repeat -550px -70px}
+.btn-home:hover:before {background:url(/resources/_Img/Admin/adm_icons_c.png) no-repeat -550px -70px}
+.btn-home:hover span {color:#4392ed}
+
+/* ==============================
+* 중단( LeftMenu + Contents )
+================================= */
+/** -- Container */
+#container-wrap {position:relative;overflow:hidden;height:100%;width:100%;transition:height 0.3s ease}
+#container-wrap:after {clear:both;content:"";display:block}
+#container-wrap.side-close .pms-info {width:100%;border:0;padding:0;left:0;bottom:0}
+#container-wrap.side-close .pms-info .tit,
+#container-wrap.side-close .pms-info .tel,
+#container-wrap.side-close .pms-info .pimg {display:none}
+#container-wrap.side-close .pms-info a {padding:20px 0}
+#container-wrap.side-close .pms-info a:before {display:block;content:"";width:40px;height:40px;background:url(/resources/_Img/Admin/Layout/arimoa_logo_icon.png) no-repeat;background-size:40px auto;margin:0 auto;position:relative;z-index:3}
+#container-wrap.side-close .pms-info a span {display:none;position:absolute;top:10px;left:0;width:215px;border:0;box-sizing:border-box;padding:20px 15px 20px 75px;text-align:left}
+#container-wrap.side-close .pms-info a:focus span,
+#container-wrap.side-close .pms-info a:hover span {display:block;background:#595f6a;border-left:5px solid #fff;transition:all .3s ease}
+#container-wrap.side-close #adm-side-wrap {width:70px}
+#container-wrap.side-close #adm-side-wrap .side-mn {width:70px}
+#container-wrap.side-close #adm-side-wrap .sidemenu {z-index:1000}
+
+#container-wrap.side-close #adm-side-wrap .side-mn .mCustomScrollBox {overflow:visible}
+#container-wrap.side-close #adm-side-wrap .side-mn .mCSB_container {overflow:visible}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-ico a .mn-ico {transition:all .3s ease}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1:focus .lm-ico a .mn-ico,
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1:hover .lm-ico a .mn-ico {opacity:1}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1 {padding:0}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1 span {display:block;position:absolute;color:#fff;opacity:1;background:#306db8;border-radius:5px;padding:4px 7px 6px;line-height:1;left:50%;top:50%;transform:translateY(-50%);opacity:0;visibility:hidden;transition:all .3s ease;}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1 span:after {content:"";display:block;position:absolute;width:0;height:0;border:solid;border-width:9px 9px 9px 0;border-color:transparent #306db8 transparent transparent;right:100%;top:50%;transform:translateY(-50%);}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:before,
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:after {display:block;position:absolute;box-sizing:border-box}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:before {width:100%;right:0;top:0}
+#container-wrap.side-close #adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:after {}
+
+#container-wrap.side-close #adm-side-wrap .sidemenu li span .lm-btn {display:none}
+#container-wrap.side-close #adm-side-wrap .sidemenu .mn_l1 ul {display:none}
+#container-wrap.side-close #adm-side-wrap .sidemenu .mn_l1 .lm-ico {left:0;width:100%}
+#container-wrap.side-close #adm-container .a-slide-ctrl-btns .open {display:block}
+#container-wrap.side-close #adm-container .a-slide-ctrl-btns .close {display:none}
+#container-wrap.side-close #adm-side-wrap .login-info-box .slide-login-info {display:none}
+#container-wrap.side-close #adm-side-wrap .login-info-box .a-logout-box {display:block}
+#container-wrap.side-close #adm-container {margin-left:70px}
+
+/** -- LeftMenu */
+#adm-side-wrap {width:200px;position:absolute;background:#26282e;left:0;top:0;z-index:1000;height:100%;box-sizing:border-box;padding:94px 0 182px;transition:all .3s linear}
+#adm-side-wrap .login-info-box {background:#464b57;color:#FFF;text-align:center;padding:1.0em 0;height:auto;position:absolute;width:100%;left:0;top:0}
+#adm-side-wrap .login-info-box a * {color:#FFF;font-size:11px}
+#adm-side-wrap .login-info-box a {display:inline-block;border-radius:14px;width:auto;font-size:0.92em;line-height:1.2em;letter-spacing:-1px;box-sizing:border-box;height:2em;background:#333;padding:0.25em 0.8em}
+#adm-side-wrap .login-info-box .txt-id {color:#999;letter-spacing:0}
+#adm-side-wrap .side-mn {height:100%;overflow:auto}
+#adm-side-wrap .side-mn .mCSB_outside + .mCSB_scrollTools {right:-15px}
+#adm-side-wrap .side-mn .sidemenu {position:relative;transition:all .3s ease;width:100%;font-size:1.077em;font-family:'univia-pro','Noto Sans KR','Malgun Gothic','맑은 고딕',"돋움",Dotum,Verdana,Arial,helvetica,clean,sans-serif}
+#adm-side-wrap .side-mn .sidemenu ul {margin:0;padding:0}
+#adm-side-wrap .side-mn .sidemenu .lm-btn {display:block;position:absolute;right:0;top:0}
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn {width:100%;height:100%;border:0;background:transparent;font-size:0;position:relative}
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn:before,
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn:after {content:"";display:block;position:absolute;width:10px;height:2px;top:0;right:0;bottom:0;left:0;margin:auto;background:#fff;transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn.minus {}
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn.minus:after {transform:rotate(0deg) !important}
+#adm-side-wrap .side-mn .sidemenu .lm-tgl-btn.plus {}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 {}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_l1 {background:#26282e;border-top:1px solid rgba(255, 255, 255, .1);border-bottom:1px solid rgba(0, 0, 0, .5)}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_l1:first-child {border-top:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_l1:last-child {border-bottom:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 {display:block;box-sizing:border-box;height:60px;position:relative;padding:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-ico {display:block;position:absolute;width:60px;height:60px;left:-5px;top:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-ico a {display:block;height:100%;text-align:center}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-ico a .mn-ico {transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1:hover .lm-ico a .mn-ico {opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1 {display:block;width:100%;height:100%;box-sizing:border-box;padding:0 40px 0 45px;transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:after {content:"";display:block;position:absolute;width:5px;height:100%;left:-5px;top:0;background:#fff;transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1 span {display:inline-block;vertical-align:middle;color:#fff;opacity:.6;line-height:1.3;white-space:nowrap;transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:focus,
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:hover,
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1.over .mn_a1  {background:#394153}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:focus span,
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:hover span {opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:focus:after,
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1:hover:after,
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1.over .mn_a1:after {left:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-btn {width:40px;height:60px}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-btn .lm-tgl-btn:before {width:10px;height:2px}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .lm-btn .lm-tgl-btn:after {width:10px;height:2px;transform:rotate(90deg)}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1 .mn_a1.text_over span {opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u1 .mn_i1.over .lm-ico .mn-ico {opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 {background:#2b3347;box-sizing:border-box;padding:0 10px}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 {display:block;box-sizing:border-box;position:relative;border-top:1px solid rgba(255, 255, 255, .1);border-bottom:1px solid rgba(0, 0, 0, .5)}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2:first-child {border-top:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2:last-child {border-bottom:0}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .mn_a2 {display:block;box-sizing:border-box;position:relative;padding:10px 40px 10px 0;line-height:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .mn_a2 span {display:block;color:#fff;line-height:1;opacity:.6}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .mn_a2:focus span,
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .mn_a2:hover span,
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .mn_a2.text_over span {text-decoration:underline;opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .lm-btn {width:33px;height:33px}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .lm-btn .lm-tgl-btn:before {width:8px;height:2px}
+#adm-side-wrap .side-mn .sidemenu .mn_u2 .mn_l2 .mn_i2 .lm-btn .lm-tgl-btn:after {width:8px;height:2px;transform:rotate(90deg)}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 {display:block;box-sizing:border-box}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 {display:block;box-sizing:border-box;margin:0 0 5px}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 {position:relative}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .mn_a3 {display:block;box-sizing:border-box;position:relative;padding:10px;line-height:1;background:#37466a}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .mn_a3.text_over {background:#06a9dc}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .mn_a3 span {display:block;color:#fff;line-height:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .mn_a3:focus span,
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .mn_a3:hover span {text-decoration:underline}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .lm-btn .lm-tgl-btn:before {width:8px;height:2px}
+#adm-side-wrap .side-mn .sidemenu .mn_u3 .mn_l3 .mn_i3 .lm-btn .lm-tgl-btn:after {width:8px;height:2px;transform:rotate(90deg)}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 {display:block;padding:5px 0 0}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 {}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 {position:relative}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 .mn_a4 {display:block;box-sizing:border-box;position:relative;padding:5px 10px;line-height:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 .mn_a4 span {display:block;color:#fff;line-height:1;opacity:.75;font-weight:300;transition:all .3s ease}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 .mn_a4.text_over span {text-decoration:underline;opacity:1}
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 .mn_a4:focus span,
+#adm-side-wrap .side-mn .sidemenu .mn_u4 .mn_l4 .mn_i4 .mn_a4:hover span {opacity:1}
+#adm-side-wrap .pms-info {border:1px solid rgba(255,255,255,.2);padding:15px 10px;text-align:center;color:#fff;box-sizing:border-box;width:180px;position:absolute;left:10px;bottom:10px}
+#adm-side-wrap .pms-info .tit {font-size:16px;font-weight:bold}
+#adm-side-wrap .pms-info .tel {margin:0 0 5px}
+#adm-side-wrap .pms-info .pimg {padding:5px 40px}
+#adm-side-wrap .pms-info .pimg img {max-width:100%}
+#adm-side-wrap .pms-info a {display:block;color:#fff}
+#adm-side-wrap .pms-info a span {display:inline-block;padding:5px 30px;border:1px solid #ccc}
+#adm-side-wrap .pms-info a span em {font-style:normal}
+#adm-side-wrap .pms-info a:hover span {background:rgba(255, 255, 255, .2)}
+
+/** -- Contents */
+#adm-container {margin:0 0 0 200px;position:relative;display:block;width:auto;height:100%;transition:margin .3s linear;overflow:auto}
+#adm-container .a-slide-ctrl-btns {position:absolute;width:20px;height:30px;padding-top:5px;z-index:1000}
+#adm-container .a-slide-ctrl-btns .open {border:0;background:transparent url(/resources/_Img/Admin/Layout/lm_tgl_r.png) no-repeat -5px center;width:20px;height:50px;overflow:hidden;display:none}
+#adm-container .a-slide-ctrl-btns .close {border:0;background:transparent url(/resources/_Img/Admin/Layout/lm_tgl.png) no-repeat -5px center;width:20px;height:50px;overflow:hidden}
+#adm-container .a-slide-ctrl-btns button span {white-space:nowrap;padding-left:9999em}
+#adm-container #adm-contents {position:relative;height:100%;box-sizing:border-box;padding:80px 0 0}
+#adm-container #adm-contents .cont-tab-menu {display:none}
+#adm-container #adm-contents .smng-cont-top {display:block;position:absolute;width:100%;height:60px;border-bottom:1px solid #ddd;background:#f3f3f3;left:0;top:0}
+#adm-container #adm-contents .smng-cont-top .cont-tit {font-weight:500;font-size:1.538em;display:block;letter-spacing:-1px;line-height:1.2;color:#333;z-index:1}
+#adm-container #adm-contents .smng-cont-top .cont-tit .mng-site-nm {display:block;float:left;padding:20px 35px 10px 35px;height:30px;background:url(/resources/_Img/Admin/mng_top_arr.png) no-repeat right center;color:#02aab9}
+#adm-container #adm-contents .smng-cont-top .cont-tit .mng-pg-nm {display:block;float:left;padding:18px 15px 10px 35px;height:30px}
+#adm-container #adm-contents .smng-cont-top .cont-top-side {position:absolute;right:20px;top:10px;text-align:right;z-index:10}
+#adm-container #adm-contents .smng-cont-top .cont-top-side > * {vertical-align:middle}
+#adm-container #adm-contents .smng-cont-top .cont-top-side .site-sel {white-space:nowrap}
+#adm-container #adm-contents .smng-cont-top .cont-top-side .site-sel > * {display:inline-block;vertical-align:middle;height:40px;line-height:36px;box-sizing:border-box;font-size:14px}
+#adm-container #adm-contents .smng-cont-top .cont-top-side .btn-down {display:inline-block;border:1px solid #ccc;text-align:left;background:#fff;padding:0 35px 0 10px;background:#fff;background:#fff url(/resources/_Img/Common/icon/down.png) no-repeat 95% 55%}
+#adm-container #adm-contents .smng-cont-top .cont-top-side .btn-down span {}
+#adm-container #adm-contents .smng-cont-top .cont-top-side .btn-down:focus span,
+#adm-container #adm-contents .smng-cont-top .cont-top-side .btn-down:hover span {text-decoration:underline}
+#adm-container #adm-contents .smng-cont-top .cont-top-side button {display:inline-block;padding:0 15px;box-sizing:border-box;margin:0;background:#6e6e6e;color:#fff;border:0;transition:all .3s ease}
+#adm-container #adm-contents .smng-cont-top .cont-top-side button:focus,
+#adm-container #adm-contents .smng-cont-top .cont-top-side button:hover {background:#333}
+#adm-container #adm-contents .smng-cont-top .cont-top-side button span {color:#fff}
+#adm-container #adm-contents .contents {display:block;position:relative;padding:0 0 50px;margin:0 20px;min-height:100%;box-sizing:border-box}
+#adm-container #adm-contents .contents:after {content:"";display:block;clear:both}
+@media all and (max-width:1600px) {
+	#adm-container #adm-contents {min-width:1600px;}
+}
+
+/* ==============================
+* 하단 ( Footer )
+================================= */
+#footer-wrap {border-top:1px solid #ddd;position:absolute;width:100%;z-index:9;right:0;bottom:0}
+#footer-wrap #footer {text-align:center;padding:10px 0;font-size:13px;background:#fff}
+#footer-wrap #footer:after {content:"";clear:both;display:block}

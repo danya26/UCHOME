@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* ==============================
+* 01. 로그인페이지
+================================= */
+html, body {}
+#doc {min-width:320px;height:100%}
+#doc .logSidePkg {box-sizing:border-box;position:relative;padding:0 0 0 620px;height:100%}
+@media all and (max-width:1399px) {
+    #doc .logSidePkg {padding:0 0 0 540px}
+}
+@media all and (max-width:1299px) {
+    #doc .logSidePkg {padding:0 0 0 400px}
+}
+@media all and (max-width:1099px) {
+    #doc .logSidePkg {padding:0 0 0 260px}
+}
+@media all and (max-width:899px) {
+    #doc .logSidePkg {padding:0 0 0 200px}
+}
+@media all and (max-width:699px) {
+    #doc .logSidePkg {padding:50px 0 0}
+}
+@media all and (max-width:599px) {
+    #doc {height:auto}
+    #doc .logSidePkg {padding:0;height:auto;}
+}
+
+/* ==============================
+* 02. 좌측
+================================= */
+.logSideL {width:620px;height:100%;position:absolute;background:url(/resources/_Img/Admin/login/login_deco.jpg) no-repeat center top;background-size:cover;left:0;top:0;}
+.logSideL .titleSet {position:absolute;z-index:1;width:100%;left:0;box-sizing:border-box;text-align:center;top:50%;padding:0 20px;transform:translateY(-50%)}
+.logSideL .titleSet span {display:block;line-height:1.2;color:#fff;letter-spacing:0;text-shadow:0 3px 5px rgba(0, 0, 0, .2);box-sizing:border-box}
+.logSideL .titleSet .t1 {font-size:40px}
+.logSideL .titleSet .t2 {font-size:20px;font-weight:400;margin:19px 0 0;}
+@media all and (max-width:1399px) {
+    .logSideL {width:540px}
+}
+@media all and (max-width:1299px) {
+    .logSideL {width:400px}
+}
+@media all and (max-width:1099px) {
+    .logSideL {width:260px}
+    .logSideL .titleSet .t1 {font-size:30px}
+    .logSideL .titleSet .t2 {margin:5px 0 0;}
+}
+@media all and (max-width:899px) {
+    .logSideL {width:200px}
+    .logSideL .titleSet .t1 {font-size:26px;letter-spacing:-.05em}
+    .logSideL .titleSet .t2 {font-size:17px;}
+}
+@media all and (max-width:699px) {
+    .logSideL {width:100%;height:50px}
+    .logSideL .titleSet span {display:inline-block;vertical-align:bottom}
+}
+@media all and (max-width:599px) {
+    .logSideL {height:auto;position:relative;left:auto;top:auto;padding:10px 0;}
+    .logSideL .titleSet {position:relative;left:auto;top:auto;padding:0 10px;transform:none}
+    .logSideL .titleSet span {display:block}
+    .logSideL .titleSet .t1 {font-size:20px;}
+    .logSideL .titleSet .t2 {margin:0;}
+}
+
+/* ==============================
+* 03. 우측
+================================= */
+.logSideR {position:relative;width:100%;height:100%;text-align:center;background:#fff;font-size:0;box-sizing:border-box;padding:0 40px}
+.logSideR:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
+.logSideR .frmSet {display:inline-block;vertical-align:middle;text-align:left;max-width:800px;width:100%;box-sizing:border-box}
+.logSideR .frmSet .frmTit {text-align:center;font-size:0;margin:0 0 44px;}
+.logSideR .frmSet .frmTit img {display:inline-block}
+.logSideR .frmSet .frmBody {box-sizing:border-box;position:relative;padding:54px 430px 116px 54px;}
+.logSideR .frmSet .frmBody:after {content:"";display:block;position:absolute;width:100%;height:100%;box-sizing:border-box;border:1px solid #ddd;z-index:0;left:0;top:0}
+.logSideR .frmSet .frmBody > div {z-index:1;}
+.logSideR .frmSet .boxTop {box-sizing:border-box;position:relative}
+.logSideR .frmSet .boxTop:after {content:"";display:block;width:74px;height:74px;background:url(/resources/_Img/Admin/login/login_ico_1.png) no-repeat;margin:65px 0 0;}
+.logSideR .frmSet .boxTop > * {display:block;box-sizing:border-box;position:relative;line-height:1.2;word-wrap:break-word;word-break:keep-all;white-space:normal}
+.logSideR .frmSet .boxTop .t1 {font-size:48px;letter-spacing:0;font-weight:500;color:#000}
+.logSideR .frmSet .boxTop .t2 {font-size:18px;letter-spacing:-.075em;font-weight:400;margin:21px 0 0;color:#000}
+.logSideR .frmSet .boxMid {position:absolute;width:100%;max-width:360px;right:58px;top:61px}
+.logSideR .frmSet .boxMid .login-form {display:block}
+.logSideR .frmSet .boxMid .login-form li {display:block;margin:0 0 6px;border-radius:10px;background:#efefef;position:relative}
+.logSideR .frmSet .boxMid .login-form li:last-child {margin:0}
+.logSideR .frmSet .boxMid .login-form label {display:block;position:absolute;font-size:17px;color:#304067;left:50px;top:13px;z-index:0;background:transparent;box-sizing:border-box;padding:3px 5px 4px;line-height:1;border-radius:5px;letter-spacing:-.05em;border:2px solid transparent;transition:all .15s linear}
+.logSideR .frmSet .boxMid .login-form input {display:block;box-sizing:border-box;border:2px solid transparent;background-repeat:no-repeat;background-position:20px center;background-color:transparent;width:100%;height:55px;line-height:55px;margin:0;font-size:17px;color:#304067;outline:0;position:relative;z-index:1;padding:0 15px 0 50px;border-radius:10px;transition:all .3s ease}
+.logSideR .frmSet .boxMid .login-form input.id {background-image:url(/resources/_Img/Admin/login/login_ico_id.png)}
+.logSideR .frmSet .boxMid .login-form input.pw {background-image:url(/resources/_Img/Admin/login/login_ico_pw.png)}
+.logSideR .frmSet .boxMid .login-form input::placeholder {color:#304067}
+.logSideR .frmSet .boxMid .login-form input:focus,
+.logSideR .frmSet .boxMid .login-form input:valid {border-color:#304067}
+.logSideR .frmSet .boxMid .login-form input:focus + label,
+.logSideR .frmSet .boxMid .login-form input:valid + label {font-size:12px;background:#fff;top:-10px;border-color:#304067;z-index:2;}
+.logSideR .frmSet .boxMid .login-save {display:block;line-height:1;margin:5px 0 27px}
+.logSideR .frmSet .boxMid .login-save input {width:0;height:0;overflow:hidden;position:absolute;top:-9999em;left:-9999em;display:block;text-indent:-9999em;font-size:0px;line-height:0;}
+.logSideR .frmSet .boxMid .login-save label {display:block;font-size:17px;letter-spacing:-.05em;color:#666;box-sizing:border-box;position:relative;padding:6px 0 6px 30px;cursor:pointer;transition:all .3s ease}
+.logSideR .frmSet .boxMid .login-save label:before,
+.logSideR .frmSet .boxMid .login-save label:after {content:"";display:block;position:absolute;box-sizing:border-box;transition:all .3s ease}
+.logSideR .frmSet .boxMid .login-save label:before {width:10px;height:5px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #ddd #ddd;transform:rotate(-45deg);z-index:1;left:5px;top:12px}
+.logSideR .frmSet .boxMid .login-save label:after {width:20px;height:20px;border:1px solid #ddd;left:0;top:6px;border-radius:50%;z-index:0}
+.logSideR .frmSet .boxMid .login-save label:focus,
+.logSideR .frmSet .boxMid .login-save label:hover {color:#1d243a;text-decoration:underline}
+.logSideR .frmSet .boxMid .login-save label:focus:before,
+.logSideR .frmSet .boxMid .login-save label:hover:before {border-color:transparent transparent #1d243a #1d243a}
+.logSideR .frmSet .boxMid .login-save label:focus:after,
+.logSideR .frmSet .boxMid .login-save label:hover:after {border-color:#1d243a}
+.logSideR .frmSet .boxMid .login-save input:checked + label {color:#1d243a;font-weight:500;text-decoration:none}
+.logSideR .frmSet .boxMid .login-save input:checked + label:before {border-color:transparent transparent #fff #fff}
+.logSideR .frmSet .boxMid .login-save input:checked + label:after {background:#1d243a;border-color:#1d243a}
+.logSideR .frmSet .boxMid .login-btn {display:block;width:100%;box-sizing:border-box;position:relative;border:0;line-height:1;border-radius:0;background:#3a65d0;text-align:center;padding:24px 20px 26px;overflow:hidden}
+.logSideR .frmSet .boxMid .login-btn span {display:inline-block;position:relative;font-size:20px;color:#fff;font-weight:500;letter-spacing:0;padding:0 22px 0 0;;z-index:1}
+.logSideR .frmSet .boxMid .login-btn span:after {content:"";display:block;position:absolute;width:8px;height:8px;border:solid;border-width:0 2px 2px 0;border-color:transparent #fff #fff transparent;right:0;top:50%;transform:translateY(-50%) rotate(-45deg);transition:all .3s ease}
+.logSideR .frmSet .boxMid .login-btn:before {content:"";display:block;position:absolute;width:100%;height:100%;right:100%;top:0;background:linear-gradient(to right, rgba(32, 49, 71, 1) 0%,  rgba(32, 49, 71, 0) 100% );z-index:0;transition:all .3s ease}
+.logSideR .frmSet .boxMid .login-btn:focus:before,
+.logSideR .frmSet .boxMid .login-btn:hover:before {right:0}
+.logSideR .frmSet .boxMid .login-btn:focus span:after,
+.logSideR .frmSet .boxMid .login-btn:hover span:after {right:-5px;}
+.logSideR .frmSet .boxBot {position:absolute;width:100%;left:0;bottom:0;background:#203147;padding:22px 20px 29px;text-align:center;box-sizing:border-box}
+.logSideR .frmSet .boxBot .login-msg {display:inline-block;font-size:15px;font-weight:300;color:#fff;letter-spacing:-.025em;line-height:1.3;word-wrap:break-word;word-break:keep-all;white-space:normal}
+.logSideR .frmCopy {display:block;position:absolute;width:100%;left:0;bottom:39px;text-align:center}
+.logSideR .frmCopy img {display:inline-block;vertical-align:middle}
+.logSideR .frmCopy span {display:inline-block;font-size:14px;line-height:1;letter-spacing:-.025em;vertical-align:middle;font-weight:400;margin:6px 0 0 22px}
+@media all and (max-width:1399px) {
+    .logSideR .frmSet .frmBody {padding:40px 430px 100px 40px}
+    .logSideR .frmSet .boxMid {right:40px;top:50px}
+}
+@media all and (max-width:1299px) {
+    .logSideR .frmSet .frmTit {margin:0 0 25px;}
+    .logSideR .frmSet .frmBody {padding:40px 360px 100px 40px;}
+    .logSideR .frmSet .boxMid {max-width:300px;}
+    .logSideR .frmSet .boxBot {padding:15px}
+}
+@media all and (max-width:999px) {
+    .logSideR .frmSet .frmBody {padding:30px 30px 100px 30px;}
+    .logSideR .frmSet .boxTop:after {position:absolute;width:70px;height:70px;margin:0;background-size:cover;right:0;top:0}
+    .logSideR .frmSet .boxTop .t1 {font-size:40px;}
+    .logSideR .frmSet .boxTop .t2 {font-size:17px;letter-spacing:-.05em;margin:10px 0 0;}
+    .logSideR .frmSet .boxTop .t2 br {display:none}
+    .logSideR .frmSet .boxMid {max-width:none;position:relative;right:auto;top:auto;margin:30px 0 0;}
+    .logSideR .frmSet .boxMid .login-btn {padding:15px 10px 15px}
+}
+@media all and (max-width:899px) {
+    .logSideR {padding:0 20px}
+    .logSideR .frmSet .boxTop:after {width:50px;height:50px;}
+}
+@media all and (max-width:699px) {
+    .logSideR .frmSet {margin:-80px 0 0;}
+    .logSideR .frmSet .frmTit {margin:0 0 20px;}
+    .logSideR .frmSet .frmBody {padding:30px 30px 80px 30px}
+    .logSideR .frmCopy {bottom:20px}
+}
+@media all and (max-width:599px) {
+    .logSideR {height:auto;padding:40px 20px 20px}
+    .logSideR:before {display:none}
+    .logSideR .frmSet {display:block;margin:0;}
+    .logSideR .frmSet .boxTop:after {width:40px;height:40px;}
+    .logSideR .frmSet .boxTop .t1 {font-size:30px;}
+    .logSideR .frmCopy {position:relative;left:auto;bottom:auto;margin:20px 0 0;}
+}
+@media all and (max-width:499px) {
+    .logSideR .frmSet .frmBody {padding:20px 20px 90px 20px}
+    .logSideR .frmSet .boxMid {margin:20px 0 0;}
+}

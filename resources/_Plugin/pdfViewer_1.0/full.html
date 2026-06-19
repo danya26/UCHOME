@@ -1,0 +1,45 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="author" content="이엔아이, 상담전화1644-7759" />
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="" />
+	<meta name="robots" content="INDEX" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />  
+	
+<title>PDF VIEWER</title>
+<style>
+*{padding:0;margin:0;}
+body {background:#444;}
+</style>
+<body>
+  
+  <!-- Use latest PDF.js build from Github -->
+  <script type="text/javascript" src="./jquery-fix.js"></script>
+  <script type="text/javascript" src="./pdf.js"></script>
+  <script type="text/javascript" src="./jquery-pdfdoc.js"></script>
+
+   <link href="./jquery-pdfdoc.css" rel="stylesheet" type="text/css" />
+
+
+ <div style="width: 100%; height: 100%;position:relative;">
+
+        <div id="mypdfdoc"></div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#mypdfdoc').PDFDoc( { source : '<?=$fileurl?>' } );
+
+        });
+    </script>
+
+
+  
+</body>
+</html>

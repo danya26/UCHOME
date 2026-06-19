@@ -1,0 +1,20 @@
+/* -------------------------------------Board S------------------------------------ */
+.mtabvideo-TMPL01 {position:relative;padding:25px;background:#fff;text-align:left;overflow:hidden;}
+.mtabvideo-TMPL01 dt {line-height:1;}
+.mtabvideo-TMPL01 dt a {color:#333;font-size:20px;font-weight:bold;letter-spacing:-0.06em;}
+.mtabvideo-TMPL01 dd {display:none;padding-top:18px;font-size:13px;}
+.mtabvideo-TMPL01 dd li a {position:relative;display:block;padding:0 0 0 15px;line-height:26px;}
+.mtabvideo-TMPL01 dd li a:before {position:absolute;top:15px;left:1px;content:"";display:block;width:3px;height:3px;background:#b1b1b1;}
+.mtabvideo-TMPL01 dd li a .ico-new {display:inline-block;margin-left:5px;}
+.mtabvideo-TMPL01 dd li .subject {color:#555;display:inline-block;vertical-align:middle;max-width:65%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.mtabvideo-TMPL01 dd li a:hover .subject {text-decoration:underline;}
+.mtabvideo-TMPL01 dd li .date {position:absolute;top:2px;right:0;font-size:12px;color:#666;}
+.mtabvideo-TMPL01 dd li.no-data {background:url(/_Img/Common/ico_nodata.png) no-repeat 50% 0;padding-top:80px}
+.mtabvideo-TMPL01 .btn-more {position:absolute;top:0;right:0;width:30px;height:30px;background:url(/resources/_Img/MainModule/ico_btnmore.png) no-repeat 0 0;transition:all .5s ease;}
+.mtabvideo-TMPL01 .btn-more:hover {transform:rotate(360deg)}
+.mtabvideo-TMPL01 .isOn dd {display:block;}
+@media only screen and (max-width:449px){
+	.mtabvideo-TMPL01 dd li .subject {max-width:88%}
+	.mtabvideo-TMPL01 dd li .date {display:none;}
+}
+/* -------------------------------------Board E------------------------------------ */

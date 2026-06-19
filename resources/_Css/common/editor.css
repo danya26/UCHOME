@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import url("/resources/_Css/common/webfont.css");
+@import url("/resources/_Css/common/common.css");
+@import url("/resources/_Css/common/style.default.css");
+@import url("/resources/_Css/common/prg.style.css");
+
+/* -------- TinyMCE 에디터내 스타일 적용 -------- */
+body {word-break:keep-all;word-wrap:break-word;font-size:18px;line-height:1.6667;letter-spacing:-.025em;color:#555;font-weight:400;box-sizing:border-box;padding:20px;}
+body:after {clear:both;content:"";display:block}
+@media all and (max-width:999px) {
+	body {font-size:17px;line-height:1.6}
+}
+@media all and (max-width:768px) {
+	body {font-size:16px;line-height:1.5}
+}
+@media all and (max-width:499px) {
+	body {font-size:15px}
+}

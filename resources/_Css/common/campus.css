@@ -1,0 +1,300 @@
+@charset "utf-8";
+/* ==============================
+* 01. BASE
+================================= */
+html, body, #campus-map  {position:relative;height:100%;overflow:hidden}
+button,
+input[type=submit],
+input[type=text],
+input[type=password],
+textarea {font-family:"Noto Sans KR"}
+#campus-map {font-size:18px;opacity:0;transition:all .3s ease}
+#campus-map.stable {opacity:1}
+
+/* ==============================
+* 02. 좌측 UI
+================================= */
+#lm-menu {position:fixed;left:0;top:0;width:420px;height:100%;background:#fff;z-index:9999;box-shadow:5px 0 10px rgba(0, 0, 0, .2);right:auto;transition:all .3s ease}
+#lm-menu.close {left:-420px}
+#lm-menu .mapPkg {position:relative;height:100%;background:#fff;box-sizing:border-box;padding:130px 0 0;z-index:10}
+#lm-menu .map-tit {position:absolute;text-align:center;background:#273135;left:0;top:0;width:100%;height:130px;line-height:130px}
+#lm-menu .map-tit h1 {color:#fff;font-size:1.333em}
+#lm-menu .map-tit h1 img,
+#lm-menu .map-tit h1 span {display:inline-block;vertical-align:middle;line-height:1}
+#lm-menu .map-tit h1 img {max-width:160px}
+#lm-menu .map-tit h1 span {margin:-4px 0 0 10px}
+#lm-menu .map-lst {position:relative;width:100px;height:100%;background:#055a23}
+#lm-menu .mapLst {padding-top:30px}
+#lm-menu .mapLst dl {display:block;width:100px}
+#lm-menu .mapLst dl dt button {display:block;width:100%;box-sizing:border-box;position:relative;padding:13px 0 17px;text-align:center;border:0;background:rgba(0, 0, 0, .1);border-top:1px solid rgba(0, 0, 0, .3);transition:all .3s ease}
+#lm-menu .mapLst dl dt button:focus,
+#lm-menu .mapLst dl dt button:hover {background:rgba(0, 0, 0, .2)}
+#lm-menu .mapLst dl dt button span {display:inline-block;color:#fff;font-size:17px;font-weight:500;letter-spacing:-.05em}
+#lm-menu .mapLst dl dt button .ico {background:url(/resources/_Img/CampusMap/lm_ico.png) no-repeat 50% 0}
+#lm-menu .mapLst dl dd {position:absolute;left:100px;top:0;width:320px;height:100%;padding:30px;box-sizing:border-box;display:none}
+#lm-menu .mapLst dl dd ul {position:relative;height:auto}
+#lm-menu .mapLst dl dd ul li {border-bottom:1px solid #dadada}
+#lm-menu .mapLst dl dd ul li:first-child {border-top:1px solid #dadada}
+#lm-menu .mapLst dl dd ul li button {display:block;width:100%;border:0;text-align:left;background:transparent;font-family:"Noto Sans KR";padding:0 0 0 30px;box-sizing:border-box;position:relative;font-size:0;transition:all .3s ease}
+#lm-menu .mapLst dl dd ul li button.hasBuildingAbb {padding-right:90px}
+#lm-menu .mapLst dl dd ul li button:before {content:"";display:inline-block;width:0;height:70px;vertical-align:middle}
+#lm-menu .mapLst dl dd ul li button:after {content:"";display:block;position:absolute;width:24px;height:36px;background:url(/resources/_Img/CampusMap/pin.png) no-repeat;background-size:cover;left:0;top:50%;transform:translateY(-50%)}
+#lm-menu .mapLst dl dd ul li button span {display:inline-block;line-height:1.2;word-wrap:break-word;word-break:keep-all;white-space:normal;vertical-align:middle;letter-spacing:-.05em;transition:all .3s ease}
+#lm-menu .mapLst dl dd ul li button .txt {font-size:15px;color:#222;font-weight:500;width:auto;max-width:95%}
+#lm-menu .mapLst dl dd ul li button .num {position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:12px;width:80px;text-align:center;box-sizing:border-box;border:1px solid #ddd;border-radius:3px;padding:5px 5px 5px;color:#777;background:#fff;font-weight:400}
+#lm-menu .mapLst dl dd ul li button:focus,
+#lm-menu .mapLst dl dd ul li button:hover {}
+#lm-menu .mapLst dl dd ul li button:focus .txt,
+#lm-menu .mapLst dl dd ul li button:hover .txt {text-decoration:underline}
+#lm-menu .mapLst dl dd ul li button:focus:after,
+#lm-menu .mapLst dl dd ul li button:hover:after {background:url(/resources/_Img/CampusMap/pin_ov.png);background-size:cover}
+#lm-menu .mapLst dl dd ul li.hasNoData {padding:30px 0}
+#lm-menu .mapLst dl dd ul li.hasNoData .no-data {text-align:center;font-size:17px;letter-spacing:-.05em;padding:0;background:none}
+#lm-menu .mapLst dl dd ul li.hasNoData .no-data:before {content:"";display:block;width:71px;height:71px;background:url(/resources/_Img/Board/default/ico_nodata.png) no-repeat;background-size:cover;margin:0 auto 10px}
+#lm-menu .mapLst dl dd ul li.on button .txt {color:#ec6f38}
+#lm-menu .mapLst dl dd ul li.on button .num {background:#ec6f38;border-color:#ec6f38;color:#fff}
+#lm-menu .mapLst dl dd ul li.on button:after {background:url(/resources/_Img/CampusMap/pin_ov.png);background-size:cover}
+#lm-menu .mapLst dl.open dt button {background:rgba(0, 0, 0, .4);border-color:transparent}
+#lm-menu .mapLst dl.open + dl dt button {border-color:transparent}
+#lm-menu .mapLst dl.open dd {display:block}
+#lm-menu .mapLst dl.open dd .mCSB_outside + .mCSB_scrollTools {right:0}
+#lm-menu .mapLst dl.open dd .mCSB_buttonUp,
+#lm-menu .mapLst dl.open dd .mCSB_buttonDown {display:none;opacity:0}
+#lm-menu .mapUtil {position:absolute;left:0;bottom:0;width:100%;text-align:center}
+#lm-menu .mapUtil a {display:block;color:#fff;font-size:15px;padding:30px 0;border-top:1px solid rgba(255,255,255,.2);transition:all .3s ease}
+#lm-menu .mapUtil a:focus,
+#lm-menu .mapUtil a:hover {background:rgba(0,0,0,.1)}
+#lm-menu .func-btn {display:none}
+@media all and (max-width:1599px) {
+    #lm-menu {width:380px}
+    #lm-menu.close {left:-380px}
+    #lm-menu .mapLst {padding-top:20px}
+    #lm-menu .mapLst dl dd {padding:20px;width:280px}
+}
+@media all and (max-width:1299px) {
+    #lm-menu {width:300px}
+    #lm-menu.close {left:-300px}
+    #lm-menu .map-tit h1 {font-size:1em}
+    #lm-menu .map-lst {width:80px}
+    #lm-menu .mapLst {padding-top:15px}
+    #lm-menu .mapLst dl {width:80px}
+    #lm-menu .mapLst dl dt button {padding:15px 0}
+    #lm-menu .mapLst dl dt button span {font-size:15px;line-height:1}
+    #lm-menu .mapLst dl dd {padding:15px;width:220px;left:80px}
+    #lm-menu .mapLst dl dd ul li button {padding:10px 0 10px 25px}
+    #lm-menu .mapLst dl dd ul li button:before {display:none}
+    #lm-menu .mapLst dl dd ul li button:after {width:17px;height:25px;top:8px;transform:none}
+    #lm-menu .mapLst dl dd ul li button.hasBuildingAbb {padding-right:0}
+    #lm-menu .mapLst dl dd ul li button .txt {display:block;max-width:none;margin:0 0 5px}
+    #lm-menu .mapLst dl dd ul li button .num {position:relative;right:auto;top:auto;transform:none;width:auto;padding:5px}
+    #lm-menu .mapLst dl dd ul li.hasNoData .no-data {font-size:15px}
+    #lm-menu .mapLst dl dd ul li.hasNoData .no-data:before {width:50px;height:50px}
+    #lm-menu .func-btn {display:block;position:absolute;width:40px;height:40px;border:0;background:#fff;left:100%;top:50%;transform:translateY(-50%);box-shadow:5px 0 10px rgba(0, 0, 0, .2);border-radius:0 5px 5px 0}
+    #lm-menu .func-btn:before,
+    #lm-menu .func-btn:after {content:"";display:block;position:absolute;width:20px;height:2px;background:#333;top:0;right:0;bottom:0;left:0;margin:auto;transition:all .3s ease}
+    #lm-menu .func-btn:before {transform:rotate(45deg)}
+    #lm-menu .func-btn:after {transform:rotate(-45deg)}
+    #lm-menu.close .func-btn {background:#1472b6}
+    #lm-menu.close .func-btn:before,
+    #lm-menu.close .func-btn:after {width:14px;background:#fff}
+    #lm-menu.close .func-btn:before {margin:15px auto auto 14px}
+    #lm-menu.close .func-btn:after {margin:auto auto 15px 14px}
+}
+@media all and (max-width:999px) {
+    #lm-menu {width:100%;box-shadow:0 5px 10px rgba(0, 0, 0, .2);height:200px}
+    #lm-menu.close {left:0;top:-200px}
+    #lm-menu .mapPkg {height:auto;padding:60px 0 0}
+    #lm-menu .map-tit {width:100%;height:60px;line-height:60px}
+    #lm-menu .map-tit h1 {font-size:1.0em}
+    #lm-menu .map-tit h1 img {max-width:none;height:24px}
+    #lm-menu .map-tit h1 span {margin:-4px 0 0 10px}
+    #lm-menu .map-lst {width:100%;height:auto}
+    #lm-menu .mapLst {padding-top:0;text-align:center;box-sizing:border-box;position:relative;font-size:0}
+    #lm-menu .mapLst dl {display:inline-block}
+    #lm-menu .mapLst dl dt {}
+    #lm-menu .mapLst dl dt button {border-top:0;border-bottom:0}
+    #lm-menu .mapLst dl dd {position:absolute;width:100%;left:0;top:50px;background:#fff;height:89px;padding:10px 15px}
+    #lm-menu .mapLst dl dd ul {display:flex;flex-flow:row;flex-wrap:wrap}
+    #lm-menu .mapLst dl dd ul li {display:inline-block;width:33.3333%;border-bottom:0;box-sizing:border-box;position:relative;border-top:0 !important;border-bottom:0 !important}
+    #lm-menu .mapLst dl dd ul li.hasNoData {width:100%;padding:0;text-align:center;padding:25px 0}
+    #lm-menu .mapLst dl dd ul li.hasNoData:after {display:none}
+    #lm-menu .mapLst dl dd ul li.hasNoData .no-data {display:inline-block;padding:0 0 0 60px;box-sizing:border-box;position:relative}
+    #lm-menu .mapLst dl dd ul li.hasNoData .no-data:before {position:absolute;margin:0;left:0;top:50%;transform:translateY(-50%)}
+    #lm-menu .mapUtil {display:none}
+    #lm-menu .func-btn {left:50%;top:100%;transform:translate(-50%, 0);box-shadow:0 5px 10px rgba(0, 0, 0, .2);border-radius:0 0 5px 5px}
+    #lm-menu.close .func-btn:before {margin:20px auto auto 9px}
+    #lm-menu.close .func-btn:after {margin:20px 9px auto auto}
+}
+@media all and (max-width:799px) {
+    #lm-menu .mapLst dl dd ul li {width:50%;padding:0 15px 0 0}
+}
+@media all and (max-width:699px) {
+    #lm-menu {z-index:2}
+}
+@media all and (max-width:599px) {
+    #lm-menu {height:172px}
+    #lm-menu.close {top:-172px}
+    #lm-menu .mapPkg {padding:40px 0 0}
+    #lm-menu .map-tit {height:40px;line-height:40px}
+    #lm-menu .map-tit h1 {font-size:15px}
+    #lm-menu .map-tit h1 img {height:20px;margin:-2px 0 0}
+    #lm-menu .mapLst dl dt button {padding:0;height:40px;line-height:40px}
+    #lm-menu .mapLst dl dd {height:92px;top:40px}
+    #lm-menu .mapLst dl dd ul li {width:100%;padding:0}
+    #lm-menu .mapLst dl dd ul li button.hasBuildingAbb {padding-right:130px}
+    #lm-menu .mapLst dl dd ul li button .txt {margin:0;width:auto;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;}
+    #lm-menu .mapLst dl dd ul li button .num {position:absolute;width:120px;right:0;top:50%;transform:translateY(-50%)}
+}
+
+/* ==============================
+* 03. API지도
+================================= */
+#campusMap {position:absolute;width:100%;height:100%}
+#campusMap .cOverlay {margin:0;position:absolute;bottom:55px;left:50%;transform:translateX(-50%);box-shadow:0 0 3px rgba(0, 0, 0, .5), 0 5px 5px rgba(0, 0, 0, .25);border:0;border-radius:5px;background:#fff}
+#campusMap .cOverlay:after {content:"";display:block;position:absolute;width:100%;height:100%;left:0;bottom:0;background:linear-gradient(to bottom, #fff 0%, #ddd 100%);border-radius:5px;transition:all .3s ease}
+#campusMap .cOverlay .msgBox {display:block;position:relative;box-sizing:border-box;border-radius:3px;line-height:1;padding:4px 7px 5px;min-width:70px;max-width:100px;width:100px;z-index:1;transition:all .3s ease}
+#campusMap .cOverlay .msgBox:after {content:"";display:block;position:absolute;width:0;height:0;left:50%;top:100%;border:solid;border-width:5px 5px 0;border-color:#ddd transparent transparent;transform:translateX(-50%);transition:all .3s ease}
+#campusMap .cOverlay .msgBox span {display:block;font-size:14px;line-height:1.3;letter-spacing:-.05em;text-align:center;white-space:normal;color:#000;font-weight:500;word-wrap:break-word;word-break:keep-all;white-space:normal}
+#campusMap .cOverlay:focus:after,
+#campusMap .cOverlay:hover:after {height:0}
+#campusMap .cOverlay:focus .msgBox:after,
+#campusMap .cOverlay:hover .msgBox:after {border-color:#fff transparent transparent}
+
+/* ==============================
+* 04. 상세보기
+================================= */
+#rm-text {position:absolute;right:0;bottom:0;width:425px;height:100%;background:#fff;z-index:10;box-shadow:-5px 0 10px rgba(0, 0, 0, .2);box-sizing:border-box;transition:all .3s ease}
+#rm-text.close {right:-425px}
+#rm-text .cmapPicWr {position:absolute;box-sizing:border-box;width:100%;height:0;padding:65.886% 0 0;left:0;top:0;z-index:3}
+#rm-text .cmapPicSld {position:absolute;width:100%;height:100%;text-align:center;background:#f2f2f2 url(/resources/_Img/Common/ico_noimg.png) no-repeat center center;background-size:cover;z-index:0;left:0;top:0}
+#rm-text .cmapPicSld .owl-stage-outer,
+#rm-text .cmapPicSld .owl-stage,
+#rm-text .cmapPicSld .owl-item,
+#rm-text .cmapPicSld .item {height:100%;box-sizing:border-box;position:relative;z-index:0}
+#rm-text .cmapPicSld img {display:block;position:absolute;width:100%;height:100%;left:0;top:0}
+#rm-text .cmapPicSld .owl-nav {position:absolute;width:100%;left:0;top:50%}
+#rm-text .cmapPicSld .owl-nav button {display:block;position:absolute;width:40px;height:40px;border:0;background:rgba(0, 0, 0, .5);top:50%;transform:translateY(-50%);border-radius:3px;font-size:0;transition:all .3s ease}
+#rm-text .cmapPicSld .owl-nav button:focus,
+#rm-text .cmapPicSld .owl-nav button:hover {background:#055a23}
+#rm-text .cmapPicSld .owl-nav button:after {content:"";display:block;position:absolute;width:10px;height:10px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #fff #fff;top:0;right:0;bottom:0;left:0}
+#rm-text .cmapPicSld .owl-nav .owl-prev {left:10px}
+#rm-text .cmapPicSld .owl-nav .owl-prev:after {transform:rotate(45deg);margin:auto auto auto 17px}
+#rm-text .cmapPicSld .owl-nav .owl-next {right:10px}
+#rm-text .cmapPicSld .owl-nav .owl-next:after {transform:rotate(225deg);margin:auto 17px auto auto}
+#rm-text .cmapPicSldCtrl {display:block;position:absolute;text-align:center;padding:10px 15px;background:#fff;border-radius:999px;box-shadow:0 0 20px rgba(0, 0, 0, .25);line-height:1;font-size:0;right:15px;bottom:-20px;z-index:3;font-size:0;line-height:1}
+#rm-text .cmapPicSldCtrl div {display:inline-block;vertical-align:middle;font-size:0;line-height:1}
+#rm-text .cmapPicSldCtrl button {display:inline-block;width:20px;height:20px;box-sizing:border-box;position:relative;vertical-align:middle;border:0;background:transparent;transition:all .3s ease}
+#rm-text .cmapPicSldCtrl button:after {content:"";display:block;position:absolute;box-sizing:border-box;top:0;right:0;bottom:0;left:0;margin:auto;border:solid;transition:all .3s ease}
+#rm-text .cmapPicSldCtrl .dataAuto {}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-stop {display:block}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-stop:after {width:6px;height:10px;border-width:0 2px;border-color:transparent #999}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-stop:focus:after,
+#rm-text .cmapPicSldCtrl .dataAuto .btn-stop:hover:after {border-color:transparent #055a23}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-play {display:none}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-play:after {width:0;height:0;border-width:5px 0 5px 5px;border-color:transparent transparent transparent #999}
+#rm-text .cmapPicSldCtrl .dataAuto .btn-play:focus:after,
+#rm-text .cmapPicSldCtrl .dataAuto .btn-play:hover:after {border-color:transparent transparent transparent #055a23}
+#rm-text .cmapPicSldCtrl .dataDots {}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot {display:inline-block}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot:after {width:10px;height:10px;border-radius:50%;background:#999;border:0}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot:focus:after,
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot:hover:after {background:#555}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot span {width:1px;height:1px;overflow:hidden;position:absolute;top:-9999em;left:-9999em;display:block;text-indent:-9999em;font-size:0;line-height:0}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot span .isSel {display:none}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot.active {}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot.active:after {background:#055a23}
+#rm-text .cmapPicSldCtrl .dataDots .owl-dot.active span .isSel {display:block}
+#rm-text .cmapConWr {position:relative;height:100%;box-sizing:border-box;padding:65.886% 20px 20px;z-index:2}
+#rm-text .cmapConWr .ccPkg {position:relative;height:100%;box-sizing:border-box;padding:80px 0 0}
+#rm-text .cmapConWr .ccTit {position:absolute;width:100%;left:0;top:20px;box-sizing:border-box;padding:0 0 0 40px}
+#rm-text .cmapConWr .ccTit:before {content:"";display:block;position:absolute;width:30px;height:45px;background:url(/resources/_Img/CampusMap/pin_ov.png) no-repeat 0 0;left:0;bottom:0}
+#rm-text .cmapConWr .ccTit .txtPkg {display:block}
+#rm-text .cmapConWr .ccTit .buld {display:block;font-size:14px;color:#ec6f38;font-weight:500;box-sizing:border-box;margin:0 0 3px 2px}
+#rm-text .cmapConWr .ccTit .name {display:block;font-size:1.556em;color:#333;font-weight:400}
+#rm-text .cmapConWr .ccTxt {display:block;position:relative;height:100%;box-sizing:border-box;padding:70px 0 0}
+#rm-text .cmapConWr .ccTxt .cType {display:block;position:absolute;width:100%;overflow:hidden;left:0;top:0}
+#rm-text .cmapConWr .ccTxt .cType button {float:left;width:50%;height:50px;text-align:center;border:1px solid #ddd;background:#f2f2f2;font-size:0.944em;color:#333}
+#rm-text .cmapConWr .ccTxt .cType button.build {border-right:0}
+#rm-text .cmapConWr .ccTxt .cType button.floor {}
+#rm-text .cmapConWr .ccTxt .cType button.on {background:#273135;color:#fff}
+#rm-text .cmapConWr .ccTxt .cBody {height:100%}
+#rm-text .cmapConWr .ccTxt .cBody .mCSB_inside > .mCSB_container {margin-right:20px}
+#rm-text .cmapConWr .ccTxt .cBody .mCSB_scrollTools {right:-7px}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList.view,
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo.view {display:block}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList {display:none}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li {position:relative;margin:0 0 20px;font-size:0.944em;color:#666;line-height:1.3}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .num {display:inline-block;color:#333;font-weight:500;padding:0 0 5px;border-bottom:2px solid #ccc;font-size:.889em;margin:0 0 10px}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt {display:block;font-size:.944em;line-height:1.3}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt p {margin:0 0 10px}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt p:last-child {margin:0}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt .strKor {}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt .strEng {}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt .strJap {}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt .strChi {}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gList li .txt .strEtc {display:inline-block;padding:3px 0 0;border-top:1px solid #ddd;font-size:15px;color:#777}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo {display:none}
+#rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo * {word-wrap:break-word;word-break:keep-all;white-space:normal}
+#rm-text .func-btn {display:none}
+@media all and (max-width:1599px) {
+    #rm-text {width:380px}
+    #rm-text.close {right:-380px}
+}
+@media all and (max-width:1299px) {
+    #rm-text {width:300px}
+    #rm-text.close {right:-300px}
+    #rm-text .cmapConWr .ccTxt {padding:65px 0 0}
+    #rm-text .func-btn {display:block;position:absolute;width:40px;height:40px;border:0;background:#fff;right:100%;top:50%;transform:translateY(-50%);box-shadow:-5px 0 10px rgba(0, 0, 0, .2);border-radius:5px 0 0 5px}
+    #rm-text .func-btn:before,
+    #rm-text .func-btn:after {content:"";display:block;position:absolute;width:20px;height:2px;background:#333;top:0;right:0;bottom:0;left:0;margin:auto;transition:all .3s ease}
+    #rm-text .func-btn:before {transform:rotate(45deg)}
+    #rm-text .func-btn:after {transform:rotate(-45deg)}
+    #rm-text.close .func-btn {background:#1472b6}
+    #rm-text.close .func-btn:before,
+    #rm-text.close .func-btn:after {width:14px;background:#fff}
+    #rm-text.close .func-btn:before {margin:auto auto 15px 12px}
+    #rm-text.close .func-btn:after {margin:15px auto auto 12px}
+}
+@media all and (max-width:999px) {
+    #rm-text {width:100%;height:300px;box-shadow:0 -5px 10px rgba(0, 0, 0, .2)}
+    #rm-text.close {bottom:-300px;right:auto}
+    #rm-text .cmapPicWr {width:300px;left:20px;top:20px;height:auto;padding:0}
+    #rm-text .cmapPicSld {position:relative;height:0;z-index:0;left:auto;top:auto;padding:0 0 65.88235%}
+    #rm-text .cmapPicSld .owl-nav button {width:30px;height:30px}
+    #rm-text .cmapPicSld .owl-nav .owl-prev {left:10px}
+    #rm-text .cmapPicSld .owl-nav .owl-prev:after {margin:auto auto auto 12px}
+    #rm-text .cmapPicSld .owl-nav .owl-next {right:10px}
+    #rm-text .cmapPicSld .owl-nav .owl-next:after {margin:auto 12px auto auto}
+    #rm-text .cmapPicSldCtrl {padding:5px;box-shadow:0 0 10px rgba(0, 0, 0, .25);right:10px;bottom:-15px}
+    #rm-text .cmapConWr {padding:17px 20px 20px 340px;z-index:2}
+    #rm-text .cmapConWr .ccPkg {padding:55px 0 0}
+    #rm-text .cmapConWr .ccTit {top:0;padding:0 0 0 30px}
+    #rm-text .cmapConWr .ccTit:before {width:21px;height:31px;background-size:cover}
+    #rm-text .cmapConWr .ccTit .buld {height:14px}
+    #rm-text .cmapConWr .ccTit .name {font-size:1.3em}
+    #rm-text .cmapConWr .ccTxt .cType button {height:40px}
+    #rm-text .func-btn {right:50%;top:auto;bottom:100%;transform:translate(50%, 0);box-shadow:0 -5px 10px rgba(0, 0, 0, .2);border-radius:5px 5px 0 0}
+    #rm-text.close .func-btn:before {margin:auto 9px 20px auto}
+    #rm-text.close .func-btn:after {margin:auto auto 20px 9px}
+}
+@media all and (max-width:799px) {
+    #rm-text .cmapConWr {padding:17px 20px 20px 280px}
+    #rm-text .cmapPicWr {width:240px}
+}
+@media all and (max-width:699px) {
+    #rm-text {height:100%;z-index:3;bottom:0}
+    #rm-text.close {bottom:-100%}
+    #rm-text .cmapConWr {padding:65.886% 20px 20px}
+    #rm-text .cmapPicWr {width:100%;left:auto;top:auto;padding:65.886% 0 0}
+    #rm-text .cmapPicSld {position:absolute;width:100%;height:100%;z-index:0;left:0;top:0;padding:0}
+    #rm-text .cmapConWr .ccTit {top:15px}
+    #rm-text .cmapConWr .ccPkg {padding:70px 0 0}
+    #rm-text .func-btn {right:15px;top:15px;bottom:auto;transform:none;box-shadow:none;border-radius:0;z-index:3}
+    #rm-text.close .func-btn {right:50%;top:auto;bottom:100%;transform:translateX(50%);border-radius:5px 5px 0 0;box-shadow:0 -5px 10px rgba(0, 0, 0, .2)}
+}
+@media all and (max-width:499px) {
+    #rm-text .cmapConWr .ccTit .name {font-size:1.2em;}
+    #rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo .c-tit03 {font-size:1.1em;}
+    #rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo ul li {font-size:16px;line-height:1.2}
+    #rm-text .cmapConWr .ccTxt .cBody .cmap-gInfo ul li:before {top:11px}
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<link href="./css/reset.css" rel="stylesheet" />
+	<link href="./css/style.css" rel="stylesheet" />
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+	<script src="../../_Js/core/jquery-1.11.3.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+	<script src="./js/vchatcloud-1.2.0.min.js"></script>
+	<script src="./js/login.js"></script>
+	<script src="./js/draw.js"></script>
+	<script src="./js/count.js"></script>
+	<script src="./js/errMsg.js"></script>
+</head>
+<body>
+	<div id="wrap" class="vChatKakao">
+		<section>
+			<div class="kakao">
+				<article class="header">
+					<span><i class="fas fa-wifi"></i></span>
+				</article>
+				<div class="errorpopup">
+					<p><i class="fas fa-exclamation-circle"></i></p>
+					<p>시스템이 원활하지 않아 오류가 발생하였습니다. 잠시 후, 다시 참여해 주시기 바랍니다.</p>
+					<a class="popupbtn" href="#!">닫기</a>
+				</div>
+				<div class="custompopup">
+					<p>팝업</p>
+					<a class="popupbtn" href="#!">확인</a><a class="popupbtn" href="#!">취소</a>
+				</div>
+				<article class="contents">
+					<div class="login">
+						<p class="login-title">대화명 설정</p>
+						<div class="profile">
+							<p>프로필 이미지</p>
+							<ul>
+								<li>
+									<a href="#!" class="active" profile="1"><img src="./img/profile/1.png" alt="man" width="100%"></a>
+								</li>
+								<li>
+									<a href="#!" profile="2"><img src="./img/profile/2.png" alt="woman" width="100%"></a>
+								</li>
+								<li>
+									<a href="#!" profile="3"><img src="./img/profile/3.png" alt="flower1" width="100%"></a>
+								</li>
+								<li>
+									<a href="#!" profile="4"><img src="./img/profile/4.png" alt="flower2" width="100%"></a>
+								</li>
+								<li>
+									<a href="#!" profile="5"><img src="./img/profile/5.png" alt="flower3" width="100%"></a>
+								</li>
+							</ul>
+						</div>
+						<div class="name">
+							<label for="name">대화명</label>
+							<input class="name" type="text" id="name" placeholder="로그인 할 대화명을 입력 해주세요.">
+						</div>
+						<button class="popupbtn">확인</button>
+					</div>
+					<div class="talk_field">
+						<div class="opponent_profile">
+							<ul>
+								<li class="room_img"><img src="./img/chat.svg" alt="man" width="100%"></li>
+								<li>vChatCloud 오픈채팅방</li>
+							</ul>
+						</div>
+						<div class="talk_contents">
+							<div class="content1">
+							</div>
+						</div>
+						<div class="talk_input">
+							<div>
+								<div class="textbox" id="content" contenteditable="true" placeholder="메세지 입력하기"></div>
+								<div class="btn_send"><a href="#!">전송</a></div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

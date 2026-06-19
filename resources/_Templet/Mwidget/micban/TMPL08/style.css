@@ -1,0 +1,56 @@
+/* -------------------------------------ICON LARGE S------------------------------------ */
+.mlnk-btn {position: relative;}
+.mlnk-btn:before {content: '';position: absolute;left: 0;top: 0;width: 100%;height: 1px;background: #dcdcdc;}
+.mlnk-btn:first-child:before {display: none;}
+.mlnk-btn a {display: block;padding:45px 95px 0 115px;height:145px;}
+
+.mlnk-btn a:after {content: '';position: absolute;left:20px;top:30px;width:85px;height:73px;background:url(/resources/_Img/MainModule/micban/l4/mlnk_icol1.png) no-repeat 50% 50%;}
+.mlnk-btn.ico-icon1 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol1.png);}
+.mlnk-btn.ico-icon2 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol2.png);}
+.mlnk-btn.ico-icon3 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol3.png);}
+.mlnk-btn.ico-icon4 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol4.png);}
+.mlnk-btn.ico-icon5  a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol5.png);}
+.mlnk-btn.ico-icon6 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol6.png);}
+.mlnk-btn.ico-icon7  a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol7.png);}
+.mlnk-btn.ico-icon8 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol8.png);}
+.mlnk-btn.ico-icon9  a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol9.png);}
+.mlnk-btn.ico-icon10 a:after {background-image:url(/resources/_Img/MainModule/micban/l4/mlnk_icol10.png);}
+.mlnk-btn .tit {display: block;font-size: 22px;color: #333;font-weight: 500;margin-bottom: 10px;}
+.mlnk-btn .eng {display: block;font-size: 16px;color: #b5b5b5;margin-bottom: 20px;}
+.mlnk-btn .stxt {display: block;font-size: 15px;color: #666;line-height: 1.2;}
+.mlnk-btn .arr {position: absolute;right:30px;bottom:30px;width: 27px;height: 27px;border:1px solid #b2b2b2}
+.mlnk-btn .arr:before,
+.mlnk-btn .arr:after {content: '';position: absolute;left:50%;top:50%;width:8px;height:2px;margin:0 0 0 -3px;background:#b2b2b2;}
+.mlnk-btn .arr:before {transform:rotate(45deg);-ms-transform:rotate(45deg);margin-top:-4px;}
+.mlnk-btn .arr:after {transform:rotate(-45deg);-ms-transform:rotate(-45deg);margin-top:1px;}
+.mlnk-btn:hover .stxt, .mlnk-btn:focus .stxt {text-decoration:underline}
+.mlnk-btn:hover a:after {animation:ico_ani3 1s ease-out}
+@media all and (max-width:1199px) {
+	.mlnk-btn a {padding-right:60px}
+	.mlnk-btn .tit {font-size:20px}
+}
+@media all and (max-width:999px) {
+	.mlnk-btn a {padding-top:30px}
+}
+@media all and (max-width:768px) {
+	.mlnk-btn a {padding-left:90px;padding-top:30px}
+	.mlnk-btn a:after {width:60px;height:46px;background-size:100% auto}
+	.mlnk-btn .tit {font-size:18px}
+}
+@media all and (max-width:699px) {
+	.mlnk-btn {width:50%;float:left;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;box-sizing:border-box}
+	.mlnk-btn:first-child {border-right:1px solid #dcdcdc}
+	.mlnk-btn:before {display:none}
+	.mlnk-btn .arr {display:none}
+}
+@media all and (max-width:599px) {
+	.mlnk-btn a {height:auto;padding:30px 0 30px 90px}
+	.mlnk-btn a:after {width:50px;height:40px;top:50%;margin-top:-20px}
+	.mlnk-btn .tit {margin-bottom:0;font-size:16px}
+	.mlnk-btn .eng, .mlnk-btn .stxt {display:none}
+}
+@media all and (max-width:499px) {
+	.mlnk-btn a {padding:65px 0 20px;text-align:center}
+	.mlnk-btn a:after {top:20px;left:50%;margin-left:-20px;margin-top:0}
+}
+/* -------------------------------------ICON LARGE E------------------------------------ */

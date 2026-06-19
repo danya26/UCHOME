@@ -1,0 +1,1346 @@
+body {
+	font-family: 'Noto Sans KR';
+	font-weight: 400;
+	transform: all;
+  }
+
+  section.rtc3 {
+	width: 100vw;
+	height: 100vh;
+	background: #282828;
+	border: 0;
+	border-radius: 0;
+	overflow: hidden;
+	position: relative;
+  }
+
+  .toast_pop {
+	font-size: 22px;
+	width: 60%;
+	left: calc(20% - 20px);
+	top: 30px;
+	padding: 20px;
+	position: fixed;
+	color: #fff;
+	background-color: rgb(0 0 0 / 60%);
+	z-index: 999999;
+	text-align: center;
+	border-radius: 50px;
+	-webkit-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+	-moz-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+	box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+  }
+
+  .toast_pop:hover {
+	cursor: pointer;
+	background-color: rgb(0 0 0 / 80%);
+  }
+
+  .video-placeholder {
+	width: 100%;
+	display: inline-block;
+	background: linear-gradient(
+	  45deg,
+	  rgba(0, 0, 0, 0) 25%,
+	  #2bc48983 25%,
+	  #2bc48983 50%,
+	  rgb(0, 0, 0, 0) 50%,
+	  rgb(0, 0, 0, 0) 75%,
+	  #2bc48983 75%,
+	  #2bc48983 100%
+	);
+	/* background: linear-gradient(45deg, red 25%, green 0, green 50%, red 0, red 75%, green 0); */
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+  }
+
+  /* 로그인 CSS */
+
+  .rtc3 div.rtc3_login_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  }
+
+  .rtc3_login_wrap div.rtc3_login {
+	display: none;
+	width: fit-content;
+	height: fit-content;
+	background: #222;
+	border: 1px solid #535353;
+	box-sizing: border-box;
+	box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.3);
+	z-index: 10000;
+  }
+
+  .rtc3_login p.login-title {
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: -1.1px;
+	color: #2bc48a;
+	padding: 24px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rtc3_login div {
+	margin: 20px 40px;
+  }
+
+  .rtc3_login div label {
+	width: 70px;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 0.8px;
+	vertical-align: middle;
+	display: inline-block;
+  }
+
+  .rtc3_login div input[type='text'],
+  .rtc3_login div input[type='password'] {
+	width: 245px;
+	border: 1px solid #464646;
+	box-sizing: border-box;
+	color: #fff;
+	background: #000;
+	padding: 7px;
+	outline: none;
+  }
+
+  .rtc3_login div input[type='text']::placeholder {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.2);
+	font-style: normal;
+  }
+
+  .rtc3_login .rtc3_login_btn {
+	width: 100px;
+	font-size: 14px;
+	color: #fff;
+	padding: 7px 0;
+	outline: none;
+	border: 0;
+	background: #2bc48a;
+	transition: 0.5s;
+	margin: 0 auto 25px;
+	display: block;
+  }
+
+  .rtc3_login .rtc3_login_btn:hover {
+	background: #24a876;
+	cursor: pointer;
+  }
+
+  /* 내비게이션 CSS */
+
+  footer.navi_wrap {
+	width: 100vw;
+	height: 70px;
+	position: fixed;
+	bottom: 0;
+	background: #313131;
+	box-sizing: border-box;
+	padding: 0 25px;
+	display: flex;
+	align-items: center;
+  }
+
+  footer.navi_wrap ul {
+	display: flex;
+	align-items: center;
+	flex: 1 0 25%;
+  }
+
+  footer.navi_wrap ul.navi01 {
+	justify-content: flex-start;
+	margin-bottom: 0;
+  }
+
+  footer.navi_wrap ul.navi02 {
+	justify-content: center;
+	margin-bottom: 0;
+  }
+
+  footer.navi_wrap ul.navi03 {
+	justify-content: flex-end;
+	margin-bottom: 0;
+  }
+
+  footer.navi_wrap ul.navi01 p.rtc_name {
+	width: 190px;
+	height: 100%;
+	line-height: 70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: -0.9px;
+	display: inline-block;
+	word-break: break-all;
+	margin: 0;
+  }
+
+  footer.navi_wrap ul.navi02 {
+	width: fit-content;
+	margin: 0 auto;
+  }
+
+  footer.navi_wrap ul.navi01 li,
+  ul.navi02 li,
+  ul.navi03 li {
+	display: inline-block;
+	margin: 0 10px;
+  }
+
+  footer.navi_wrap ul.navi01 li {
+	opacity: 0.5;
+	transition: 0.5s;
+  }
+
+  footer.navi_wrap ul.navi01 li:hover {
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi02 li {
+	width: 50px;
+	height: 50px;
+	background: #232323;
+	transition: 0.5s;
+	border-radius: 25px;
+  }
+
+  footer.navi_wrap ul.navi02 li,
+  ul.navi03 li {
+	opacity: 0.5;
+	transition: 0.5s;
+  }
+
+  footer.navi_wrap ul.navi02 li:hover,
+  ul.navi03 li:hover {
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi03 li.user_list,
+  ul.navi03 li.chat {
+	width: 50px;
+	height: 50px;
+	background: #232323;
+	transition: 0.5s;
+	border-radius: 25px;
+  }
+
+  footer.navi_wrap ul.navi03 li:last-child {
+	margin-right: 0;
+  }
+
+  footer.navi_wrap ul.navi03 li.fileshare {
+	background: #232323;
+	border-radius: 5px;
+	cursor: pointer;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 10px;
+	min-width: 90px;
+  }
+
+  footer.navi_wrap ul.navi03 li.fileshare.on {
+	background-color: #2bc48a;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi03 li.fileshare img {
+	width: 20px;
+	filter: sepia(5%) brightness(111%) contrast(100%);
+	margin: 0 auto 6px;
+	display: block;
+  }
+
+  footer.navi_wrap ul.navi03 li.fileshare p {
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+  }
+
+  footer.navi_wrap ul.navi03 li.canvas {
+	background: #232323;
+	border-radius: 5px;
+	cursor: pointer;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 10px;
+	min-width: 90px;
+  }
+
+  footer.navi_wrap ul.navi03 li.canvas.on {
+	background-color: #2bc48a;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi03 li.canvas img {
+	width: 20px;
+	filter: invert(100%) sepia(5%) saturate(822%) hue-rotate(159deg) brightness(111%) contrast(100%);
+	margin: 0 auto 6px;
+	display: block;
+  }
+
+  footer.navi_wrap ul.navi03 li.canvas p {
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+  }
+
+  footer.navi_wrap ul.navi03 li.Present {
+	background: #232323;
+	border-radius: 5px;
+	cursor: pointer;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 10px;
+	min-width: 90px;
+  }
+
+  footer.navi_wrap ul.navi03 li.Present.on {
+	background-color: #2bc48a;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi03 li.Present img {
+	width: fit-content;
+	margin: 0 auto 6px;
+	display: block;
+  }
+
+  footer.navi_wrap ul.navi03 li.Present p {
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+  }
+
+  footer.navi_wrap ul.navi01 li.lock.off {
+	cursor: pointer;
+	width: 36px;
+	height: 30px;
+	background: url('../img/webRTC/ico_lock_off.svg') no-repeat;
+  }
+
+  footer.navi_wrap ul.navi01 li.lock.on {
+	opacity: 1;
+	cursor: pointer;
+	width: 36px;
+	height: 30px;
+	background: url('../img/webRTC/ico_lock_on.svg') no-repeat;
+  }
+
+  footer.navi_wrap ul.navi01 li.invite {
+	cursor: pointer;
+	width: 36px;
+	height: 30px;
+	background: url('../img/webRTC/ico_invite.svg') no-repeat;
+  }
+
+  footer.navi_wrap ul.navi01 li.presenter.off {
+	cursor: pointer;
+	width: 36px;
+	height: 30px;
+	background: url('../img/webRTC/ico_presenter_off.svg') no-repeat;
+  }
+
+  footer.navi_wrap ul.navi01 li.presenter.on {
+	width: 36px;
+	cursor: pointer;
+	height: 30px;
+	background: url('../img/webRTC/ico_presenter_on.svg') no-repeat;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi02 li.mic.off {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_mic_off.svg');
+	background-color: #ea4335;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi02 li.mic.on {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_mic_on.svg');
+  }
+
+  footer.navi_wrap ul.navi02 li.exit {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_exit.svg');
+  }
+
+  footer.navi_wrap ul.navi02 li.camera.off {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_camera_off.svg');
+	background-color: #ea4335;
+	opacity: 1;
+  }
+
+  footer.navi_wrap ul.navi02 li.camera.on {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_camera_on.svg');
+  }
+
+  footer.navi_wrap ul.navi03 li.user_list {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_user_list.svg');
+  }
+
+  footer.navi_wrap ul.navi03 li.chat.off {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_chat_off.svg');
+  }
+
+  footer.navi_wrap ul.navi03 li.chat.on {
+	cursor: pointer;
+	background-image: url('../img/webRTC/ico_chat_on.svg');
+	opacity: 1;
+	background-color: #2bc48a;
+  }
+
+  /* 영상 CSS */
+
+  section.rtc3 article.contents {
+	position: relative;
+  }
+
+  section.rtc3 div.video_area {
+	width: 100%;
+	height: calc(100vh - 70px);
+	position: absolute;
+	top: 0;
+  }
+
+  div.video_area div.present_cam {
+	width: 75%;
+	height: 100%;
+	float: left;
+  }
+
+  div.video_area div.cam_list {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+	overflow: overlay;
+  }
+
+  div.present_cam div.cam_move {
+	width: 100%;
+	height: 100%;
+  }
+
+  div.present_cam div.cam_move_wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+  }
+
+  div.present_cam div.cam_move_wrap div.camvideo {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #292929;
+	z-index: 1;
+	background-image: url('../img/webRTC/ico_user.svg');
+	background-size: cover;
+	background-position: center center;
+  }
+
+  div.present_cam div.cam_move_wrap div.camvideo video {
+	width: 100%;
+	height: 100%;
+  }
+
+  div.present_cam div.cam_move_wrap div.mic_off {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: url('../img/webRTC/ico_mic_off.svg') no-repeat;
+	z-index: 10;
+	display: none;
+  }
+
+  div.present_cam div.cam_move_wrap div.cam_user_name {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 25%);
+	z-index: 10;
+	font-size: 13px;
+	color: #fff;
+	letter-spacing: -0.65px;
+	line-height: 50px;
+	opacity: 0.5;
+	box-sizing: border-box;
+	padding: 0 50px 0 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+	white-space: nowrap;
+  }
+
+  div.cam_list div.cam_move {
+	cursor: move;
+	width: 100%;
+	float: left;
+  }
+
+  div.cam_list div.cam_move_wrap {
+	width: 100%;
+	position: relative;
+	float: left;
+  }
+
+  div.cam_list div.cam_move_wrap div.camvideo {
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;
+	position: relative;
+	background: #292929;
+	z-index: 1;
+	background-image: url('../img/webRTC/ico_user.svg');
+	background-size: 250%;
+	background-position: center center;
+  }
+
+  div.cam_list div.cam_move_wrap div.camvideo video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+  }
+
+  div.cam_list div.cam_move_wrap div.mic_off {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: url('../img/webRTC/ico_mic_off.svg') no-repeat;
+	z-index: 10;
+	display: none;
+  }
+
+  div.cam_list div.cam_move_wrap div.cam_user_name {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 25%);
+	z-index: 10;
+	font-size: 13px;
+	color: #fff;
+	letter-spacing: -0.65px;
+	line-height: 50px;
+	opacity: 0.5;
+	box-sizing: border-box;
+	padding: 0 50px 0 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+	white-space: nowrap;
+  }
+
+  div.cam_list::-webkit-scrollbar {
+	width: 6px;
+  }
+
+  div.cam_list::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 42%, 0.49);
+	border-radius: 3px;
+  }
+
+  /* 팝업 - 공통 CSS */
+
+  div.popup_bg {
+	padding: 20px;
+	background: #222;
+	border: 1px solid #535353;
+	box-sizing: border-box;
+	box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.3);
+	position: fixed;
+	bottom: 70px;
+	color: #fff;
+	z-index: 10000;
+	transition: 0.5s;
+  }
+
+  div.popup_bg label.on_off_btn {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 24px;
+	vertical-align: middle;
+  }
+
+  div.popup_bg label.on_off_btn input {
+	display: none;
+  }
+
+  div.popup_bg label.on_off_btn span.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #aaa;
+	transition: 0.4s;
+  }
+
+  div.popup_bg label.on_off_btn span.slider:before {
+	position: absolute;
+	content: '';
+	height: 20px;
+	width: 20px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	transition: 0.4s;
+  }
+
+  div.popup_bg label.on_off_btn input:checked + span.slider {
+	background-color: #2bc48a;
+  }
+
+  div.popup_bg label.on_off_btn input:focus + span.slider {
+	box-shadow: 0 0 1px #2196f3;
+  }
+
+  div.popup_bg label.on_off_btn input:checked + .slider:before {
+	transform: translateX(20px);
+  }
+
+  div.popup_bg label.on_off_btn span.slider.round {
+	border-radius: 24px;
+  }
+
+  div.popup_bg label.on_off_btn span.slider.round:before {
+	border-radius: 50%;
+  }
+
+  div.popup_bg div.copy_input {
+	background: #000;
+	border: 1px solid #464646;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+
+  div.popup_bg input[type='text'] {
+	background: #000;
+	border: 0;
+	padding: 8px;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.7);
+	box-sizing: border-box;
+	outline: none;
+  }
+
+  div.popup_bg div.copy_input label {
+	margin: 0;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/webRTC/text_copy.svg);
+	background-position: 7px 7px;
+	background-repeat: no-repeat;
+	display: inline-block;
+  }
+
+  div.popup_bg button {
+	background: #2bc48a;
+	color: #fff;
+	padding: 8px 0;
+	font-size: 13px;
+	outline: none;
+	border: 0;
+	display: block;
+	transition: 0.5s;
+  }
+
+  div.popup_bg button:hover {
+	background: #24a876;
+	cursor: pointer;
+  }
+
+  /* 팝업 - 회의실 잠금 CSS */
+
+  div.pop_lock {
+	left: 220px;
+	display: none;
+  }
+
+  div.pop_lock div p {
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: -0.75px;
+	width: 150px;
+	display: inline-block;
+  }
+
+  div.pop_lock div.lock_password {
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+  }
+
+  div.pop_lock div.lock_password span {
+	cursor: pointer;
+	font-size: 12px;
+	color: #2bc48a;
+	letter-spacing: -0.55px;
+	text-decoration: underline;
+	float: right;
+	margin-top: 2px;
+  }
+
+  div.pop_lock div.lock_password div.copy_input {
+	margin-top: 15px;
+  }
+
+  div.pop_lock div.lock_password div.copy_input input {
+	width: 165px;
+  }
+
+  div.pop_lock button {
+	width: 108px;
+	margin: 20px auto 0;
+  }
+
+  /* 팝업 - 초대 CSS */
+
+  div.pop_invite {
+	left: 270px;
+	display: none;
+  }
+
+  div.pop_invite div p {
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: -0.75px;
+	width: 70px;
+	float: left;
+  }
+
+  div.pop_invite div.invite_url {
+	display: flex;
+	align-items: center;
+  }
+
+  div.pop_invite div.invite_url div.copy_input input {
+	width: 290px;
+  }
+
+  div.pop_invite div.invite_mail {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	margin-top: 15px;
+	padding-top: 15px;
+	display: flex;
+	align-items: center;
+  }
+
+  div.pop_invite div.invite_mail_wrap {
+	display: inline-block;
+  }
+
+  div.pop_invite div.invite_mail_wrap input {
+	width: 265px;
+	height: 33px;
+	border: 1px solid #464646;
+	margin-right: 3px;
+	display: inline-block;
+  }
+
+  div.pop_invite div.invite_mail_wrap button {
+	width: 50px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+  }
+
+  /* 팝업 - 발표자모드 CSS */
+
+  div.pop_present_mode {
+	left: 350px;
+	display: none;
+  }
+
+  div.pop_present_mode div p {
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: -0.75px;
+	width: 150px;
+	display: inline-block;
+  }
+
+  div.pop_present_mode div.present_view_btn {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  div.pop_present_mode button {
+	width: 108px;
+	margin: 20px auto 0;
+  }
+
+  /* 팝업 - 참여자목록 CSS */
+
+  div.pop_user_list {
+	right: 0;
+	display: none;
+  }
+
+  div.pop_user_list p.user_list_title {
+	font-size: 15px;
+	font-weight: 300;
+	width: 100%;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  div.pop_user_list p.user_list_title span.user_list_count {
+	margin: 0 2px;
+  }
+
+  div.pop_user_list div.user_list_wrap ul {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+  }
+
+  div.pop_user_list div.user_list_wrap ul:last-child {
+	margin-bottom: 0;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 100;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name {
+	width: 250px;
+	display: flex;
+	align-items: center;
+	line-height: 20px;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name span {
+	display: inline-block;
+	vertical-align: middle;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name span.ico_present_mode {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_present_mode.svg') no-repeat;
+	margin-right: 5px;
+	display: none;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name span.ico_present_mode.active {
+	display: inline-block;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name div.name {
+	width: fit-content;
+	max-width: 180px;
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: break-all;
+  }
+
+  div.pop_user_list div.user_list_wrap ul li.user_name div.my_name {
+	margin-left: 2px;
+	display: inline-block;
+	color: rgba(255, 255, 255, 1);
+  }
+
+  li.ico_mic.on {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_mic_on_p.svg') no-repeat;
+  }
+
+  li.ico_mic.off {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_mic_off_p.svg') no-repeat;
+  }
+
+  li.ico_camera.on {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_camera_on_p.svg') no-repeat;
+	margin-left: 8px;
+  }
+
+  li.ico_camera.off {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_camera_off_p.svg') no-repeat;
+	margin-left: 8px;
+  }
+
+  li.ico_out {
+	width: 20px;
+	height: 20px;
+	background: url('../img/webRTC/ico_out.svg') no-repeat;
+	margin-left: 8px;
+  }
+
+  /* 알림 팝업 CSS */
+
+  .rtc3_login_wrap div.alret_wrap {
+	display: none;
+	min-width: 400px;
+	height: fit-content;
+	background: #222;
+	border: 1px solid #535353;
+	box-sizing: border-box;
+	box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.3);
+	z-index: 10000;
+  }
+
+  .rtc3_login_wrap div.alret_wrap p.alret-title {
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: -1.1px;
+	color: #2bc48a;
+	padding: 24px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rtc3_login_wrap div.alret_wrap div.alret {
+	margin: 40px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+  }
+
+  .rtc3_login_wrap div.alret_wrap div.alret_btn_wrap {
+	width: fit-content;
+	margin: 0 auto;
+  }
+
+  .rtc3_login_wrap div.alret_wrap div.alret_btn_wrap button.alret_btn {
+	font-size: 14px;
+	color: #fff;
+	padding: 7px 20px;
+	outline: none;
+	border: 0;
+	background: #2bc48a;
+	transition: 0.5s;
+	display: inline-block;
+	margin: 0 4px 25px;
+  }
+
+  .rtc3_login_wrap div.alret_wrap div.alret_btn_wrap button.alret_btn:hover {
+	background: #24a876;
+	cursor: pointer;
+  }
+
+  .rtc3_login_wrap div.alret_wrap div.alret_btn_wrap button.alret_btn.off {
+	display: none;
+  }
+
+  /* 채팅 CSS */
+
+  div.chat_wrap {
+	width: 360px;
+	height: calc(100vh - 70px);
+	position: fixed;
+	top: 0;
+	right: -360px;
+	z-index: 5000;
+	overflow: hidden;
+	background: #282828;
+	color: #fff;
+	transition: 0.5s;
+	box-shadow: -2px 0px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  div.chat_wrap.active {
+	right: 0;
+  }
+
+  div.chat_wrap div.chat_subwrap {
+	position: static;
+  }
+
+  div.chat_subwrap div.chat_title {
+	margin: 20px;
+  }
+
+  div.chat_subwrap div.chat_title ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+
+  div.chat_subwrap div.chat_title ul li {
+	font-size: 18px;
+  }
+
+  div.chat_subwrap div.chat_title ul li.help {
+	font-size: 13px;
+	opacity: 0.5;
+	text-decoration: underline;
+	transition: 0.5s;
+  }
+
+  div.chat_subwrap div.chat_title ul li.help:hover {
+	opacity: 1;
+  }
+
+  div.chat_subwrap hr {
+	opacity: 0.2;
+	margin: 0;
+  }
+
+  div.chat_subwrap div.chat_field {
+	width: 100%;
+	height: auto;
+	max-height: calc(100vh - 240px);
+	padding: 20px;
+	box-sizing: border-box;
+	overflow: overlay;
+	font-size: 13px;
+	color: #dedede;
+	line-height: 1.5;
+	font-weight: 300;
+	z-index: 10;
+	word-break: break-all;
+  }
+
+  div.chat_subwrap div.chat_field p {
+	margin: 8px 0;
+  }
+
+  div.chat_subwrap div.chat_field p span {
+	display: inline-block;
+  }
+
+  div.chat_subwrap div.chat_field p.entery {
+	text-align: center;
+	color: #edc336;
+  }
+
+  div.chat_subwrap div.chat_field p.notice {
+	padding: 10px;
+	background-color: rgba(180, 180, 180, 0.1);
+	color: #fff;
+  }
+
+  div.chat_subwrap div.chat_field p.notice span.ico_notice {
+	width: 13px;
+	height: 13px;
+	background: url('../img/webRTC/ico_notice.svg') no-repeat;
+	display: inline-block;
+	margin-right: 5px;
+  }
+
+  div.chat_subwrap div.chat_field p.comment span.user_name {
+	color: #999;
+	margin-right: 5px;
+  }
+
+  div.chat_subwrap div.chat_field p.whisper {
+	padding: 10px;
+	background-color: rgba(180, 180, 180, 0.1);
+	color: #fff;
+  }
+
+  div.chat_subwrap div.chat_field p.whisper span.ico_whisper {
+	width: 13px;
+	height: 13px;
+	background: url('../img/webRTC/ico_whisper.svg') no-repeat;
+	display: inline-block;
+	margin-right: 5px;
+  }
+
+  div.chat_subwrap div.chat_field p.whisper span.user_name {
+	color: #fdbd39;
+	font-weight: bold;
+	margin-right: 5px;
+  }
+
+  div.chat_subwrap div.chat_field p.whisper span.whisper_comment {
+	display: block;
+	color: #dedede;
+  }
+
+  div.chat_subwrap div.chat_field p.exit {
+	text-align: center;
+	color: #e77079;
+  }
+
+  div.chat_subwrap div.chat_field p.comment.admin span.user_name {
+	color: #2bdfeb;
+  }
+
+  div.chat_subwrap div.chat_field p.comment.admin {
+	color: #28bfc9;
+  }
+
+  div.chat_subwrap div.chat_field::-webkit-scrollbar {
+	width: 6px;
+  }
+
+  div.chat_subwrap div.chat_field::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 42%, 0.5);
+	border-radius: 3px;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper {
+	padding: 20px;
+	box-shadow: 6.5px 11.3px 21px 0 rgba(0, 0, 0, 0.2);
+	background-color: #222;
+	display: none;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper.active {
+	display: block;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper p.whisper {
+	margin: 0;
+	padding: 0;
+	background: inherit;
+	font-weight: 100;
+	color: #ccc;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper p.whisper span.ico_whisper {
+	background-image: url('../img/webRTC/ico_whisper_p.svg');
+	opacity: 0.5;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper div.whisper_text_wrap {
+	display: flex;
+	align-items: center;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper div.whisper_text_wrap input.whisper_text {
+	width: calc(100% - 44px);
+	display: inline-block;
+	outline: none;
+	background: #000;
+	border: 1px solid #464646;
+	color: #fff;
+	padding: 8px;
+	margin: 7px 0;
+	box-sizing: border-box;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper div.whisper_text_wrap button {
+	width: 44px;
+	height: 33px;
+	padding: 8px;
+	background-color: #2bc48a;
+	transition: 0.5s;
+	color: #fff;
+	outline: none;
+	border: 0;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper div.whisper_text_wrap button:hover {
+	background: #24a876;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper p.notify {
+	margin-bottom: 0;
+  }
+
+  div.chat_subwrap div.chat_field div.pop_whisper p.notify span.ico_notify {
+	width: 13px;
+	height: 13px;
+	background-image: url('../img/webRTC/ico_notify_p.svg');
+	opacity: 0.5;
+	margin-right: 5px;
+  }
+
+  div.chat_subwrap div.chat_input_wrap {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	word-break: break-all;
+	background: #282828;
+  }
+
+  div.chat_input_wrap div.chat_input {
+	margin: 20px 20px 0 20px;
+  }
+
+  div.chat_input_wrap div.chat_input p.user_name {
+	color: #ccc;
+	font-weight: 300;
+	font-size: 15px;
+  }
+
+  div.chat_input_wrap div.chat_input div.textbox {
+	margin: 10px 0;
+  }
+
+  div.chat_input_wrap div.chat_input div.textbox[contenteditable='true'] {
+	min-height: 22px;
+	color: #fff;
+	line-height: 1.5;
+	border-bottom: 1px solid #333;
+	letter-spacing: 0.5px;
+  }
+
+  div.chat_input_wrap div.chat_input div.textbox[contenteditable='true']:empty:before {
+	content: attr(placeholder);
+	color: rgba(255, 255, 255, 0.3);
+	display: block;
+	font-size: 12px;
+	font-weight: 300;
+	padding-bottom: 2px;
+  }
+
+  div.chat_input_wrap div.chat_input div.emoji_wrap {
+	padding: 5px;
+	background-color: #282828;
+	display: none;
+  }
+
+  div.chat_input_wrap div.chat_input div.emoji_wrap.active {
+	display: block;
+  }
+
+  div.chat_input_wrap div.chat_input div.emoji_wrap a {
+	font-size: 15px;
+	padding: 5px 2px;
+	display: inline-block;
+	transition: 0.5s;
+  }
+
+  div.chat_input_wrap div.chat_input div.emoji_wrap a:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap {
+	margin: 0 20px 20px 20px;
+	display: flex;
+	justify-content: space-between;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul {
+	display: flex;
+	align-items: center;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul li.chat_input_btn {
+	width: 20px;
+	height: 20px;
+	opacity: 0.5;
+	transition: 0.5s;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul li.chat_input_btn:hover {
+	opacity: 1;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul li.chat_input_btn.emoji {
+	background-image: url('../img/webRTC/ico_emoji.svg');
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul li.chat_input_btn.keyboard {
+	background-image: url('../img/webRTC/ico_keyboard.svg');
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap ul li.chat_word_count {
+	font-weight: 100;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-left: 10px;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap button {
+	font-size: 14px;
+	color: #fff;
+	padding: 7px;
+	outline: none;
+	border: 0;
+	background-color: #2bc48a;
+	transition: 0.5s;
+  }
+
+  div.chat_input_wrap div.chat_input_btn_wrap button:hover {
+	background-color: #24a876;
+	cursor: pointer;
+  }
+
+  /* 채팅 도움말 CSS */
+
+  div.chat_wrap div.chat_help_wrap {
+	width: 100%;
+	height: calc(100vh - 70px);
+	padding: 20px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	background-color: #292a2d;
+	z-index: 100;
+	display: none;
+  }
+
+  div.chat_wrap div.chat_help_wrap.active {
+	display: block;
+  }
+
+  div.chat_help_wrap div.chat_help {
+	height: 100%;
+	font-size: 13px;
+	font-weight: normal;
+	color: #999;
+	line-height: 1.5;
+	position: relative;
+  }
+
+  div.chat_help_wrap div.chat_help ul {
+	margin-bottom: 20px;
+  }
+
+  div.chat_help_wrap div.chat_help ul:last-child,
+  div.chat_help_wrap div.chat_help ul li:last-child {
+	margin-bottom: 0;
+  }
+
+  div.chat_help_wrap div.chat_help ul li {
+	margin-bottom: 5px;
+  }
+
+  div.chat_help_wrap div.chat_help ul li.help_title {
+	font-size: 16px;
+	color: #fff;
+  }
+
+  div.chat_help_wrap div.chat_help div.chat_help_close {
+	width: 100%;
+	padding: 8px 0;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+  }

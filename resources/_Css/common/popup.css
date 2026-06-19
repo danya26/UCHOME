@@ -1,0 +1,325 @@
+@charset "utf-8";
+.isMain #popup-wrap,
+.isSub #popup-wrap {font-size:18px}
+#popup-wrap {position:relative;width:100%;height:100%;font-weight:400;line-height:1.6667;letter-spacing:-.025em;word-break:keep-all;word-wrap:break-word;color:#555;font-size:18px;}
+#popup-wrap .pop-head {position:fixed;top:0;left:0;width:100%;height:70px;z-index:1000;background:#182a37;padding:0 80px 0 40px;box-sizing:border-box}
+#popup-wrap .pop-head:before {content:"";display:inline-block;width:0;height:64px;vertical-align:middle}
+#popup-wrap .pop-head .htit {display:inline-block;font-weight:400;font-size:1.222em;padding:0;color:#fff;max-width:100%;letter-spacing:-.05em;line-height:1.3;vertical-align:middle;width:auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal}
+#popup-wrap .pop-cont {margin:80px 30px 20px}
+#popup-wrap .btn-close,
+#popup-wrap .btn-reload,
+#popup-wrap .btn-minsize,
+#popup-wrap .btn-maxsize {display:block;position:fixed;top:0;right:0;border:0;cursor:pointer;text-indent:-9999px;width:70px;height:70px;z-index:1200;background:#0088a5;border:0}
+#popup-wrap .btn-close:after,
+#popup-wrap .btn-reload:after,
+#popup-wrap .btn-minsize:after,
+#popup-wrap .btn-maxsize:after {content:"";display:block;position:absolute;width:40px;height:40px;top:0;right:0;bottom:0;left:0;margin:auto;background-repeat:no-repeat;background-position:0 0;background-color:transparent}
+#popup-wrap .btn-close:after {background-image:url(/resources/_Img/Popup/btn_pclose2.png)}
+#popup-wrap .btn-reload:after {background-image:url(/resources/_Img/Popup/btn_reload2.png)}
+#popup-wrap .btn-minsize:after {background-image:url(/resources/_Img/Popup/btn_minsize2.png)}
+#popup-wrap .btn-maxsize:after {background-image:url(/resources/_Img/Popup/btn_maxsize2.png)}
+#layout-popup-wrap {position:fixed;z-index:9999;top:0px;left:0px;right:0px;bottom:0px;width:100%;height:100%;background-color:rgba(0, 0, 0, .8);cursor:default}
+#layout-popup-wrap > #popup-wrap {position:absolute;background-color:rgba( 255,255,255,1);width:auto;height:auto}
+#layout-popup-wrap > #popup-wrap .pop-head {position:relative;overflow:hidden}
+#layout-popup-wrap > #popup-wrap .pop-cont {margin:40px;overflow:auto}
+#layout-popup-wrap > #popup-wrap > button {width:70px;height:70px}
+#layout-popup-wrap > #popup-wrap .pop-btn-1 {position:absolute;right:0px;top:0}
+#layout-popup-wrap > #popup-wrap .pop-btn-2 {position:absolute;right:70px;top:0}
+#layout-popup-wrap > #popup-wrap .pop-btn-3 {position:absolute;right:140px;top:0}
+#layout-popup-wrap > #popup-wrap .pop-btn-4 {position:absolute;right:210px;top:0}
+#popup-wrap .nw-btn:focus,
+#popup-wrap .nw-btn:hover {text-decoration:underline}
+#popup-wrap .nw-btn:focus span,
+#popup-wrap .nw-btn:hover span {color:#2186a2}
+.adm #popup-wrap {font-size:inherit;font-size:13px;}
+.adm #layout-popup-wrap > #popup-wrap .pop-cont {overflow:auto;overflow-x:hidden}
+@media all and (max-width:1200px) {
+	#popup-wrap .pop-head {padding:0 140px 0 30px}
+	#layout-popup-wrap > #popup-wrap .pop-cont {margin:30px}
+}
+@media all and (max-width:999px) {
+	.isMain #popup-wrap,
+	.isSub #popup-wrap {font-size:17px;line-height:1.6}
+	#popup-wrap {}
+	#popup-wrap .pop-head {padding:0 140px 0 20px;height:60px}
+	#popup-wrap .pop-head:before {height:60px}
+	#popup-wrap .btn-close,
+	#popup-wrap .btn-reload,
+	#popup-wrap .btn-minsize,
+	#popup-wrap .btn-maxsize {width:60px;height:60px}
+	#popup-wrap .pop-cont {margin:70px 20px 20px}
+	#layout-popup-wrap {box-sizing:border-box;padding:20px}
+	#layout-popup-wrap > #popup-wrap {position:relative;width:100% !important;height:100% !important;top:auto !important;left:auto !important;padding:80px 20px 20px;box-sizing:border-box}
+	#layout-popup-wrap > #popup-wrap .pop-head {position:absolute;width:100%;left:0;top:0}
+	#layout-popup-wrap > #popup-wrap .pop-cont {margin:0;height:100% !important}
+	#layout-popup-wrap > #popup-wrap > button {width:60px;height:60px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-1 {right:0px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-2 {right:60px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-3 {right:120px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-4 {right:180px}
+}
+@media all and (max-width:768px) {
+	.isMain #popup-wrap,
+	.isSub #popup-wrap {font-size:16px;line-height:1.5}
+}
+@media all and (max-width:699px) {
+	#popup-wrap .pop-head {padding:0 60px 0 20px;height:50px}
+	#popup-wrap .pop-head:before {height:46px}
+	#popup-wrap .btn-close,
+	#popup-wrap .btn-reload,
+	#popup-wrap .btn-minsize,
+	#popup-wrap .btn-maxsize {width:50px;height:50px}
+	#layout-popup-wrap > #popup-wrap {padding:70px 20px 20px}
+	#layout-popup-wrap > #popup-wrap .pop-head {}
+	#layout-popup-wrap > #popup-wrap .pop-cont {}
+	#layout-popup-wrap > #popup-wrap > button {width:50px;height:50px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-1 {right:0px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-2 {right:50px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-3 {right:100px}
+	#layout-popup-wrap > #popup-wrap .pop-btn-4 {right:150px}
+}
+@media all and (max-width:499px) {
+	.isMain #popup-wrap,
+	.isSub #popup-wrap {font-size:15px}
+}
+
+/* ==============================
+* 윈도우 팝업
+================================= */
+.winPopBodyTag {height:100%}
+.winPopBodyTag body {height:100%;box-sizing:border-box;padding:0 0 42px}
+.popup-window {position:relative;padding:0;font-size:18px;color:#555;letter-spacing:-0.05em;line-height:1.666;word-break:keep-all;word-wrap:break-word;font-weight:400;height:100%;box-sizing:border-box;overflow:auto}
+.popup-window a {display:block}
+.popup-window img {display:block;width:auto;max-width:100%}
+.popup-window .no-data {display:block;position:absolute;width:100%;height:auto;left:0;top:50%;transform:translateY(-50%);text-align:center}
+.popup-window .no-data:before {content:"";display:block;width:71px;height:71px;margin:0 auto 10px;background:url(/resources/_Img/Board/default/ico_nodata.png) no-repeat}
+.popup-window .popwin_foot {position:fixed;left:0;bottom:0;background:#282828;width:100%;overflow:hidden;color:#fff;padding:5px 10px 7px;box-sizing:border-box}
+.popup-window .popwin_foot .chks label {font-size:15px}
+.popup-window .popwin_foot .chks label:focus,
+.popup-window .popwin_foot .chks label:hover {color:#fff;text-decoration:underline}
+.popup-window .popwin_foot .chks input[type="checkbox"] + label:focus:before,
+.popup-window .popwin_foot .chks input[type="checkbox"] + label:hover:before {border-color:#fff}
+.popup-window .popwin_foot button {position:absolute;right:10px;top:50%;width:50px;border:0;padding:0;background:none;color:#fff;font-size:15px;line-height:1;cursor:pointer;transform:translateY(-50%);box-sizing:border-box;padding:0 0 4px 15px}
+.popup-window .popwin_foot button:before,
+.popup-window .popwin_foot button:after {content:"";display:block;position:absolute;width:15px;height:2px;top:0;right:0;bottom:0;left:0;margin:auto auto auto 0;background:#fff;transition:all .3s ease}
+.popup-window .popwin_foot button:before {transform:rotate(45deg)}
+.popup-window .popwin_foot button:focus:before,
+.popup-window .popwin_foot button:hover:before {transform:rotate(135deg)}
+.popup-window .popwin_foot button:after {transform:rotate(135deg)}
+.popup-window .popwin_foot button:focus:after,
+.popup-window .popwin_foot button:hover:after {transform:rotate(225deg)}
+
+/* ==============================
+* 메인 레이어팝업
+================================= */
+.layor-popups {display:block;position:absolute;z-index:4001;width:100%;height:0;left:0;top:0}
+.layor-popups.activate {}
+.layor-popups .layers_popup {display:none;position:absolute;width:0;height:0;left:0;top:0;background:#fff;border:1px solid #ccc;z-index:3000;padding:40px 0 42px;box-shadow:5px 5px 10px rgba(0, 0, 0, .5);transition:all .3s ease}
+.layor-popups .layers_popup.show {display:block}
+.layor-popups .layers_popup.hide {display:none}
+.layor-popups .popup_layer_title {display:block;position:absolute;left:0;top:0;height:40px;line-height:40px;text-align:left;box-sizing:border-box;padding:0 0 0 15px;font-size:15px;font-weight:500;color:#000}
+.layor-popups .popup_layer_body {position:relative;box-sizing:border-box;width:100% !important;height:100% !important;padding:0;overflow-x:hidden}
+.layor-popups .popup_layer_body img {display:block;max-width:100%}
+.layor-popups .popup_layer_body .extraHtml {box-sizing:border-box;padding:15px}
+.layor-popups .popup_layer_body.hasNoData {font-size:0;text-align:center}
+.layor-popups .popup_layer_body.hasNoData:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
+.layor-popups .popup_layer_body.hasNoData .no-data {display:inline-block;vertical-align:middle;background:none;padding:0;line-height:1.3;font-size:15px;color:#555;font-weight:500;letter-spacing:-.05em;word-wrap:break-word;word-break:keep-all;white-space:normal}
+.layor-popups .popup_layer_body.hasNoData .no-data:before {content:"";display:block;width:71px;height:71px;margin:0 auto 5px;background:url(/resources/_Img/Board/default/ico_nodata.png) no-repeat}
+.layor-popups .popup_layer_foot {position:absolute;left:0;bottom:0;background:#282828;width:100%;overflow:hidden;color:#fff;padding:5px 10px 7px;box-sizing:border-box}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label {display:inline-block;vertical-align:middle;position:relative;padding:5px 0 5px 25px;cursor:pointer;user-select:none;line-height:1.2;font-size:15px;text-align:left;transition:all .3s ease}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:before,
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:after {content:'';display:block;position:absolute;box-sizing:border-box;transition:all .3s ease}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:before {width:18px;height:18px;left:0;top:6px;margin:0;background:#fff;border:1px solid #fff}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:after {width:10px;height:6px;left:5px;top:11px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #01346b #01346b;transform:rotate(-45deg);opacity:0}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:focus,
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:hover {color:#fff;text-decoration:underline}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:focus:before,
+.layor-popups .popup_layer_foot .chks input[type="checkbox"] + label:hover:before {border-color:#fff}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"]:checked + label:before {border-color:#fff;background:#fff}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"]:checked + label:after {opacity:1}
+.layor-popups .popup_layer_foot .chks input[type="checkbox"]:focus + label {outline:rgba(255, 255, 255, .2) auto 5px}
+.layor-popups .popup_layer_foot button {position:absolute;right:10px;top:50%;width:50px;border:0;padding:0;background:none;color:#fff;font-size:15px;line-height:1;cursor:pointer;transform:translateY(-50%);box-sizing:border-box;padding:0 0 4px 15px}
+.layor-popups .popup_layer_foot button:before,
+.layor-popups .popup_layer_foot button:after {content:"";display:block;position:absolute;width:15px;height:2px;top:0;right:0;bottom:0;left:0;margin:auto auto auto 0;background:#fff;transition:all .3s ease}
+.layor-popups .popup_layer_foot button:before {transform:rotate(45deg)}
+.layor-popups .popup_layer_foot button:focus:before,
+.layor-popups .popup_layer_foot button:hover:before {transform:rotate(135deg)}
+.layor-popups .popup_layer_foot button:after {transform:rotate(135deg)}
+.layor-popups .popup_layer_foot button:focus:after,
+.layor-popups .popup_layer_foot button:hover:after {transform:rotate(225deg)}
+@media all and (max-width:699px) {
+	.layor-popups {height:0;overflow-y:hidden;position:fixed}
+	.layor-popups.activate {width:100%;height:100%;box-sizing:border-box;padding:20px;background:rgba(0, 0, 0, .3)}
+	.layor-popups .layers_popupPkgs {position:relative;width:100%;height:100%;box-sizing:border-box;position:relative}
+	.layor-popups .layers_popup {width:100% !important;height:100% !important;left:auto !important;top:auto !important;position:relative !important;box-sizing:border-box}
+	.layor-popups .popup_layer_body {width:100% !important;height:100% !important}
+}
+
+/* ==============================
+* 와이드팝업
+================================= */
+#toppop {display:block;position:absolute;left:0;top:0;width:100%;background:#0c1b59 url(/resources/_Img/Popup/wPop_bg1.gif) no-repeat center center;background-size:cover;opacity:0;z-index:-1;overflow:hidden;padding:20px 0 10px;box-sizing:border-box}
+#toppop.stable {display:none;position:relative;left:auto;top:auto;opacity:1;z-index:1}
+#toppop .dataListWr {position:relative;box-sizing:border-box;max-width:1400px;margin:0 auto}
+#toppop .dataNavi {position:absolute;width:100%;left:0;top:50%;z-index:2}
+#toppop .dataNavi.disabled {display:none}
+#toppop .dataNavi button {display:block;position:absolute;width:30px;height:30px;top:50%;transform:translateY(-50%);background:transparent;border:0;z-index:1;font-size:0;transition:all .3s ease}
+#toppop .dataNavi button:after {content:"";display:block;position:absolute;width:10px;height:10px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #fff #fff;top:0;right:0;bottom:0;left:0;transition:all .3s ease}
+#toppop .dataNavi .owl-prev {right:100%;margin:0 10px 0 0}
+#toppop .dataNavi .owl-prev:after {transform:rotate(45deg);margin:auto auto auto 11px}
+#toppop .dataNavi .owl-next {left:100%;margin:0 0 0 10px}
+#toppop .dataNavi .owl-next:after {transform:rotate(225deg);margin:auto 11px auto auto}
+#toppop .dataListCore {position:relative;width:auto;margin:0;box-sizing:border-box}
+#toppop.row1 {}
+#toppop.row2 {}
+#toppop.row3 {}
+#toppop.row4 {}
+#toppop .dataList {}
+#toppop .dataList.owl-carousel.owl-hidden {opacity:1}
+#toppop .dataList .item {line-height:1;font-size:0;box-sizing:border-box;padding:0 20px;position:relative}
+#toppop .dataList .item .cont {display:block;box-sizing:border-box;position:relative;height:auto;overflow:hidden;max-width:650px;margin:0 auto;}
+#toppop .dataList .item .cont .contContainer {display:block;width:100%;height:0;padding:0 0 18.4615%;}
+#toppop .dataList .item .cont a {display:block;position:absolute;font-size:0;line-height:1;text-align:center;width:100%;height:100%;left:0;top:0;}
+#toppop .dataList .item .cont .base {display:block;width:100%;height:100%;position:absolute;left:0;top:0;}
+#toppop .dataList .owl-item.active .item:after {content:"";display:block;position:absolute;width:1px;height:80%;right:-2px;top:50%;transform:translateY(-50%);background:rgba(255, 255, 255, .3);}
+#toppop .dataUtil {position:relative;width:100%;max-width:1400px;margin:23px auto 0;box-sizing:border-box}
+#toppop .dataUtil .side-L {max-width:1400px;margin:0 auto;text-align:left}
+#toppop .dataUtil .side-L > div {display:inline-block;vertical-align:middle;line-height:1;font-size:0}
+#toppop .dataUtil .side-L button {width:20px;height:20px;font-size:0;box-sizing:border-box;border:0;position:relative;background:transparent;transition:all .3s ease}
+#toppop .dataUtil .side-L button:after {content:"";display:block;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;box-sizing:border-box;transition:all .3s ease}
+#toppop .dataUtil .side-L .dataDots {text-align:left;font-size:0}
+#toppop .dataUtil .side-L .dataDots button {display:inline-block;vertical-align:top}
+#toppop .dataUtil .side-L .dataDots button:after {width:10px;height:10px;border-radius:50%;background:#fff;opacity:.5}
+#toppop .dataUtil .side-L .dataDots button.active:after {opacity:1}
+#toppop .dataUtil .side-L .dataAuto {}
+#toppop .dataUtil .side-L .dataAuto .btn-stop {}
+#toppop .dataUtil .side-L .dataAuto .btn-stop:after {width:6px;height:10px;border:solid;border-width:0 2px;border-color:transparent #fff}
+#toppop .dataUtil .side-L .dataAuto .btn-play {display:none}
+#toppop .dataUtil .side-L .dataAuto .btn-play:after {width:0;height:0;border:solid;border-width:5px 0 5px 6px;border-color:transparent transparent transparent #fff}
+#toppop .dataUtil .side-R {position:absolute;right:0;top:-10px}
+#toppop .dataUtil .side-R .dataCloser {display:inline-block;line-height:1;font-size:0}
+#toppop .dataUtil .side-R .dataChks {display:inline-block;vertical-align:middle}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] {display:block;position:absolute;width:0;height:0;overflow:hidden;top:-9999em;left:-9999em;text-indent:-9999em;font-size:0;line-height:0;opacity:0;visibility:hidden}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label {display:block;font-size:16px;font-weight:400;color:#fff;letter-spacing:-.05em;padding:5px 5px 5px 25px;box-sizing:border-box;position:relative;line-height:1;cursor:pointer}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:before,
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:after {content:"";display:block;position:absolute;box-sizing:border-box;transition:all .3s ease}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:before {width:20px;height:20px;background:transparent;border:1px solid #fff;left:0;top:4px;border-radius:50%}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:after {width:8px;height:4px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #fff #fff;transform:rotate(-45deg);left:6px;top:11px;opacity:0}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"]:checked + label:before {}
+#toppop .dataUtil .side-R .dataChks input[type="checkbox"]:checked + label:after {opacity:1}
+#toppop .dataUtil .side-R .close-btn {display:inline-block;vertical-align:middle;width:30px;height:30px;background:transparent;border:0;box-sizing:border-box;position:relative;margin:2px 0 0 0}
+#toppop .dataUtil .side-R .close-btn:before,
+#toppop .dataUtil .side-R .close-btn:after {content:"";display:block;position:absolute;width:18px;height:2px;background:#fff;top:0;right:0;bottom:0;left:0;margin:auto;transition:all .3s ease}
+#toppop .dataUtil .side-R .close-btn:before {transform:rotate(45deg)}
+#toppop .dataUtil .side-R .close-btn:after {transform:rotate(135deg)}
+#toppop .dataUtil .side-R .close-btn:focus:before,
+#toppop .dataUtil .side-R .close-btn:hover:before {transform:rotate(135deg)}
+#toppop .dataUtil .side-R .close-btn:focus:after,
+#toppop .dataUtil .side-R .close-btn:hover:after {transform:rotate(225deg)}
+@media all and (max-width:1499px) {
+	#toppop .dataNavi button {border-radius:50%;background:rgba(0, 0, 0, .5)}
+	#toppop .dataNavi button:after {width:8px;height:8px}
+	#toppop .dataNavi .owl-prev {right:auto;left:0;margin:0}
+	#toppop .dataNavi .owl-prev:after {margin:auto auto auto 12px}
+	#toppop .dataNavi .owl-next {left:auto;right:0;margin:0}
+	#toppop .dataNavi .owl-next:after {margin:auto 12px auto auto}
+}
+@media all and (max-width:1440px) {
+	#toppop .dataListWr {margin:0 20px}
+	#toppop .dataUtil {width:auto;margin:10px 20px 0}
+}
+@media all and (max-width:1199px) {
+	#toppop {padding:20px 0 15px}
+	#toppop .dataListCore:before,
+	#toppop .dataListCore:after {height:100%;top:0;transform:none}
+	#toppop .dataUtil .side-R .close-btn {margin:2px 0 0 15px}
+}
+@media all and (max-width:999px) {
+	#toppop .dataUtil .side-L {text-align:left}
+	#toppop .dataUtil .side-R {top:-4px}
+}
+@media all and (max-width:799px) {
+	#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label {font-size:14px;letter-spacing:-.05em;padding:5px 3px 5px 25px}
+	#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:before {top:3px;width:20px;height:20px}
+	#toppop .dataUtil .side-R .dataChks input[type="checkbox"] + label:after {top:9px;left:5px;width:10px;height:5px;opacity:1}
+	#toppop .dataUtil .side-R .close-btn {margin:2px 0 0 3px;width:24px;height:24px}
+	#toppop .dataUtil .side-R .close-btn:before,
+	#toppop .dataUtil .side-R .close-btn:after {width:16px}
+}
+@media all and (max-width:758px) {
+	#toppop .dataListWr {margin:0 15px}
+	#toppop .dataListCore:before,
+	#toppop .dataListCore:after {display:none !important}
+}
+@media all and (max-width:599px) {
+	#toppop {padding:20px 0 10px}
+}
+@media all and (max-width:499px) {
+	#toppop .dataListWr {padding:0 0}
+	#toppop .dataNavi button {width:24px;height:24px}
+	#toppop .dataNavi button:after {width:6px;height:6px}
+	#toppop .dataNavi .owl-prev:after {margin:auto auto auto 9px}
+	#toppop .dataNavi .owl-next:after {margin:auto 9px auto auto}
+	#toppop .dataUtil {margin:10px 20px 0}
+}
+
+/* ==============================
+* 게시판 게시글 비밀번호 체크
+================================= */
+#layout-popup-wrap.chkBoardPw {}
+#layout-popup-wrap.chkBoardPw #popup-wrap {height:auto !important}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pop-head {display:none}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pop-cont {box-sizing:border-box;padding:60px 87px 0;margin:0}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pop-btn-1 {display:none}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead {position:relative;padding:107px 0 0;margin:0 0 39px}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead:before {content:"";display:block;position:absolute;width:68px;height:88px;top:0;left:50%;transform:translateX(-50%);background:url(/resources/_Img/Board/default/passChk_spr.png) no-repeat}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead .txt {display:block;font-size:20px;line-height:1.2;color:#333}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm {margin:0 0 40px}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap {position:relative;box-sizing:border-box;height:65px;padding:0 75px 0 0}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap input {display:block;box-sizing:border-box;width:100%;height:100%;background:#fff;border-radius:0;border:2px solid #ebebeb;border-right:none;padding:0 5px 0 25px}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap input::placeholder {font-size:15px;color:#666}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap .bp-btn {position:absolute;width:75px;height:65px;min-width:0;right:0;top:0;background:#002752}
+#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap .bp-btn:before {content:"";display:block;position:absolute;width:22px;height:19px;left:50%;top:50%;transform:translate(-50%, -50%);background:url(/resources/_Img/Board/default/passChk_spr.png) no-repeat -78px 0}
+#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkClose {box-sizing:border-box;width:130px;height:60px;border:1px solid #ccc;background:#f7f7f7;font-size:16px;color:#444}
+@media all and (max-width:999px) {
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pop-cont {padding:40px 80px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm {margin:0 0 30px}
+}
+@media all and (max-width:699px) {
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pop-cont {padding:30px 60px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead {padding:86px 0 0;margin:0 0 15px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead:before {width:54px;height:70px;background-size:80px auto}
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkHead .txt {font-size:16px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm {margin:0 0 15px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap {height:52px;padding:0 60px 0 0}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap .bp-btn {width:60px;height:52px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap .bp-btn:before {width:18px;height:15px;background-size:80px auto;background-position:-62px 0}
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pwChkClose {width:104px;height:48px;font-size:14px}
+}
+@media all and (max-width:499px) {
+	#layout-popup-wrap.chkBoardPw #popup-wrap .pop-cont {padding:20px}
+	#layout-popup-wrap.chkBoardPw #popup-wrap #boardPwChkForm .chkpasswd-wrap input {padding:0 5px 0 10px}
+}
+
+/* ==============================
+* 관리자 전용
+================================= */
+/** -- 01. */
+.adm #popup-wrap .pop-head:before {height:70px}
+.adm #popup-wrap .pop-head .selWidgetId {letter-spacing:0}
+
+/** -- 02. 템플릿 & 사이트 미리보기 팝업 이미지 드래그로 스크롤 대체 */
+.hasImgDragHtml,
+.hasImgDragBody {display:block;width:100%;height:100%;overflow:hidden;}
+.hasImgDragBody #popup-wrap {position:absolute;width:100%;height:100%;left:0;top:0;box-sizing:border-box;padding:70px 0 0;}
+.hasImgDragBody #popup-wrap .pop-head {}
+.hasImgDragBody #popup-wrap .pop-cont {margin:0;width:100%;height:100%}
+.hasImgDragBody .dragHandle {width:100%;height:100%;position:relative;overflow:auto;cursor:all-scroll}
+.hasImgDragBody .dragHandle img {}
+@media all and (max-width:999px) {
+	.hasImgDragBody #popup-wrap {padding:60px 0 0;}
+}
+@media all and (max-width:699px) {
+	.hasImgDragBody #popup-wrap {padding:50px 0 0;}
+}

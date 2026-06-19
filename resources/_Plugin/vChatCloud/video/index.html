@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="설치 없이 가입 즉시 바로 이용할 수 있는 무료 채팅 서비스를 제공 해 드리겠습니다." />
+	<meta name="author" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="바로 이용하는 무료 채팅 솔루션" />
+	<meta property="og:description" content="설치 없이 가입 즉시 바로 이용할 수 있는 무료 채팅 서비스를 제공 해 드리겠습니다." />
+	<meta property="og:image" content="https://www.vchatcloud.com/img/common/og_img.png" />
+	<meta property="og:url" content="https://www.vchatcloud.com" />
+	<title>RTC-PC 3형</title>
+	<link rel="canonical" href="https://vchatcloud.com/index.html" />
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/style_RTC3.css" rel="stylesheet" />
+	<link href="css/toastr.css" rel="stylesheet" />
+	<link href="css/fabric.css" rel="stylesheet" />
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+	<!--RTC3 Style-->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/c13f14f04a.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/8.1.0/adapter.min.js" integrity="sha512-w7RWyKh35UnZe3T7sp8+JLBQWKz4QzOLfQbfNo005DlSSGBhpBPmf5ywPwMyyyB9Qbb/0YZsyqFQFdbUyew6vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+	<script src="js/libs/fabric.js"></script>
+	<script src="https://unpkg.com/convertapi-js/lib/convertapi.js"></script>
+	<script src="js/vchatcloud-1.2.0.min.js"></script>
+	<script src="js/toastr.min.js"></script>
+	<script src="js/colorjoe.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="js/login.js"></script>
+	<script src="js/count.js"></script>
+	<script src="js/errMsg.js"></script>
+	<script src="js/draw.js"></script>
+	<script src="js/rtc.js"></script>
+	<script src="js/fabric.js"></script>
+	<script src="js/fabric_histroy.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<section class="rtc3">
+		<div class="toast_pop" style="display: none">‘000’님이 마이크를 음소거하셨습니다.</div>
+		<!-- 로그인&영상 시작 -->
+		<article class="contents">
+			<!-- 로그인 및 알림 팝업 시작 -->
+			<div class="rtc3_login_wrap">
+				<!-- 대화명 입력 -->
+				<div class="rtc3_login">
+					<p class="login-title">회의 시작하기</p>
+					<div class="name">
+						<label for="name">대화명</label>
+						<input class="name" type="text" id="name" value="" placeholder="로그인 할 대화명을 입력해주세요." />
+					</div>
+					<button class="rtc3_login_btn">확인</button>
+				</div>
+
+				<!-- 비밀번호 입력 -->
+				<div class="rtc3_login">
+					<p class="login-title">비밀번호 입력</p>
+					<div class="password">
+						<label for="password">비밀번호</label>
+						<input class="password" type="password" id="password" value="" placeholder="패스워드를 입력해 주세요." />
+					</div>
+					<button class="rtc3_login_btn">확인</button>
+				</div>
+
+				<!-- 알림 -->
+				<div class="alret_wrap">
+					<p class="alret-title">알림</p>
+					<div class="alret">알림 내용 작성 부분입니다.</div>
+					<div class="alret_btn_wrap">
+						<button class="alret_btn">확인</button>
+						<button class="alret_btn off">취소</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 영상 시작 -->
+			<div class="video_area">
+				<!-- 발표 영상 영역 -->
+				<div class="present_cam" name="present_cam"></div>
+
+				<!-- 영상 리스트 영역-->
+				<div class="cam_list" name="cam_list"></div>
+			</div>
+		</article>
+		<!-- 로그인&영상영역 끝 -->
+		</section>
+
+		<!-- 캔버스 -->
+		<div class="fabric_wrap">
+			<div class="canvas_tool_wrap">
+				<ul class="canvas_tool">
+					<!-- 메뉴선택 시 .current 추가 -->
+					<li class="canvas_tool_btn pointer"><i class="fa-solid fa-bullseye"></i></li>
+					<li class="canvas_tool_btn shapes"><i class="fa-solid fa-shapes"></i></li>
+					<li class="canvas_tool_btn pen"><i class="fa-solid fa-pen"></i></li>
+					<li class="canvas_tool_btn eraser"><i class="fa-solid fa-eraser"></i></li>
+					<li class="canvas_tool_btn eraser-all"><i class="fa-solid fa-reply-all"></i></li>
+					<li class="canvas_tool_btn tool_close"><i class="fa-solid fa-xmark"></i></li>
+				</ul>
+
+				<!-- 도형 서브툴 -->
+				<!-- 노출시 css visibility 속성 변경 -->
+				<ul class="canvas_tool_subwrap shapes_tool_wrap">
+					<div class="subtool_wrap">
+						<li class="subtool-colorpicker">
+							<div class="color_fill">
+								<p class="colorPicker" id="shapes_colorpicker"></p>
+							</div>
+						</li>
+						<li class="shape-circle current">
+							<img src="img/fabric/circle.svg" width="100%" />
+						</li>
+						<li class="shape-rect">
+							<img src="img/fabric/rect.svg" width="100%" />
+						</li>
+						<li class="shape-triangle">
+							<img src="img/fabric/triangle.svg" width="100%" />
+						</li>
+					</div>
+				</ul>
+
+				<!-- 펜 서브툴 -->
+				<!-- 노출시 css visibility 속성 변경 -->
+				<ul class="canvas_tool_subwrap pen_tool_wrap">
+					<div class="subtool_wrap">
+						<li class="subtool-colorpicker">
+							<div class="color_fill">
+								<p class="colorPicker" id="pen_colorpicker"></p>
+							</div>
+						</li>
+						<li class="stroke _1px current">
+							<p class="stroke_1px"></p>
+							<p>1px</p>
+						</li>
+						<li class="stroke _3px">
+							<p class="stroke_3px"></p>
+							<p>3px</p>
+						</li>
+						<li class="stroke _5px">
+							<p class="stroke_5px"></p>
+							<p>5px</p>
+						</li>
+						<li class="stroke _8px">
+							<p class="stroke_8px"></p>
+							<p>8px</p>
+						</li>
+						<li class="stroke _12px">
+							<p class="stroke_12px"></p>
+							<p>12px</p>
+						</li>
+					</div>
+				</ul>
+			</div>
+			<div class="canvas_wrap">
+				<canvas id="fabric_canvas"></canvas>
+			</div>
+			<img class="cursor_img" src="img/fabric/cursor_pointer.svg" alt="커서 이미지" width="100%" />
+		</div>
+
+		<!-- 내비게이션 시작 -->
+		<footer class="navi_wrap">
+			<ul class="navi01">
+				<p class="rtc_name"></p>
+				<li class="lock off"></li>
+				<li class="invite"></li>
+				<li class="presenter off"></li>
+			</ul>
+			<ul class="navi02">
+				<li class="mic on"></li>
+				<li class="exit"></li>
+				<li class="camera on"></li>
+			</ul>
+			<ul class="navi03">
+				<li class="canvas off">
+				<img src="img/webRTC/canvas.svg" alt="화이트보드" />
+				<p>Whiteboard</p>
+				</li>
+				<li class="Present off">
+				<img src="img/webRTC/ico_present.svg" alt="화면공유" />
+				<p>Present now</p>
+				</li>
+				<li class="user_list on"></li>
+				<li class="chat off"></li>
+			</ul>
+		</footer>
+		<!-- 하단 내비게이션 끝 -->
+
+		<!-- 내비 팝업 - 회의실 잠금 시작 -->
+		<div class="popup_bg pop_lock">
+			<div class="lock_password" style="display: none">
+				<p>비밀번호 설정</p>
+				<span>자동생성</span>
+				<div class="copy_input">
+					<input type="text" />
+					<label></label>
+				</div>
+			</div>
+			<div class="lock_btn">
+				<p>회의실 잠금</p>
+				<label class="on_off_btn">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<button>적용하기</button>
+		</div>
+		<!-- 내비 팝업 - 회의실 잠금 끝 -->
+
+		<!-- 내비 팝업 - 초대하기 시작 -->
+		<div class="popup_bg pop_invite">
+			<div class="invite_url">
+				<p>접속URL</p>
+				<div class="copy_input">
+					<input readonly type="text" />
+					<label></label>
+				</div>
+			</div>
+			<div class="invite_mail">
+				<p>초대하기</p>
+				<div class="invite_mail_wrap">
+					<input type="text" placeholder="이메일주소 (, 로 구분)" />
+					<button>전송</button>
+				</div>
+			</div>
+		</div>
+		<!-- 내비 팝업 - 초대하기 끝 -->
+
+		<!-- 내비 팝업 - 발표자모드 시작 -->
+		<div class="popup_bg pop_present_mode">
+			<div class="present_view_btn" style="display: none">
+				<p>발표자만 화면 공유</p>
+				<label class="on_off_btn">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<div class="present_btn">
+				<p>발표자 모드</p>
+				<label class="on_off_btn">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<button>적용하기</button>
+		</div>
+		<!-- 내비 팝업 - 발표자모드 끝 -->
+
+		<!-- 내비 팝업 - 참여자 목록 시작 -->
+		<div class="popup_bg pop_user_list">
+		<p class="user_list_title">참여자 목록(<span class="user_list_count">00</span>)</p>
+		<div class="user_list_wrap">
+			<!-- 목록 1 -->
+			<ul>
+				<li class="user_name">
+					<span class="ico_present_mode active"></span>
+					<span>발표자 이름</span>
+				</li>
+				<li class="ico_mic on"></li>
+				<li class="ico_camera on"></li>
+				<li class="ico_out"></li>
+			</ul>
+			<!-- 목록 2 -->
+			<ul>
+				<li class="user_name">
+					<span class="ico_present_mode"></span>
+					<span>사용자 이름<div class="my_name">(나)</div></span>
+				</li>
+				<li class="ico_mic on"></li>
+				<li class="ico_camera on"></li>
+				<li class="ico_out"></li>
+			</ul>
+			<!-- 목록 3 -->
+			<ul>
+				<li class="user_name">
+					<span class="ico_present_mode"></span>
+					<span>사용자 이름</span>
+				</li>
+				<li class="ico_mic on"></li>
+				<li class="ico_camera on"></li>
+				<li class="ico_out"></li>
+			</ul>
+		</div>
+		</div>
+		<!-- 내비 팝업 - 참여자 목록 끝 -->
+		<!-- 채팅 시작 active -->
+		<div class="chat_wrap">
+		<!-- 채팅 내용 시작 -->
+		<div class="chat_subwrap">
+			<div class="chat_title">
+				<ul>
+					<li>실시간 채팅</li>
+					<li class="help">도움말</li>
+				</ul>
+			</div>
+			<hr />
+			<!-- 대화내용 시작 -->
+			<div class="chat_field">
+				<p class="entery">홍길동님으로 입장하셨습니다.</p>
+				<p class="notice">
+					<span class="ico_notice"></span>실시간 채팅에 오신 것을 환영합니다. 개인정보를 보호하고 커뮤니티 가이드를 준수하는 것을 잊지마세요
+				</p>
+				<p class="comment"><span class="user_name">홍길동</span>가나다라마바사아자차카타파하</p>
+				<p class="whisper">
+					<span class="ico_whisper"></span><span class="user_name">홍길동</span>님의 귓속말<span class="whisper_comment">개인정보를 보호하고 커뮤니티 가이드를 준수하는 것을 잊지마세요</span>
+				</p>
+				<p class="exit">사용자 이름 님이 나가셨습니다.</p>
+				<p class="comment admin"><span class="user_name">운영자</span>가나다라마바사아자차카타파하</p>
+				<div class="pop_whisper">
+					<!-- 노출시 class에 active 추가 -->
+					<p class="whisper"><span class="ico_whisper"></span>귓속말 보내기</p>
+					<div class="whisper_text_wrap">
+						<input type="text" class="whisper_text" placeholder="메시지 입력" />
+						<button>전송</button>
+					</div>
+					<p class="notify"><span class="ico_notify"></span>신고하기</p>
+				</div>
+			</div>
+			<!-- 대화내용 끝 -->
+			<div class="chat_input_wrap">
+				<hr />
+				<div class="chat_input">
+					<p class="user_name">홍길동</p>
+					<div class="textbox" maxlength="200" contenteditable="true" placeholder="최대 200자까지 입력 가능"></div>
+					<div class="emoji_wrap">
+						<!-- 노출시 class에 active 추가 -->
+					</div>
+				</div>
+				<div class="chat_input_btn_wrap">
+					<ul>
+						<li class="chat_input_btn emoji"></li>
+						<li class="chat_word_count">0/200</li>
+					</ul>
+					<button>전송</button>
+				</div>
+			</div>
+		</div>
+		<!-- 채팅 내용 끝 -->
+
+		<!-- 채팅 도움말 시작 -->
+		<div class="chat_help_wrap">
+			<!-- 노출시 class에 active 추가 -->
+			<div class="chat_help">
+				<ul>
+					<li class="help_title">· 메시지 보내기</li>
+					<li>1. 전송하실 메시지 최대 200자 이내로 입력하고 전송을 클릭하세요.</li>
+					<li><img src="img/help/001.png" alt="메시지 입력" width="100%" /></li>
+				</ul>
+				<ul>
+					<li class="help_title">· 이모지 보내기</li>
+					<li>1. 아이콘 <i class="fas fa-laugh"></i> 을 클릭하시면 나타나는 목록에서 원하시는 이모티콘을 선택하세요.</li>
+					<li><img src="img/help/002.png" alt="이모지 입력" width="100%" /></li>
+				</ul>
+				<ul>
+					<li class="help_title">· 귓속말 보내기</li>
+					<li>1. 귓속말을 받으실 사용자 대화명을 클릭하세요.</li>
+					<li>2. 나타난 팝업창에서 <i class="fas fa-comment-alt"></i> 귓속말 입력창에 보내실 메시지를 입력하고 전송을 클릭하세요.</li>
+					<li><img src="img/help/003.png" alt="귓속말 입력" width="100%" /></li>
+				</ul>
+				<ul>
+					<li class="help_title">· 신고하기</li>
+					<li>1. 신고할 사용자 대화명을 클릭하세요.</li>
+					<li>2. 나타난 팝업창에서 <i class="fas fa-not-equal"></i> 신고하기을 클릭하세요.</li>
+				</ul>
+				<div class="chat_help_close">도움말 닫기</div>
+			</div>
+		</div>
+		<!-- 채팅 도움말 끝 -->
+		</div>
+		<!-- 채팅 끝 -->
+	</div>
+	<!--
+		<form class="upload" style="position: absolute; top: 100px; left: 50px">
+			<input type="file" name="pdf" accept=".pdf" />
+			<button type="submit">전송</button>
+		</form>
+	-->
+</body>
+</html>

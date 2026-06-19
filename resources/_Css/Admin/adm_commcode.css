@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.adm-commcode-wr {position:relative;}
+.adm-commcode-wr:after {clear:both;content:"";display:block;}
+.comm-cdgroups {position:absolute;left:0;width:360px;height:500px;z-index:150;top:0px;}
+
+.comm-cd-list {margin-left:400px;position:relative}
+.comm-cd-list .no-data {border-top:2px solid #555;border-bottom:1px solid #DDD;padding:50px;}
+
+.tree-list-wr  {font-size:1em;}
+.tree-list-wr ul {}
+.tree-list-wr ul:after {clear:both;content:"";display:block;}
+.tree-list-wr li {position:relative;width:100%;float:left;}
+
+.tree-list-wr li .tgl-btn {position:absolute;left:0;top:2px;width:35px;height:3em;border:0;background:#CCC;}
+.tree-list-wr li .is-lf {position:absolute;left:0;top:2px;display:inline-block;width:35px;height:3em;background:#EAEAEA;}
+
+.tree-list-wr .li-wr {position:relative;display:block;box-sizing:border-box;padding:0.5em 1em;height:3em;line-height:1.5em;position:relative;border:1px solid #DDD;margin-top:2px;margin-bottom:2px;margin-left:35px;}
+.tree-list-wr .li-wr:hover {background-color:#f9f9f9;}
+.tree-list-wr li ul {margin-left:35px;position:relative;}
+
+.tree-list-wr .is-btns {position:absolute;right:5px;top:50%;margin-top:-10px;height:20px;}

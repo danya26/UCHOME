@@ -1,0 +1,227 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<script src="/resources/_Plugin/FileManager.v4.0/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" media="all" href="/resources/_Plugin/FileManager.v4.0/lib/css/common.multiFileUpload.css" />
+	<style>
+	body {
+		max-width: 1200px;
+	}
+	</style>
+</head>
+<body>
+	<div class="multiFileUpload">
+
+
+		<div class="mfu-top">
+			<button type="button" class="mfu-fsel-bt">File Select</button>
+
+			<div class="mfu-limit-info simple">
+				<button type="button" class="mfu-fcnt-info">
+					File Count (<span class="mfu-use-cnt">2</span> / MAX : <span
+						class="mfu-max-cnt">2</span>)
+				</button>
+			</div>
+
+		</div>
+
+		<ul class="mfu-file-list ">
+			<li class="file-item" id="mfu-item-1510647484744">
+				<input type="hidden" name="tmpfile_idx[]" value="5">
+				<div class="mfu-finfo">
+					<span class="isFileTypeIcon">
+						<img src="/resources/_Plugin/FileManager.v4.0/lib/img/img.gif" alt="jpg 파일">
+					</span>
+					<span class="isFileName">0002.jpg</span>
+					<div class="isFileInfo">
+						<span class="mfu-fsize">135.61KB</span>
+						<span class="mfu-state">업로드완료</span>
+					</div>
+				</div>
+
+				<div class="mfu-ctrls">
+					<button type="button" class="bt-cont" onclick="toggleFileItem(this,'cont-open');">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-view">
+						<span>VIEW</span>
+					</button>
+					<button type="button" class="bt-down">
+						<span>다운로드</span>
+					</button>
+					<button type="button" class="bt-del">
+						<span>삭제</span>
+					</button>
+				</div>
+				<button class="bt-ctrl-more" type="button" onclick="toggleFileItem(this,'ctrl-open');">
+					<span>More</span>
+				</button>
+				<div class="mfu-fcont">
+					<span class="isFileAlt">
+						<input type="text" class="text" name="tmpfile_cont[]" placeholder="파일설명" value="" hname="파일설명">
+					</span>
+					<button type="button" class="bt-add-cont">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-cont-close" onclick="toggleFileItem(this,'cont-open');">
+						<span>취소</span>
+					</button>
+				</div>
+			</li>
+			<li class="file-item" id="mfu-item-1510647484744">
+				<input type="hidden" name="tmpfile_idx[]" value="5"> 
+
+				<div class="mfu-finfo">
+					<span class="isFileTypeIcon"><img
+						src="/resources/_Plugin/FileManager.v4.0/lib/img/ing.gif" alt="jpg 파일"></span> <span
+						class="isFileName">0002.jpg</span>
+
+					<div class="isFileInfo">
+						<span class="mfu-fsize">135.61KB</span> <span class="mfu-state">업로드완료</span>
+					</div>
+				</div>
+
+				<div class="mfu-ctrls">
+					<button type="button" class="bt-cont" onclick="toggleFileItem(this,'cont-open');">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-view">
+						<span>VIEW</span>
+					</button>
+					<button type="button" class="bt-down">
+						<span>다운로드</span>
+					</button>
+					<button type="button" class="bt-del">
+						<span>삭제</span>
+					</button>
+
+				</div>
+				<button class="bt-ctrl-more" type="button"
+					onclick="toggleFileItem(this,'ctrl-open');">
+					<span>More</span>
+				</button>
+				<div class="mfu-fcont">
+					<span class="isFileAlt">
+						<input type="text" class="text" name="tmpfile_cont[]" placeholder="파일설명" value="" hname="파일설명">
+					</span>
+					<button type="button" class="bt-add-cont">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-cont-close"
+						onclick="toggleFileItem(this,'cont-open');">
+						<span>취소</span>
+					</button>
+				</div></li>
+			<li class="file-item" id="mfu-item-1510647484744">
+				<input type="hidden" name="tmpfile_idx[]" value="5">
+
+				<div class="mfu-finfo">
+					<span class="isFileTypeIcon">
+						<img src="/resources/_Plugin/FileManager.v4.0/lib/img/fail.png" alt="jpg 파일">
+					</span>
+					<span class="isFileName">0002.jpg</span>
+					<div class="isFileInfo">
+						<span class="mfu-fsize">135.61KB</span> <span class="mfu-state">업로드완료</span>
+					</div>
+				</div>
+
+				<div class="mfu-ctrls">
+					<button type="button" class="bt-cont" onclick="toggleFileItem(this,'cont-open');">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-view">
+						<span>VIEW</span>
+					</button>
+					<button type="button" class="bt-down">
+						<span>다운로드</span>
+					</button>
+					<button type="button" class="bt-del">
+						<span>삭제</span>
+					</button>
+				</div>
+				<button class="bt-ctrl-more" type="button" onclick="toggleFileItem(this,'ctrl-open');">
+					<span>More</span>
+				</button>
+				<div class="mfu-fcont">
+					<span class="isFileAlt"><input type="text" class="text"
+						name="tmpfile_cont[]" placeholder="파일설명" value="" hname="파일설명"></span>
+					<button type="button" class="bt-add-cont">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-cont-close" onclick="toggleFileItem(this,'cont-open');">
+						<span>취소</span>
+					</button>
+				</div></li>
+			<li class="file-item" id="mfu-item-1510647484744">
+				<input type="hidden" name="tmpfile_idx[]" value="5">
+
+				<div class="mfu-finfo">
+					<span class="isFileTypeIcon">
+						<img src="/resources/_Plugin/FileManager.v4.0/lib/img/img.gif" alt="jpg 파일">
+					</span> 
+					<span class="isFileName">0002.jpg</span>
+
+					<div class="isFileInfo">
+						<span class="mfu-fsize">135.61KB</span> <span class="mfu-state">업로드완료</span>
+					</div>
+				</div>
+
+				<div class="mfu-ctrls">
+					<button type="button" class="bt-cont" onclick="toggleFileItem(this,'cont-open');">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-view">
+						<span>VIEW</span>
+					</button>
+					<button type="button" class="bt-down">
+						<span>다운로드</span>
+					</button>
+					<button type="button" class="bt-del">
+						<span>삭제</span>
+					</button>
+
+				</div>
+				<button class="bt-ctrl-more" type="button" onclick="toggleFileItem(this,'ctrl-open');">
+					<span>More</span>
+				</button>
+				<div class="mfu-fcont">
+					<span class="isFileAlt">
+						<input type="text" class="text" name="tmpfile_cont[]" placeholder="파일설명" value="" hname="파일설명">
+					</span>
+					<button type="button" class="bt-add-cont">
+						<span>본문추가</span>
+					</button>
+					<button type="button" class="bt-cont-close"
+						onclick="toggleFileItem(this,'cont-open');">
+						<span>취소</span>
+					</button>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+	<script>
+function toggleFileItem(bt,opt){
+	var $li = $($(bt).parents("li").get(0));
+
+
+	if($li.hasClass(opt)){
+		$li.removeClass(opt);
+	}else{
+		if(opt=="ctrl-open"){
+			$(".mfu-file-list li").removeClass('cont-open');
+		}
+
+		
+		$(".mfu-file-list li").not($li).removeClass(opt);
+		$li.addClass(opt);
+
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* -------------------------------------ImgeBanner S------------------------------------ */
+.mimban-TMPL01 {overflow:hidden;position:relative;width:100%;height:100%;background:url(/resources/_Img/MainModule/dpt_info_bg.jpg) no-repeat;}
+.mimban-TMPL01 .bg-img {display:block;width:100%;height:100%;position:absolute;left:0;top:0;z-index:1}
+.mimban-TMPL01 .bg-img img {width:100%;height:100%;}
+.mimban-TMPL01 .pcont {position:relative;padding:40px 30px;color:#fff;text-align:left;box-sizing:border-box;height:100%;width:100%;z-index:2;}
+.mimban-TMPL01 .pcont .tit {font-size:26px;;display:block;font-weight:bold;line-height:1;margin-bottom:15px;}
+.mimban-TMPL01 .pcont .txt {overflow:hidden;font-size:14px;line-height:16px;word-wrap:break-word;word-break:keep-all;}
+.mimban-TMPL01 a {display:block;}
+.mimban-TMPL01 a:after {content:"";display:block;background:url(/resources/_Img/MainModule/mimban_arr.png) no-repeat 0 0;width:40px;height:40px;position:absolute;right:33px;bottom:33px;transition:all .3s ease;z-index:1;}
+.mimban-TMPL01 a:hover:after {right:30px;}
+/* -------------------------------------ImgeBanner E------------------------------------ */

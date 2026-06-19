@@ -1,0 +1,144 @@
+<div class="formbd-pkg-wr">
+	<div class="frmbd-view frmbd-view1">
+		<div id="frmInputFldList">
+			<div class="frmbd-fld-tit">
+				<h2 class="fbdItemTit1 c-tit01">템플릿 01</h2>
+				<div class="fbdItemMsg1">
+					<span class="req">필수입력</span>표시는 필수입력항목입니다.
+				</div>
+			</div>
+			<div class="frmbd-fld-list">
+				<ul>
+					<li class="frmfld-group">
+						<h3 class="frmGroupTit"><span>분류1</span></h3>
+						<ul class="frmGroupLst">
+							<li>
+								<div class="frm-li fld-check">
+									<div class="lbl">
+										<label for="FLD_00000000021">체크박스 항목</label><span class="req">필수입력</span>
+									</div>
+									<div class="fld">
+										<div class="eleFld chkFld">
+											<ul class="dir-left">
+												<li><span class="chks"><input data-hname="체크박스 항목" data-maxcheck="4" data-mincheck="2" id="FLD_00000000021_0" name="FLD_00000000021" onclick="fn_EtcCheckBoxOpnion(this.checked,'선택값1','FLD_00000000021',',', 0, 4 , 'N');" required="" type="checkbox" value="선택값1"> <label for="FLD_00000000021_0">선택값1</label></span></li>
+												<li><span class="chks"><input data-hname="체크박스 항목" data-maxcheck="4" data-mincheck="2" id="FLD_00000000021_1" name="FLD_00000000021" onclick="fn_EtcCheckBoxOpnion(this.checked,'선택값2','FLD_00000000021',',', 1, 4 , 'N');" required="" type="checkbox" value="선택값2"> <label for="FLD_00000000021_1">선택값2</label></span></li>
+												<li><span class="chks"><input data-hname="체크박스 항목" data-maxcheck="4" data-mincheck="2" id="FLD_00000000021_2" name="FLD_00000000021" onclick="fn_EtcCheckBoxOpnion(this.checked,'선택값3','FLD_00000000021',',', 2, 4 , 'N');" required="" type="checkbox" value="선택값3"> <label for="FLD_00000000021_2">선택값3</label></span></li>
+												<li><span class="chks"><input data-hname="체크박스 항목" data-maxcheck="4" data-mincheck="2" id="FLD_00000000021_3" name="FLD_00000000021" onclick="fn_EtcCheckBoxOpnion(this.checked,'선택값4','FLD_00000000021',',', 3, 4 , 'N');" required="" type="checkbox" value="선택값4"> <label for="FLD_00000000021_3">선택값4</label></span></li>
+												<li><span class="chks"><input data-hname="체크박스 항목" data-maxcheck="4" data-mincheck="2" id="FLD_00000000021_4" name="FLD_00000000021" onclick="fn_EtcCheckBoxOpnion(this.checked,'선택값5','FLD_00000000021',',', 4, 4 , 'N');" required="" type="checkbox" value="선택값5"> <label for="FLD_00000000021_4">선택값5</label></span></li>
+											</ul>
+										</div>
+										<div class="info-ex03">
+											체크박스 입력안내문구
+										</div>
+										<div class="fhelp csc-p03">
+											2개이상 ~ 4개이하
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="frm-li fld-select">
+									<div class="lbl">
+										<label for="FLD_00000000022">셀렉트박스</label><span class="req">필수입력</span>
+									</div>
+									<div class="fld">
+										<div class="eleFld">
+											<select class="a-sel" data-hname="셀렉트박스" id="FLD_00000000022" name="FLD_00000000022" onchange="fn_FldEtc2(this.value, 'FLD_00000000022','셀렉트박스 선택값2,');" required="required">
+												<option value="셀렉트박스 선택값1">
+													셀렉트박스 선택값1
+												</option>
+												<option value="셀렉트박스 선택값2">
+													셀렉트박스 선택값2
+												</option>
+												<option value="셀렉트박스 선택값3">
+													셀렉트박스 선택값3
+												</option>
+												<option value="셀렉트박스 선택값4">
+													셀렉트박스 선택값4
+												</option>
+												<option value="셀렉트박스 선택값5">
+													셀렉트박스 선택값5
+												</option>
+												<option value="셀렉트박스 선택값6">
+													셀렉트박스 선택값6
+												</option>
+												<option value="셀렉트박스 선택값7">
+													셀렉트박스 선택값7
+												</option>
+											</select>
+										</div><span class="txt-wr" id="FLD_00000000022_span_1" style="display:none">
+										<textarea cols="90" data-hname="셀렉트박스 기타의견" id="FLD_00000000022_etc1" name="FLD_00000000022_etc" placeholder="셀렉트박스 선택값2 상세내용을 입력해주세요." rows="2"></textarea></span>
+										<div class="info-ex03">
+											셀렉트박스 입력안내문구
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="frm-li fld-radio">
+									<div class="lbl">
+										<label for="FLD_00000000019">라디오 항목1</label><span class="req">필수입력</span>
+									</div>
+									<div class="fld">
+										<div class="eleFld rdoFld">
+											<ul class="dir-left">
+												<li><span class="rdos"><input data-hname="라디오 항목1" id="FLD_00000000019_0" name="FLD_00000000019" required="" type="radio" value="선택값1"> <label for="FLD_00000000019_0">선택값1</label></span></li>
+												<li><span class="rdos"><input data-hname="라디오 항목1" id="FLD_00000000019_1" name="FLD_00000000019" required="" type="radio" value="선택값2"> <label for="FLD_00000000019_1">선택값2</label></span></li>
+												<li><span class="rdos"><input data-hname="라디오 항목1" id="FLD_00000000019_2" name="FLD_00000000019" required="" type="radio" value="선택값3"> <label for="FLD_00000000019_2">선택값3</label></span></li>
+												<li><span class="rdos"><input data-hname="라디오 항목1" id="FLD_00000000019_3" name="FLD_00000000019" required="" type="radio" value="선택값4"> <label for="FLD_00000000019_3">선택값4</label></span></li>
+											</ul>
+										</div>
+										<div class="info-ex03">
+											라디오 입력문구
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="frmfld-group">
+						<h3 class="frmGroupTit"><span>분류2</span></h3>
+						<ul class="frmGroupLst">
+							<li>
+								<div class="frm-li fld-text">
+									<div class="lbl">
+										<label for="FLD_00000000023">텍스트 항목1</label><span class="req">필수입력</span>
+									</div>
+									<div class="fld">
+										<div class="eleFld">
+											<input class="text" data-hname="텍스트 항목1" data-minlenght="150" id="FLD_00000000023" maxlength="150" name="FLD_00000000023" required="required" type="text" value="">
+										</div>
+										<div class="info-ex03">
+											텍스트 항목1 입력안내문구
+										</div>
+										<div class="fhelp csc-p03">
+											3자 ~ 150자 까지 입력
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="frm-li fld-textarea">
+									<div class="lbl">
+										<label for="FLD_00000000024">서술</label><span class="req">필수입력</span>
+									</div>
+									<div class="fld">
+										<div class="eleFld areaFld">
+											<textarea cols="90" data-hname="서술" data-minlenght="333" id="FLD_00000000024" maxlength="333" name="FLD_00000000024" required="required" rows="10"></textarea>
+										</div>
+										<div class="info-ex03">
+											서술 입력안내문구
+										</div>
+										<div class="fhelp csc-p03">
+											3자 ~ 333자 까지 입력
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

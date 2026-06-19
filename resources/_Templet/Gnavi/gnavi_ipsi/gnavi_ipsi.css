@@ -1,0 +1,105 @@
+#gNavi {position:relative;width:auto;box-sizing:border-box;height:40px;z-index:12;background:#fff}
+#gNavi .global-wrap {max-width:1400px;margin:0 auto;box-sizing:border-box;position:relative;height:100%}
+#gNavi .glnk-sec {height:100%;font-size:0}
+#gNavi .glnk-sec a span,
+#gNavi .glnk-sec button span {display:inline-block;line-height:1;box-sizing:border-box;position:relative;letter-spacing:0;font-weight:500;font-size:14px;vertical-align:middle;z-index:1}
+#gNavi .glnk-sec a:after,
+#gNavi .glnk-sec button:after {content:"";display:block;position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0, 0, 0, .3);z-index:0;opacity:0;transition:all .3s ease}
+#gNavi .glnk-sec a:focus span,
+#gNavi .glnk-sec a:hover span,
+#gNavi .glnk-sec button:focus span,
+#gNavi .glnk-sec button:hover span {text-decoration:underline}
+#gNavi .glnk-sec a:focus:after,
+#gNavi .glnk-sec a:hover:after,
+#gNavi .glnk-sec button:focus:after,
+#gNavi .glnk-sec button:hover:after {opacity:1}
+#gNavi .glnk-sec a {display:inline-block;box-sizing:border-box;position:relative;padding:0 22px;font-size:0;height:100%}
+#gNavi .glnk-sec a:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
+#gNavi .glnk-sec a:focus:after,
+#gNavi .glnk-sec a:hover:after {opacity:1}
+#gNavi .glnk-sec .whome {background:#1472b6;color:#fff}
+#gNavi .glnk-sec .whome span {margin:-4px 0 0}
+#gNavi .glnk-sec .toppop-ctrl {display:inline-block;vertical-align:top;height:100%}
+#gNavi .glnk-sec .toppop-ctrl .btn-wctrl {display:block;height:100%;padding:0 44px 0 23px;color:#fff;border:0;box-sizing:border-box;position:relative;background:#0c1b59}
+#gNavi .glnk-sec .toppop-ctrl .btn-wctrl:before {content:"";display:block;position:absolute;width:7px;height:7px;border:solid;border-width:0 0 2px 2px;border-color:transparent transparent #fff #fff;top:0;right:0;bottom:0;left:0;margin:13px 21px auto auto;transform:rotate(-45deg);z-index:1;transition:all .3s ease}
+#gNavi .glnk-sec .toppop-ctrl .btn-wctrl span {margin:-8px 0 0}
+#gNavi .glnk-sec .toppop-ctrl .btn-wctrl.show:before {transform:rotate(135deg);margin:17px 23px auto auto}
+#gNavi .srvc-sec {position:absolute;right:0;top:0;z-index:2200;height:100%}
+#gNavi .srvc-sec .srvcLink {position:relative;z-index:1100;height:100%;font-size:0}
+#gNavi .srvc-sec .srvcLink > a {display:inline-block;box-sizing:border-box;position:relative;height:100%;padding:0 11px 0 10px;font-size:0;vertical-align:top;}
+#gNavi .srvc-sec .srvcLink > a:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
+#gNavi .srvc-sec .srvcLink > a:after {content:"";display:block;position:absolute;width:2px;height:2px;right:0;top:50%;margin:3px 0 0;background:#ababab}
+#gNavi .srvc-sec .srvcLink > a:last-child {padding-right:0}
+#gNavi .srvc-sec .srvcLink > a:last-child:after {display:none}
+#gNavi .srvc-sec .srvcLink > a > span {display:inline-block;font-size:17px;color:#666;padding:0;line-height:1;letter-spacing:-.05em;vertical-align:middle;margin:4px 0 0;font-weight:400;transition:all .3s ease}
+#gNavi .srvc-sec .srvcLink > a:focus > span,
+#gNavi .srvc-sec .srvcLink > a:hover > span {text-decoration:underline;color:#000}
+#gNavi .srvc-sec .srvcLink .langPkg {display:inline-block;box-sizing:border-box;position:relative;vertical-align:top;margin:0 0 0 10px;}
+#gNavi .srvc-sec .srvcLink .langPkg .caster {display:block;border:0;box-sizing:border-box;height:40px;font-size:0;background:transparent;padding:0 15px 0 0;}
+#gNavi .srvc-sec .srvcLink .langPkg .caster:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle;}
+#gNavi .srvc-sec .srvcLink .langPkg .caster:after {content:"";display:block;position:absolute;width:0;height:0;right:0;top:20px;border:solid;border-width:5px 4px 0 4px;border-color:#555 transparent transparent transparent;transition:all .3s ease}
+#gNavi .srvc-sec .srvcLink .langPkg .caster span {display:inline-block;font-size:16px;color:#666;padding:0;line-height:1;letter-spacing:-.05em;vertical-align:middle;margin:2px 0 0;font-weight:400;transition:all .3s ease}
+#gNavi .srvc-sec .srvcLink .langPkg .caster:focus span,
+#gNavi .srvc-sec .srvcLink .langPkg .caster:hover span {color:#000;text-decoration:underline}
+#gNavi .srvc-sec .srvcLink .langPkg.over .caster:after {transform:rotate(180deg);border-color:#1472b6 transparent transparent transparent}
+#gNavi .srvc-sec .srvcLink .langPkg.over .caster span {color:#1472b6}
+#gNavi .srvc-sec .srvcLink .langPkg .langSet {display:none;position:absolute;width:100%;left:0;top:100%;box-sizing:border-box;padding:0 10px;border:1px solid #ddd;background:#fff}
+#gNavi .srvc-sec .srvcLink .langPkg ul {display:block;}
+#gNavi .srvc-sec .srvcLink .langPkg ul li {display:block;box-sizing:border-box;border-bottom:1px solid #ddd}
+#gNavi .srvc-sec .srvcLink .langPkg ul li:last-child {border-bottom:0}
+#gNavi .srvc-sec .srvcLink .langPkg a {display:block;text-align:center;padding:10px 0;line-height:1}
+#gNavi .srvc-sec .srvcLink .langPkg a span {display:inline-block;font-size:15px;color:#666;line-height:1;transition:all .3s ease}
+#gNavi .srvc-sec .srvcLink .langPkg a:focus span,
+#gNavi .srvc-sec .srvcLink .langPkg a:hover span {color:#000;text-decoration:underline}
+#gNavi .srvc-sec .srvcLink .langPkg .closer {display:block;position:absolute;width:20px;height:20px;right:0;top:100%;border:1px solid #ddd;border-top:0;background:#fff;margin:-1px -1px 0 0}
+#gNavi .srvc-sec .srvcLink .langPkg .closer:before,
+#gNavi .srvc-sec .srvcLink .langPkg .closer:after {content:"";display:block;position:absolute;width:10px;height:2px;background:#333;top:0;right:0;bottom:0;left:0;margin:auto;transition:all .3s ease}
+#gNavi .srvc-sec .srvcLink .langPkg .closer:before {transform:rotate(45deg)}
+#gNavi .srvc-sec .srvcLink .langPkg .closer:after {transform:rotate(135deg)}
+#gNavi .srvc-sec .srvcLink .langPkg .closer:focus:before,
+#gNavi .srvc-sec .srvcLink .langPkg .closer:hover:before {transform:rotate(135deg);background:#1472b6}
+#gNavi .srvc-sec .srvcLink .langPkg .closer:focus:after,
+#gNavi .srvc-sec .srvcLink .langPkg .closer:hover:after {transform:rotate(225deg);background:#1472b6}
+#gNavi .srvc-sec .srvcUtil {display:block;position:absolute;right:0;top:68px;z-index:1001}
+#gNavi .srvc-sec .srvcUtil .amenu {display:block;width:50px;height:50px;background:#fff;font-size:0;color:transparent;box-sizing:border-box;border:1px solid #656565;transition:all .3s ease}
+#gNavi .srvc-sec .srvcUtil .amenu:before,
+#gNavi .srvc-sec .srvcUtil .amenu span,
+#gNavi .srvc-sec .srvcUtil .amenu:after {content:"";display:block;position:absolute;width:22px;height:2px;background:#000;top:0;right:0;bottom:0;left:0;font-size:0;transition:all .3s ease}
+#gNavi .srvc-sec .srvcUtil .amenu:before {margin:16px auto auto auto}
+#gNavi .srvc-sec .srvcUtil .amenu span {margin:auto}
+#gNavi .srvc-sec .srvcUtil .amenu:after {margin:auto auto 16px auto}
+#gNavi .srvc-sec .srvcUtil .amenu:focus,
+#gNavi .srvc-sec .srvcUtil .amenu:hover {border-color:#000;background:#000}
+#gNavi .srvc-sec .srvcUtil .amenu:focus:before,
+#gNavi .srvc-sec .srvcUtil .amenu:focus span,
+#gNavi .srvc-sec .srvcUtil .amenu:focus:after,
+#gNavi .srvc-sec .srvcUtil .amenu:hover:before,
+#gNavi .srvc-sec .srvcUtil .amenu:hover span,
+#gNavi .srvc-sec .srvcUtil .amenu:hover:after {background:#fff}
+@media all and (max-width:1440px) {
+	#gNavi .global-wrap {margin:0 20px}
+}
+@media all and (max-width:1025px) {
+	#gNavi .glnk-sec a:after,
+	#gNavi .glnk-sec button:after {display:none}
+}
+@media all and (max-width:999px) {
+	#gNavi .srvc-sec .srvcUtil {display:none}
+	.mobile-sideMenu-open #gNavi {z-index:0}
+}
+@media all and (max-width:699px) {
+	#gNavi {height:0}
+	#gNavi .glnk-sec {position:relative}
+	#gNavi .glnk-sec .whome {display:none}
+	#gNavi .glnk-sec .toppop-ctrl {position:absolute;right:60px;top:27px}
+	#gNavi .glnk-sec .toppop-ctrl .btn-wctrl {height:auto;padding:5px 20px 5px 5px;color:#333;background:#fff;line-height:1}
+	#gNavi .glnk-sec .toppop-ctrl .btn-wctrl:before {border-width:0 0 1px 1px;border-color:transparent transparent #333 #333;margin:7px 5px auto auto;transform:rotate(-45deg);z-index:1;transition:all .3s ease}
+	#gNavi .glnk-sec .toppop-ctrl .btn-wctrl span {margin:0}
+	#gNavi .glnk-sec .toppop-ctrl .btn-wctrl.show:before {margin:12px 5px auto auto}
+	#gNavi .srvc-sec {display:none}
+}
+@media all and (max-width:399px) {
+	#gNavi .glnk-sec a span,
+	#gNavi .glnk-sec button span {font-size:12px}
+	#gNavi .glnk-sec .toppop-ctrl {right:45px}
+}

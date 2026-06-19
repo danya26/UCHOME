@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="설치 없이 가입 즉시 바로 이용할 수 있는 무료 채팅 서비스를 제공 해 드리겠습니다." />
+    <meta name="author" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="바로 이용하는 무료 채팅 솔루션" />
+    <meta property="og:description" content="설치 없이 가입 즉시 바로 이용할 수 있는 무료 채팅 서비스를 제공 해 드리겠습니다." />
+    <meta property="og:image" content="https://www.vchatcloud.com/img/common/og_img.png" />
+    <meta property="og:url" content="https://www.vchatcloud.com" />
+    <title>카카오톡형</title>
+    <link rel="canonical" href="https:// vchatcloud.com/index.html">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c13f14f04a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+
+    <script src="js/vchatcloud-1.2.0.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/errMsg.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 샘플 메뉴 끝 -->
+        <section>
+            <!-- 샘플 화면 -->
+            <div class="kakao">
+                <article class="header">
+                    <span><i class="fas fa-wifi"></i></span>
+                </article>
+                <!-- 에러 표시 팝업 -->
+                <div class="errorpopup">
+                    <p><i class="fas fa-exclamation-circle"></i></p>
+                    <p>시스템이 원활하지 않아 오류가 발생하였습니다. 잠시 후, 다시 참여해 주시기 바랍니다.</p>
+                    <a class="popupbtn" href="#!">닫기</a>
+                </div>
+                <!-- 에러 표시 팝업 끝 -->
+
+                <!-- 커스텀 팝업 -->
+                <div class="custompopup">
+                    <p>팝업</p>
+                    <a class="popupbtn" href="#!">확인</a><a class="popupbtn" href="#!">취소</a>
+                </div>
+                <!-- 커스텀 팝업 끝 -->
+
+                <article class="contents">
+                    <!-- 로그인 -->
+                    <div class="login">
+                        <p class="login-title">대화명 설정</p>
+                        <div class="profile">
+                            <p>프로필 이미지</p>
+                            <ul>
+                                <li>
+                                    <a href="#!" class="active" profile="1"><img src="img/profile/1.png" alt="man" width="100%"></a>
+                                </li>
+                                <li>
+                                    <a href="#!" profile="2"><img src="img/profile/2.png" alt="woman" width="100%"></a>
+                                </li>
+                                <li>
+                                    <a href="#!" profile="3"><img src="img/profile/3.png" alt="flower1" width="100%"></a>
+                                </li>
+                                <li>
+                                    <a href="#!" profile="4"><img src="img/profile/4.png" alt="flower2" width="100%"></a>
+                                </li>
+                                <li>
+                                    <a href="#!" profile="5"><img src="img/profile/5.png" alt="flower3" width="100%"></a>
+                                </li>
+                            </ul>
+                            <!-- 프로필 이미지 선택 -->
+                        </div>
+                        <div class="name">
+                            <label for="name">대화명</label>
+                            <input class="name" type="text" id="name" placeholder="로그인 할 대화명을 입력 해주세요.">
+                        </div>
+                        <button class="popupbtn">확인</button>
+                    </div>
+                    <!-- 로그인 끝 -->
+
+                    <!-- 채팅 -->
+                    <div class="talk_field">
+
+                        <!-- 상단 대화상대 프로필 -->
+                        <div class="opponent_profile">
+                            <ul>
+                                <li class="room_img"><img src="img/chat.svg" alt="man" width="100%"></li>
+                                <li>vChatCloud 오픈채팅방</li>
+                            </ul>
+                        </div>
+
+                        <!-- 톡 내용 -->
+                        <div class="talk_contents">
+                            <div class="content1">
+
+                            </div>
+                        </div>
+
+                        <!-- 메시지 작성 시작 -->
+                        <div class="talk_input">
+                            <div>
+                                <div class="textbox" id="content" contenteditable="true" placeholder="메세지 입력하기"></div>
+                                <div class="btn_send"><a href="#!">전송</a></div>
+                            </div>
+                        </div>
+                        <!-- 메시지 작성 끝 -->
+
+                    </div>
+                    <!-- 채팅 끝 -->
+                </article>
+            </div>
+            <!-- 샘플 화면 끝 -->
+        </section>
+    </div>
+</body>
+
+</html>

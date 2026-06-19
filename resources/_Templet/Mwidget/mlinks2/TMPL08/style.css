@@ -1,0 +1,26 @@
+/* -------------------------------------Link S------------------------------------ */
+.center01-sec1 .greeting-w {float:left;width:427px;box-sizing:border-box;padding:75px 60px 0 52px;position:relative;z-index:100}
+.center01-sec1 .greeting-w:after {position:absolute;left:0;top:0;width:3px;height:62px;background:#006474;display:block;content:'';}
+.center01-sec1 .greeting-w .txt1 {font-size:30px;color:#0c6676;letter-spacing:-0.05em;line-height:1;}
+.center01-sec1 .greeting-w .txt1 .tp {font-size:60px;color:#0c6676;font-family:'myriad-pro', sans-serif;}
+.center01-sec1 .greeting-w .txt2 {font-size:17px;color:#555;padding-top:35px;letter-spacing:-0.01em;line-height:1.6;}
+.center01-sec1 .greeting-w a.btn {font-size:15px;color:#fff;display:inline-block;width:100px;height:100px;box-sizing:border-box;padding:15px;position:relative;background:#0c6676;margin-top:115px;}
+.center01-sec1 .greeting-w a.btn:after {position:absolute;right:0;bottom:0;width:32px;height:32px;background:#f4f4f4 url(/resources/_Templet/TMPL07/_Img/Main/center01_greeting_arr.png) no-repeat center center;display:block;content:'';transition:all .3s ease;}
+.center01-sec1 .greeting-w a.btn:hover:after {right:-16px;}
+@media all and (max-width:1199px){
+	.center01-sec1 .greeting-w {width:40%;padding-left:50px}
+}
+@media all and (max-width:999px){
+	.center01-sec1 .greeting-w {width:100%;float:none;padding:30px;overflow:hidden;padding-bottom:0;border-bottom:1px solid #eee;margin-bottom:30px}
+	.center01-sec1 .greeting-w .txt1 {font-size:26px}
+	.center01-sec1 .greeting-w .txt2 {font-size:16px;padding-top:25px}
+	.center01-sec1 .greeting-w a.btn {float:right;margin-top:0;margin-right:-30px}
+}
+@media all and (max-width:768px){
+	.center01-sec1 .greeting-w {margin-bottom:20px}
+	.center01-sec1 .greeting-w a.btn {width:80px;height:80px}
+}
+@media all and (max-width:599x){
+	.center01-sec1 .greeting-w a.btn {width:60px;height:60px}
+}
+/* -------------------------------------Link E------------------------------------ */

@@ -1,0 +1,70 @@
+/* -------------------------------------Link S------------------------------------ */
+.mlink-sec {position: relative;height:100%;background:url(/resources/_Templet/TMPL01/_Img/Main/allim_bg.gif) no-repeat 15px 90%;}
+.mlink-sec:after {display:block;content:"";clear:both;}
+.mlink-sec .list {width:33.333%;float:left;text-align:center;position:relative;}
+.mlink-sec .list:before {display:block;content:"";position:absolute;background:url(/resources/homepage/ipsi/_Img/Layout/ipsimain_spr.png) no-repeat;}
+.mlink-sec .n1 {background:rgba(36,169,118,.9);}
+.mlink-sec .n2 {background:rgba(59,161,53,.9);}
+.mlink-sec .n3 {background:rgba(20,100,173,.9);}
+.mlink-sec .n1:before {top:0;left:0;width:147px;height:148px;background-position:0 -47px;}
+.mlink-sec .n2:before {bottom:0;left:0;width:394px;height:164px;background-position:0 -214px;}
+.mlink-sec .n3:before {bottom:0;right:0;width:233px;height:165px;background-position:-161px -47px;}
+.mlink-sec a {display:block;position:relative;}
+.mlink-sec a:before, .mlink-sec a:after {display:block;content:"";width:27px;height:1px;background:#fff;position:absolute;top:35px;right:30px;transition:all .5s ease;}
+.mlink-sec a:before {transform:rotate(90deg);-ms-transform:rotate(90deg);}
+.mlink-sec a span {display:block;}
+.mlink-sec .mtit {font-size:22px;font-weight:500;color:#fff;background:rgba(0,0,0,.2);padding:24px 20px;}
+.mlink-sec .comm {position: relative;padding:0 50px 9px;font-size:19px;color:#fff;line-height: 1.5;min-height:125px;}
+.mlink-sec .comm:before {display:block;content:'';width:45px;height:45px;background:url(/resources/homepage/ipsi/_Img/Layout/ipsimain_spr.png) no-repeat 0 0;margin:26px auto 12px;transition:all .5s ease;}
+.mlink-sec .comm:after {display:block;content:'';width:0;height:0;transition:all .5s ease;position:absolute;top:50px;left:50%;background:radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0%, transparent 50%);}
+.mlink-sec a:hover:before, .mlink-sec a:focus:before {transform:rotate(270deg);-ms-transform:rotate(270deg);}
+.mlink-sec a:hover:after, .mlink-sec a:focus:after {transform:rotate(180deg);-ms-transform:rotate(180deg);}
+.mlink-sec a:hover .mtit, .mlink-sec a:focus .mtit {text-decoration:underline;}
+/* 아이콘 */
+.mlink-sec .n1 .comm:before {background-position:0 0;}
+.mlink-sec .n2 .comm:before {background-position:-47px 0;}
+.mlink-sec .n3 .comm:before {background-position:-94px 0;}
+.mlink-sec a:hover .comm:before, .mlink-sec a:focus .comm:before {transform:translateY(-6px);-ms-transform:translateY(-6px);}
+.mlink-sec a:hover .comm:after, .mlink-sec a:focus .comm:after {width:60px;height:10px;top:45px;margin-left:-30px;}
+@media all and (max-width:1099px) {
+	.mlink-sec .comm {padding:0 30px 9px;}
+}
+@media all and (max-width:999px) {
+	.mlink-sec .list:before {background-size:316px auto;}
+	.mlink-sec .n1:before {width:118px;height:118px;background-position:0 -38px;}
+	.mlink-sec .n2:before {width:315px;height:131px;background-position:0 -171px;}
+	.mlink-sec .n3:before {width:186px;height:132px;background-position:-129px -38px;}
+	.mlink-sec .mtit {font-size:18px;text-align:left;}
+	.mlink-sec .comm {padding:0 10px 9px;font-size:16px;}
+	.mlink-sec a:before, .mlink-sec a:after {top:32px;right:15px}
+}
+@media all and (max-width:768px) {
+	.mlink-sec .list {font-size:0;}
+	.mlink-sec a:before, .mlink-sec a:after {top:20px;display:none;}
+	.mlink-sec .mtit {font-size:16px;font-weight:400;line-height:1.2;text-align:center;}
+	.mlink-sec .comm {min-height:130px;}
+	.mlink-sec .comm:before {margin-top:15px;}
+}
+@media all and (max-width:599px) {
+	.mlink-sec .n1:before, .mlink-sec .n2:before, .mlink-sec .n3:before {display:none;}
+	.mlink-sec a {display:block;padding:25px 0;}
+	.mlink-sec .comm {display:none;}
+	.mlink-sec .mtit {font-size:14px;padding:50px 5px 0;position:relative;background:none;}
+	.mlink-sec .list .mtit:before {display:block;content:'';width:36px;height:36px;position:absolute;top:0;left:50%;margin-left:-18px;background:url(/resources/homepage/ipsi/_Img/Layout/ipsimain_spr.png) no-repeat 0 0;background-size:316px auto;}
+	/* 아이콘 */
+	.mlink-sec .n1 .mtit:before {background-position:0 0;}
+	.mlink-sec .n2 .mtit:before {background-position:-38px 0;}
+	.mlink-sec .n3 .mtit:before {background-position:-75px 0;}
+}
+@media all and (max-width:399px) {
+	.mlink-sec .list {width:50%;text-align:left;box-sizing:border-box;}
+	.mlink-sec .list:last-child {width:100%;}
+	.mlink-sec a {text-align:center;}
+	.mlink-sec .mtit {display:inline-block;vertical-align:middle;padding:0 0 0 40px;}
+	.mlink-sec .list .mtit:before {top:-6px;left:0;margin:0;width:27px;height:27px;background-size:237px auto;}
+	/* 아이콘 */
+	.mlink-sec .n1 .mtit:before {background-position:0 0;}
+	.mlink-sec .n2 .mtit:before {background-position:-28px 0;}
+	.mlink-sec .n3 .mtit:before {background-position:-56px 0;}
+}
+/* -------------------------------------Link E------------------------------------ */
