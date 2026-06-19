@@ -29,7 +29,7 @@
 	#menu-wrap .allmn-btn:hover:after {width:14px;background:#0d5db2}
 	#menu-wrap .allmn-btn:hover .txt:before {width:18px;margin-left:20px;background:#0d5db2}
 	#mainNavi {height:100px;box-sizing:border-box;padding:0}
-	#mainNavi .depth1-wrap {display:block;width:auto;text-align:center;box-sizing:border-box;position:relative;max-width:1400px;margin:0 auto;padding:0 280px 0 0;font-size:0;line-height:1}
+	#mainNavi .depth1-wrap {display:block;width:auto;text-align:center;box-sizing:border-box;position:relative;max-width:1920px;margin:0 auto;padding:0 280px 0 0;font-size:0;line-height:1}
 	#mainNavi .depth1-ul {display:inline-block;overflow:hidden}
 	#mainNavi > ul > li:first-child {padding-left:8px}
 	#mainNavi .mn_li1 {display:inline-block;text-align:center;margin:0 28px}
@@ -44,7 +44,7 @@
 	#mainNavi .mn_a1:hover:after,
 	#mainNavi .mn_a1:focus:after,
 	#mainNavi .mn_li1.over .mn_a1:after {display:none}
-	#mainNavi .depth2-wrap {display:none;position:absolute;top:100px;left:50%;z-index:1000;width:1400px;margin:0 0 0 -700px;padding:0 0 40px 448px;text-align:left;font-weight:normal;box-sizing:border-box;min-height:270px;background:#fff;box-shadow:0 10px 25px rgba(0, 0, 0, .05)}
+	#mainNavi .depth2-wrap {display:none;position:absolute;top:100px;left:50%;z-index:1000;width:1920px;margin:0 0 0 -960px;padding:0 0 40px 448px;text-align:left;font-weight:normal;box-sizing:border-box;min-height:270px;background:#fff;box-shadow:0 10px 25px rgba(0, 0, 0, .05)}
 	#mainNavi .depth2-wrap:after {}
 	#mainNavi .depth2-wrap .depth2-tit {display:block;position:absolute;width:448px;height:270px;box-sizing:border-box;left:0;top:0;padding:40px 30px 35px;background:#057d84;border-radius:0 20px 20px 0}
 	#mainNavi .depth2-wrap .depth2-tit span {display:block;line-height:1.3}
@@ -115,8 +115,11 @@
 	.pc-topMenu-open #mainNavi .mn_a1[target=_blank]:hover span:after {background-position-x:-25px}
 	.body-slider-ovclick {display:none}
 }
-@media all and (min-width:1300px) and (max-width:1440px) {
-	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 380px}
+@media all and (min-width:1000px) and (max-width:1919px) {
+	#mainNavi .depth2-wrap {left:0;width:100%;margin:0;padding:0 20px 40px 448px}
+}
+@media all and (min-width:1300px) and (max-width:1919px) {
+	#mainNavi .depth2-wrap {padding:0 20px 40px 380px}
 	#mainNavi .depth2-wrap .depth2-tit {width:380px;height:270px;padding:40px 25px 35px;border-radius:0 20px 20px 0}
 }
 @media all and (min-width:1200px) and (max-width:1299px) {
