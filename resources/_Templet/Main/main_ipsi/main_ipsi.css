@@ -6,7 +6,7 @@
 /* ==============================
  * 메인비쥬얼
 ================================= */
-.mVisual-wr {position:relative;height:520px;box-sizing:border-box;padding:0;z-index:0;overflow:hidden;max-width:1720px;margin:0 auto;transition:all .3s ease}
+.mVisual-wr {position:relative;height:520px;box-sizing:border-box;padding:0;z-index:0;overflow:hidden;width:100%;max-width:none;margin:0;transition:all .3s ease}
 #mVisual {height:100%;position:relative}
 #mVisual .dataList {display:block;z-index:0;height:100%}
 #mVisual .dataList .owl-item {overflow:hidden}
@@ -16,6 +16,8 @@
 #mVisual .dataList .item,
 #mVisual .dataList .item {height:100%}
 #mVisual .dataList .item {display:block;box-sizing:border-box;position:relative}
+#mVisual .dataList .item > a {display:block;height:100%}
+#mVisual .dataList .item video {display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 #mVisual .dataList .item.hasNoData {background:#f5f5f5;text-align:center}
 #mVisual .dataList .item.hasNoData:before {content:"";display:inline-block;width:0;height:100%;vertical-align:middle}
 #mVisual .dataList .item.hasNoData .no-data {display:inline-block;vertical-align:middle;width:auto}
@@ -24,12 +26,13 @@
 #mVisual .dataList .txtBox .txtCore .pTxt1,
 #mVisual .dataList .txtBox .txtCore .pTxt2 {display:block;word-wrap:break-word;word-break:keep-all;white-space:normal;box-sizing:border-box;color:#fff}
 #mVisual .dataList .txtBox .txtCore .pTxt1:empty {display:none}
-#mVisual .dataList .txtBox .txtCore .pTxt1 {font-size:22px;font-weight:600;line-height:1.3;letter-spacing:0;font-family:address-sans-pro, sans-serif}
-#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:65px;font-weight:600;line-height:1.3;letter-spacing:0;margin:8px 0 0}
-#mVisual .dataList .txtBox .txtCore .pTxt1:empty + .pTxt2 {margin-top:0}
+#mVisual .dataList .txtBox .txtCore .pTxt1,
+#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:65px;font-weight:600;line-height:1.3;letter-spacing:0}
+#mVisual .dataList .txtBox .txtCore .pTxt2 {margin:0}
+#mVisual .dataList .txtBox .txtCore .pTxt1:not(:empty) + .pTxt2 {margin-top:0}
 #mVisual .dataList .txtBox .txtCore .pTxt2 em {font-weight:700;font-style:normal}
-#mVisual .dataList .imgBox {display:block;position:relative;z-index:1;height:100%}
-#mVisual .dataList .imgBox img {display:block;position:absolute;width:auto;height:100%;left:50%;top:0;transform:translateX(-50%)}
+#mVisual .dataList .imgBox {display:block;position:relative;z-index:1;height:100%;overflow:hidden}
+#mVisual .dataList .imgBox img {display:block;position:absolute;width:100%;height:100%;left:0;top:0;object-fit:cover;object-position:center;transform:none}
 #mVisual .dataList .owl-stage-outer {z-index:0}
 #mVisual .dataList .owl-nav {position:absolute;width:100%;left:0;top:50%;z-index:1}
 #mVisual .dataList .owl-nav button {display:block;position:absolute;width:40px;height:40px;top:50%;transform:translateY(-50%);border:0;border-radius:3px;background:transparent}
@@ -42,14 +45,15 @@
 #mVisual .dataList .owl-nav .owl-next:after {transform:rotate(225deg);margin:auto 16px auto auto}
 #mVisual .dataList .owl-nav .owl-next:focus:after,
 #mVisual .dataList .owl-nav .owl-next:hover:after {margin:auto 10px auto auto}
-#mVisual .dataCtrl {display:block;position:absolute;left:0;top:0;width:100%;height:100%;max-width:1720px;margin:0 auto;z-index:2;pointer-events:none}
-#mVisual .dataCtrl .dataAuto {display:block;position:absolute;left:calc((100% - min(100%, 1400px)) / 2);top:250px;line-height:1;font-size:0;pointer-events:auto}
+#mVisual .dataCtrl {display:block;position:absolute;left:0;top:0;width:100%;height:100%;z-index:2;pointer-events:none}
+#mVisual .dataCtrl .visUtil {display:block;position:absolute;left:calc((100% - min(100%, 1400px)) / 2);top:250px;line-height:1;font-size:0;pointer-events:auto}
+#mVisual .dataCtrl .dataAuto {display:inline-block;vertical-align:middle;line-height:1;font-size:0}
 #mVisual .dataCtrl .dataAuto button {display:block;position:relative;width:36px;height:36px;box-sizing:border-box;border:0;border-radius:50%;background:rgba(0, 0, 0, .35)}
 #mVisual .dataCtrl .dataAuto button:after {display:block;content:"";position:absolute;top:0;left:0;bottom:0;right:0;margin:auto;box-sizing:border-box}
 #mVisual .dataCtrl .dataAuto .btn-stop:after {width:10px;height:14px;border-left:3px solid #fff;border-right:3px solid #fff}
 #mVisual .dataCtrl .dataAuto .btn-play {display:none}
 #mVisual .dataCtrl .dataAuto .btn-play:after {width:0;height:0;border:solid;border-width:6px 0 6px 8px;border-color:transparent transparent transparent #fff}
-#mVisual .dataCtrl .dataPkgs {display:block;position:absolute;left:calc((100% - min(100%, 1400px)) / 2);bottom:50px;pointer-events:auto}
+#mVisual .dataCtrl .dataPkgs {display:inline-block;vertical-align:middle;line-height:1;margin:0 0 0 12px;pointer-events:auto}
 #mVisual .dataCtrl .dataPkg1 {display:inline-block;vertical-align:middle;box-sizing:border-box;border-radius:999px;background:rgba(0, 0, 0, .5);padding:10px 20px 10px;line-height:1}
 #mVisual .dataCtrl .dataNums {display:inline-block;vertical-align:middle;font-size:16px;letter-spacing:-.05em;font-weight:500;color:#fff;line-height:1}
 #mVisual .dataCtrl .dataNums .press {}
@@ -69,40 +73,36 @@
 	#mVisual .dataList .txtBox .txtCore {width:calc(100% - 120px);padding:0 60px;box-sizing:border-box}
 }
 @media all and (max-width:1440px) {
-	#mVisual .dataCtrl {left:0;right:0;width:100%}
+	#mVisual .dataCtrl .visUtil {left:20px}
+	#mVisual .dataList .txtBox .txtCore {left:20px;width:calc(100% - 40px)}
 }
 @media all and (max-width:999px) {
 	.mVisual-wr {height:450px}
-	#mVisual .dataList .txtBox .txtCore {left:0;top:200px;width:100%;padding:0 60px;text-align:left}
-	#mVisual .dataList .txtBox .txtCore .pTxt1 {font-size:18px}
-	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:48px;margin:6px 0 0}
-	#mVisual .dataCtrl .dataAuto {left:60px;top:150px}
-	#mVisual .dataCtrl .dataPkgs {left:50%;transform:translateX(-50%);bottom:50px}
+	#mVisual .dataList .txtBox .txtCore {left:0;top:200px;width:100%;padding:0 60px;box-sizing:border-box;text-align:left}
+	#mVisual .dataList .txtBox .txtCore .pTxt1,
+	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:48px}
+	#mVisual .dataCtrl .visUtil {left:60px;top:150px}
 }
 @media all and (max-width:699px) {
 	.mVisual-wr {height:400px}
 	#mVisual .dataList .txtBox .txtCore {top:160px;padding:0 50px}
-	#mVisual .dataList .txtBox .txtCore .pTxt1 {font-size:16px}
-	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:36px;margin:6px 0 0}
-	#mVisual .dataCtrl .dataAuto {left:50px;top:120px}
+	#mVisual .dataList .txtBox .txtCore .pTxt1,
+	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:36px}
+	#mVisual .dataCtrl .visUtil {left:50px;top:120px}
 	#mVisual .dataList .owl-nav button {width:30px;height:30px}
 	#mVisual .dataList .owl-nav button:after {width:13px;height:13px}
 	#mVisual .dataList .owl-nav .owl-prev:after {margin:auto auto auto 12px}
 	#mVisual .dataList .owl-nav .owl-next:after {margin:auto 12px auto auto}
-	#mVisual .dataCtrl .dataPkgs {width:100%;bottom:30px;overflow:hidden}
-	#mVisual .dataCtrl .dataPkg1 {float:left}
-	#mVisual .dataCtrl .dataPkg2 {float:right;margin:25px 0 0}
 }
 @media all and (max-width:599px) {
 	.mVisual-wr {height:250px}
 	#mVisual .dataList .txtBox .txtCore {top:100px}
-	#mVisual .dataList .txtBox .txtCore .pTxt1 {font-size:12px}
-	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:24px;margin:4px 0 0}
-	#mVisual .dataCtrl .dataAuto {left:30px;top:70px}
+	#mVisual .dataList .txtBox .txtCore .pTxt1,
+	#mVisual .dataList .txtBox .txtCore .pTxt2 {font-size:24px}
+	#mVisual .dataCtrl .visUtil {left:30px;top:70px;width:calc(100% - 60px)}
 	#mVisual .dataCtrl .dataAuto button {width:28px;height:28px}
-	#mVisual .dataCtrl .dataPkgs {bottom:20px}
 	#mVisual .dataCtrl .dataPkg1 {padding:5px 15px}
-	#mVisual .dataCtrl .dataPkg2 {margin:14px 0 0}
+	#mVisual .dataCtrl .dataPkg2 {margin:0 0 0 8px}
 	#mVisual .dataCtrl .dataNums {font-size:13px}
 }
 @media all and (max-width:399px) {
