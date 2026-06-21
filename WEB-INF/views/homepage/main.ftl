@@ -108,14 +108,14 @@
 					</#if>
 				</div>
 				<div class="dataCtrl">
+					<div class="dataAuto">
+						<button class="btn-stop" type="button"><span class="blind">정지</span></button>
+						<button class="btn-play" type="button"><span class="blind">재생</span></button>
+					</div>
 					<div class="dataPkgs">
 						<div class="dataPkg1">
 							<div class="dataNums">
 								<span class="press">1</span> / <span class="total"></span>
-							</div>
-							<div class="dataAuto">
-								<button class="btn-stop" type="button"><span class="blind">정지</span></button>
-								<button class="btn-play" type="button"><span class="blind">재생</span></button>
 							</div>
 						</div>
 						<div class="dataPkg2">
