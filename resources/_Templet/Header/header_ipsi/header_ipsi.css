@@ -95,15 +95,15 @@
 	#mainNavi .mn_a3[target=_blank]:hover span:after,
 	#mainNavi .mn_a3[target=_blank].over span:after {background-position:-99px 0}
 	#mainNavi .tgl-btn {display:none}
-	#mainNavi .amenu {display:block;position:absolute;width:90px;height:90px;right:0;top:0;background:#008284;transition:all .3s ease}
+	#mainNavi .amenu {display:block;position:absolute;width:50px;height:50px;right:0;top:50%;transform:translateY(-50%);background:#057D84;border:0;cursor:pointer;transition:all .3s ease}
 	#mainNavi .amenu:before,
 	#mainNavi .amenu span,
-	#mainNavi .amenu:after {content:"";display:block;position:absolute;height:3px;background:#fff;top:0;right:0;bottom:0;left:0;font-size:0;transition:all .3s ease}
-	#mainNavi .amenu:before {width:27px;margin:35px auto auto 32px}
-	#mainNavi .amenu span {width:19px;margin:auto auto auto 32px}
-	#mainNavi .amenu:after {width:27px;margin:auto auto 34px 32px}
-	#mainNavi .amenu:focus span,
-	#mainNavi .amenu:hover span {width:27px}
+	#mainNavi .amenu:after {content:"";display:block;position:absolute;height:2px;background:#fff;top:0;right:0;bottom:0;left:0;margin:auto;font-size:0;transition:all .3s ease}
+	#mainNavi .amenu:before {width:22px;margin-top:-8px}
+	#mainNavi .amenu span {width:22px}
+	#mainNavi .amenu:after {width:22px;margin-bottom:-8px}
+	#mainNavi .amenu:focus,
+	#mainNavi .amenu:hover {background:#046870}
 	.pc-topMenu-open #mainNavi-wrap {background:#fff}
 	.pc-topMenu-open #menu-wrap {box-shadow:0 10px 25px rgba(0, 0, 0, .05)}
 	.pc-topMenu-open #menu-wrap:after {opacity:0}

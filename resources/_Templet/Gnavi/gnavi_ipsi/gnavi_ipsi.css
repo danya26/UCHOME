@@ -88,11 +88,14 @@
 	#gNavi {height:0;overflow:visible;background:transparent}
 	#gNavi .global-wrap {height:0;overflow:visible}
 	#gNavi .glnk-sec {display:none}
-	#gNavi .srvc-sec {position:absolute;right:100px;top:30px;height:40px;z-index:502}
-	#gNavi .srvc-sec .srvcUtil {display:none}
+	#gNavi .srvc-sec {position:absolute;right:0;top:30px;height:50px;z-index:502;padding:0 62px 0 0;box-sizing:border-box}
+	#gNavi .srvc-sec .srvcUtil {display:block;position:absolute;right:0;top:0;margin:0}
+	#gNavi .srvc-sec .srvcUtil .amenu {width:50px;height:50px;background:#057D84;position:relative}
+	#gNavi .srvc-sec .srvcUtil .amenu:focus,
+	#gNavi .srvc-sec .srvcUtil .amenu:hover {background:#046870}
 }
 @media all and (min-width:1000px) and (max-width:1299px) {
-	#gNavi .srvc-sec {right:90px;top:30px}
+	#gNavi .srvc-sec {right:0;top:30px}
 }
 @media all and (max-width:1440px) {
 	#gNavi .global-wrap {margin:0 20px}
